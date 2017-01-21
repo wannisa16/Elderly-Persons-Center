@@ -16,4 +16,10 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/indexpublicize', 'PublicizeController@indexnew');
+
+Route::get('/template',function(){
+  return view('elderly-center/template');
+});
+
