@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
 Route::get('/indexpublicize', 'PublicizeController@indexnew');
 
 Route::get('/template',function(){
