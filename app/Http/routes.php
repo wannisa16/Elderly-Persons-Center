@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/indexpublicize', 'PublicizeController@indexpublicize');
+Route::get('/indexpublicize', 'PublicizeController@indexnew');

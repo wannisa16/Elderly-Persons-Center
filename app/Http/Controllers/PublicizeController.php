@@ -15,7 +15,7 @@ class PublicizeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function indexPublicize()
+    public function indexnew()
     {
 
         $publicizes = Publicize::ofDataType('publicize')
@@ -24,18 +24,13 @@ class PublicizeController extends Controller
             ->limit(3)
             ->get();
 
-        return response()->json(['publicizes' => $publicizes]);
-    }
-
-    public function indexAtivity()
-    {
         $ativities = Publicize::ofDataType('ativity')
             ->with('Images')
             ->orderBy('publicizeID','DESC')
             ->limit(3)
             ->get();
 
-        return response()->json(['ativities' => $ativities]);
+        return view('elderly.home',compact('publicizes','ativities'));
     }
 
 }
