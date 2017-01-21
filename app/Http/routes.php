@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/meepooh', function () {
-    return "meepooh";
-});
+
+Route::get('/indexpublicize', 'PublicizeController@indexpublicize');
