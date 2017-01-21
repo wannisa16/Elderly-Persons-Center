@@ -17,3 +17,8 @@ Route::get('/template',function(){
   return view('elderly-center/template');
 });
 
+
+Route::get('/home', function () {
+    return view('elderly/home');
+});
+
