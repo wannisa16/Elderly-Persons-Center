@@ -22,3 +22,8 @@ Route::get('/home', function () {
     return view('elderly/home');
 });
 
+Route::get('/publicizes', function () {
+    return view('elderly/publicizes');
+});
+
+

@@ -1,4 +1,4 @@
-@extends('elderly-center.template')
+@extends('elderly.template')
 @section('title')
 @endsection
 

@@ -1,0 +1,13 @@
+.layout-title{
+	border-radius: 15px;
+	margin: 20px;
+	background-color: #00e676;
+	color: #ffffff;
+}
+
+p.font-title{
+	padding-left: 15px; 
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 30px;
+}
