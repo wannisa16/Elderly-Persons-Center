@@ -14,7 +14,7 @@
 Route::get('/indexpublicize', 'PublicizeController@indexnew');
 
 Route::get('/template',function(){
-  return view('elderly-center/template');
+  return view('elderly/template');
 });
 
 

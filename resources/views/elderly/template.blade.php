@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-@yield('title')</title>
+<title>@yield('title')</title>
 @yield('link')
+
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link href="{{ URL::asset('css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ URL::asset('elderly/css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
 
+   <link rel="stylesheet" href="{{ URL::asset('fonts/RSU_Regular.ttf') }}">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -29,7 +31,7 @@
     </ul>
     <nav class="white">
         <div class="nav-wrapper container">
-        <a href="elderly"><img src="images/logo1.png" alt="LOGO" height="45" width="350" class="img-responsive" /></a>
+        <a href="elderly"><img src="images/lg.png" alt="LOGO" height="45" width="400" class="img-responsive" /></a>
             <ul class="right hide-on-med-and-down ">
             <li class="active"><a class="green-text text-accent-4" href="collapsible.html">หน้าหลัก</a></li>
                 <li><a class="green-text text-accent-4" href="sass.html">เกี่ยวกับเรา</a></li>
@@ -49,21 +51,21 @@
     <footer class="page-footer green accent-3 center">
             <div class="row">
                 <div class="col l4 s12">
-                    <h5 class="black-text">สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h5>
-                    <p class="white-text">11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล 
+                    <h5 class="white-text">สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h5>
+                    <p class="black-text">11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล 
                         อ.ถลาง ภูเก็ต</p>
                     </div>
                     <div class="col l4 offset-l0 s12">
-                    <h5 class="white-text">ติดต่อเราได้ที่</h5>
-                        <p class="white-text">โทรศัพท์ : 086 952 5113</p>
-                        <p class="white-text">อีเมล์ : nartruthai.nkr@gmail.com</p>
-                        </div>
+                        <h5 class="white-text">ติดต่อเราได้ที่</h5>
+                        <p class="black-text" >โทรศัพท์ : 086 952 5113</p>
+                        <p class="black-text" >อีเมล์ : nartruthai.nkr@gmail.com</p>
+                    </div>
                         <div class="col l4 offset-l0 s12">
-                        <h5 class="white-text">ติดตามหรือติดต่อได้ที่</h5>
-                            <a href="template"><img src="images/email.png" alt="E-mail" height="40" width="40" class="img-responsive" /></a>
-                            <a href="template"><img src="images/call.png" alt="Call" height="40" width="40" class="img-responsive" /></a>
-                            <a href="template"><img src="images/facebook.png" alt="facebook" height="40" width="40" class="img-responsive" /></a>
-                            </div>
+                            <h5 class="white-text">ติดตามหรือติดต่อได้ที่</h5>
+                            <a href="template"><img src="images/email1.png" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
+                            <a href="template"><img src="images/call1.png" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
+                            <a href="template"><img src="images/face.png" alt="facebook" height="40" width="40" class="img-responsive" /></a>
+                        </div>
                         </div>
                     
                     <div class="footer-copyright">
