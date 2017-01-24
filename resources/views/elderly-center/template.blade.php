@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    @yield('header')
+    @yield('band')
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
     <li><a href="#!" class="green-text text-accent-4">เข้าสู่ระบบ</a></li>
