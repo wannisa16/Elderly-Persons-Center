@@ -10,7 +10,6 @@
 
 @section('content')
 
-
     <br><h3><center>ประชาสัมพันธ์</center></h3><br>
     <div class="container">
         <div class="row">
@@ -18,7 +17,6 @@
                 <div class="card small z-depth-5">
                   <div class="card-image">
                     <img src="images/1.jpg">
-                    <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
                     <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -34,7 +32,6 @@
             <div class="card small z-depth-5">
                 <div class="card-image">
                    <img src="images/2.png">
-                   <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
                 <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -50,7 +47,6 @@
     <div class="card small z-depth-5">
       <div class="card-image">
         <img src="images/3.jpg">
-        <span class="card-title">Card Title</span>
     </div>
     <div class="card-content">
         <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -78,7 +74,6 @@
             <div class="card small z-depth-5">
               <div class="card-image">
                 <img src="images/1.jpg">
-                <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
                 <p>I am a very simple card. I am good at containing small bits of information.</p>
@@ -94,7 +89,6 @@
     <div class="card small z-depth-5">
       <div class="card-image">
         <img src="images/2.png">
-        <span class="card-title">Card Title</span>
     </div>
     <div class="card-content">
         <p>I am a very simple card. </p>
@@ -110,7 +104,6 @@
     <div class="card small z-depth-5">
       <div class="card-image">
         <img src="images/3.jpg">
-        <span class="card-title">Card Title</span>
     </div>
     <div class="card-content">
         <p>123456</p>
