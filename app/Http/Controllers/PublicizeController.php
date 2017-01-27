@@ -17,7 +17,6 @@ class PublicizeController extends Controller
      */
     public function indexnew()
     {
-
         $publicizes = Publicize::ofDataType('publicize')
             ->with('Images')
             ->orderBy('publicizeID','DESC')
@@ -31,6 +30,20 @@ class PublicizeController extends Controller
             ->get();
 
         return view('elderly.home',compact('publicizes','ativities'));
+    }
+
+    public function indexpublicizes()
+    {
+        $publicizes = Publicize::ofDataType('publicize') 
+            ->with('Images')
+            ->orderBy('publicizeID','DESC')
+            ->paginate(2);
+
+        dd($publicizes);    
+
+    
+
+        return view ('elserly.publicize',compoct('publicizes'));
     }
 
 }

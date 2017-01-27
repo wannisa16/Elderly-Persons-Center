@@ -13,6 +13,8 @@
 
 Route::get('/indexpublicize', 'PublicizeController@indexnew');
 
+Route::get('/indexpublicize1', 'PublicizeController@indexpublicizes');
+
 Route::get('/template',function(){
   return view('elderly/template');
 });
