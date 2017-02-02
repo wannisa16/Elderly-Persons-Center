@@ -6,7 +6,7 @@ html{
     font-family: myFirstFont;
 }
 a img{
-		margin-top: 20px !important;
+		margin-top: 9px !important;
 		margin-right: 10px !important;
 	}
 p.add {
@@ -17,7 +17,4 @@ footer h5{
 }
 footer p{
 	font-size: 20px;
-}
-footer.ft{
-	margin-left: 50px;
 }

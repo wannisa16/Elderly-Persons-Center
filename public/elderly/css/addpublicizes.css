@@ -1,0 +1,38 @@
+.title {
+	margin-top: 50px;
+	font-size: 40px;
+}
+
+h4{
+	border-radius: 10px;
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.add{
+	background-color: #00bfa5 !important; 
+}
+
+span.photo{
+	font-size: 20px;
+}
+
+.btn{
+	background-color: #7cb342 !important;
+}
+}
+
+
+button.btn{
+	font-size: 20px;
+	padding-top: 3px;
+	background-color: #f44336; 
+	padding-bottom: 10px;
+}
+
+input.s{
+	font-size: 25px;
+}
+
+
