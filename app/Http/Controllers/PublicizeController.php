@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Publicize;
 use App\Image;
+use View;
 
 class PublicizeController extends Controller
 {
@@ -32,18 +33,20 @@ class PublicizeController extends Controller
         return view('elderly.home',compact('publicizes','ativities'));
     }
 
+    public function show(){
+
+        return view('elderly.publicizes');
+    }
+
     public function indexpublicizes()
     {
         $publicizes = Publicize::ofDataType('publicize') 
             ->with('Images')
             ->orderBy('publicizeID','DESC')
-            ->paginate(2);
+            ->paginate(9); 
 
-        dd($publicizes);    
 
-    
-
-        return view ('elserly.publicize',compoct('publicizes'));
+        return view('elderly.publicizes',compact('publicizes'));
     }
 
 }
