@@ -28,8 +28,6 @@ Route::get('/addpublicizes', function () {
     return view('elderly/addpublicizes');
 });
 
-Route::get('/publicizes', function () {
-    return view('elderly/publicizes');
-});
+
 
 

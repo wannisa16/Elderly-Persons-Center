@@ -1,14 +1,22 @@
 
-label.layout-title{
+label.layout-title {
 	border-radius: 15px;
 	margin: 20px;
 	background-color:#00897b;
 	color: #ffffff;
 }
 
-p.font-title{
+p.font-title {
 	padding-left: 15px; 
 	margin-top: 5px;
 	margin-bottom: 5px;
-	font-size: 30px;
+	font-size: 37px;
+}
+
+ul.pagination {
+	font-size: 20px;
+}
+
+span {
+	padding: 10px;
 }

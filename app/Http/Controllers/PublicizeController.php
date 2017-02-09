@@ -45,7 +45,6 @@ class PublicizeController extends Controller
             ->orderBy('publicizeID','DESC')
             ->paginate(9); 
 
-
         return view('elderly.publicizes',compact('publicizes'));
     }
 

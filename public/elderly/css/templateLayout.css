@@ -1,0 +1,27 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../fonts/RSU_Regular.ttf);
+}
+
+html {
+    font-family: myFirstFont;
+}
+
+a img {
+	margin-top: 9px !important;
+	margin-right: 10px !important;
+}
+
+div.nav-wrapper {
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: #f9fbe7;
+}
+
+footer h5 {
+	font-size: 30px;
+}
+
+footer p {
+	font-size: 20px;
+}
