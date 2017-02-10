@@ -26,48 +26,59 @@
              <ul id="dropdown1" class="dropdown-content">
                 <li><a href="#!">เข้าสู่ระบบ</a></li>
                 <li class="divider"></li>
-                <li><a href="#!">กะทู้</a></li>
+                <li><a href="#!">ข้อมูลผู้สูงอายุ</a></li>
                 <li class="divider"></li>
                 <li><a href="#!">ส่งไฟล์</a></li>
                 <li class="divider"></li>
-                <li><a href="#!" >ปฏิทิน</a></li>
+                <li><a href="#!">ปฏิทิน</a></li>
             </ul>
 
             <nav class="white">
                 <div class="nav-wrapper">
-                    <a href="elderly"><img src="images/lg.png" alt="LOGO" height="45" width="400" class="img-responsive" /></a>
+                    <a href="elderly"><img src="images/logo.png" alt="LOGO" class="img-responsive" /></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
-                            <li class="active"><a class=" text-accent-4" href="collapsible.html">หน้าหลัก</a></li>
-                            <li><a class="text-accent-4" href="sass.html">เกี่ยวกับเรา</a></li>
-                            <li><a class=" text-accent-4" href="badges.html">บริจาค</a></li>
-                            <li><a class=" text-accent-4" href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a class=" text-accent-4" href="badges.html">ติดต่อเรา</a></li>
+                            <li class="active"><a  href="collapsible.html">หน้าหลัก</a></li>
+                            <li><a href="elderly/about">เกี่ยวกับเรา</a></li>
+                            <li><a href="elderly/donate">บริจาค</a></li>
+                            <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
+                            <li><a href="elderly/board">บอร์ดสนทนา</a></li>
+                            <li><a href="elderly/contact">ติดต่อเรา</a></li>
                             <!-- Dropdown Trigger -->
                             <li><a class="dropdown-button  text-accent-4" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
-                        
+                        <ul class="side-nav" id="mobile-demo">
+                            <li class="active"><a href="collapsible.html">หน้าหลัก</a></li>
+                            <li><a href="elderly/about">เกี่ยวกับเรา</a></li>
+                            <li><a href="elderly/donate">บริจาค</a></li>
+                            <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
+                            <li><a href="elderly/board">บอร์ดสนทนา</a></li>
+                            <li><a href="elderly/contact">ติดต่อเรา</a></li>
+                            <!-- Dropdown Trigger -->
+                            <li><a class="dropdown-button  text-accent-4" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>
+                        </ul>
                 </div>
             </nav>
 
         @yield('content')
 
         @yield('footer')
-            <footer class="page-footer green accent-3 center">
+            <footer class="page-footer center">
                 <div class="row">
 
                     <div class="col l4 s12">
-                        <h5 class="white-text">สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h5>
-                        <p class="black-text">11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล อ.ถลาง ภูเก็ต</p>
+                        <h5>สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h5>
+                        <p >11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล อ.ถลาง ภูเก็ต</p>
                     </div>
 
                     <div class="col l4 offset-l0 s12">
-                        <h5 class="white-text">ติดต่อเราได้ที่</h5>
-                        <p class="black-text" >โทรศัพท์ : 086 952 5113</p>
-                        <p class="black-text" >อีเมล์ : nartruthai.nkr@gmail.com</p>
+                        <h5>ติดต่อเราได้ที่</h5>
+                        <p>โทรศัพท์ : 086 952 5113</p>
+                        <p>อีเมล์ : nartruthai.nkr@gmail.com</p>
                     </div>
 
                         <div class="col l4 offset-l0 s12">
-                            <h5 class="white-text">ติดตามหรือติดต่อได้ที่</h5>
+                            <h5>ติดตามหรือติดต่อได้ที่</h5>
                             <a href="template"><img src="images/email1.png" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
                             <a href="template"><img src="images/call1.png" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
                             <a href="template"><img src="images/face.png" alt="facebook" height="40" width="40" class="img-responsive" /></a>
@@ -85,8 +96,16 @@
             <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
             <script type="text/javascript" src="js/materialize.min.js"></script>
 
+
+
+            
+            <!--Import jQuery before materialize.js-->
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+            <script type="text/javascript" src="js/materialize.min.js"></script>
+               
             <!-- Compiled and minified JavaScript -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.mi"></script>
 <script>
         $(document).ready(function(){
       $('.carousel').carousel();

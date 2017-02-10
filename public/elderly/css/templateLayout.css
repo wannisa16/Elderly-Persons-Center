@@ -10,16 +10,35 @@ html {
 a img {
 	margin-top: 9px !important;
 	margin-right: 10px !important;
+	height: 100%;
+	width: auto;
 }
 
 div.nav-wrapper {
 	padding-right: 20px;
 	padding-left: 20px;
-	background-color: #f9fbe7;
+	background-color: #212121;
+}
+
+nav ul a:hover {
+    background-color: #ee6e73;
+}
+
+nav ul li.active {
+    background-color: #26a69a;
+}
+
+footer.page-footer {
+    background-color: #212121 !important;
 }
 
 footer h5 {
 	font-size: 30px;
+	color: #009688;
+}
+
+footer p {
+	color: #ffffff;
 }
 
 footer p {
