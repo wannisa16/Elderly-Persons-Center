@@ -7,7 +7,7 @@ html {
     font-family: myFirstFont;
 }
 
-a img {
+.nav-wrapper a img {
 	margin-top: 9px !important;
 	margin-right: 10px !important;
 	height: 100%;
