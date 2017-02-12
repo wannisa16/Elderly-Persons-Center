@@ -11,21 +11,20 @@
 |
 */
 
-Route::get('/indexpublicize', 'PublicizeController@indexnew');
+Route::get('/home', 'PublicizeController@indexnew');
 
 Route::get('/publicizes','PublicizeController@indexpublicizes');
 
-Route::get('/template',function(){
-  return view('elderly/template');
+Route::get('/template', function() {
+    return view('elderly/template');
 });
 
-
-Route::get('/home', function () {
-    return view('elderly/home');
-});
-
-Route::get('/addpublicizes', function () {
+Route::get('/addpublicizes', function() {
     return view('elderly/addpublicizes');
+});
+
+Route::get('/about', function() {
+	return view('elderly/about');
 });
 
 
