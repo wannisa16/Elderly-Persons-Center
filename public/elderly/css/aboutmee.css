@@ -1,4 +1,4 @@
-.layout-title{
+.layout-title {
 	border-bottom: 6px solid #ee6e73;
 	font-size: 48px;
 	color: #26a69a;
@@ -17,6 +17,6 @@ p.layout-text {
 	margin-top: 35px;
 }
 
-.row{
+.row {
 	margin-bottom: 0px !important;
 }
