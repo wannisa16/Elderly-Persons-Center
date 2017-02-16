@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/aboutme.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/aboutmee.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -35,12 +35,14 @@
         {{--*/$i = 1/*--}}
         @foreach ($goals as $goal)
     	   <div class="row">
-    		  <div class="col m1 offset-m1">
+              
+    		  <div class="col m1 offset-m1 col s2">
     			 <p class="layout-number center-align">{{ $i }}</p>
     	       </div>
-    		  <div class="col m9">
+    		  <div class="col m9 col s10">
     			 <p class="layout-text">{{ $goal->content }}</p>
     		  </div>
+            
     	   </div>
         {{--*/$i++/*--}}
         @endforeach
@@ -50,10 +52,10 @@
         {{--*/$i = 1/*--}}
         @foreach ($obligations as $obligation)
            <div class="row">
-              <div class="col m1 offset-m1">
+              <div class="col m1 offset-m1 col s2">
                  <p class="layout-number center-align">{{ $i }}</p>
                </div>
-              <div class="col m9">
+              <div class="col m9 col s10">
                  <p class="layout-text">{{ $obligation->content }}</p>
               </div>
            </div>
@@ -65,10 +67,10 @@
         {{--*/$i = 1/*--}}
         @foreach ($roles as $role)
            <div class="row">
-              <div class="col m1 offset-m1">
+              <div class="col m1 offset-m1 col s2">
                  <p class="layout-number center-align">{{ $i }}</p>
                </div>
-              <div class="col m9">
+              <div class="col m9 col s10">
                  <p class="layout-text">{{ $role->content }}</p>
               </div>
            </div>
@@ -80,10 +82,10 @@
         {{--*/$i = 1/*--}}
         @foreach ($visions as $vision)
            <div class="row">
-              <div class="col m1 offset-m1">
+              <div class="col m1 offset-m1 col s2">
                  <p class="layout-number center-align">{{ $i }}</p>
                </div>
-              <div class="col m9">
+              <div class="col m9 col s10">
                  <p class="layout-text">{{ $vision->content }}</p>
               </div>
            </div>
