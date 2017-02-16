@@ -15,16 +15,10 @@ Route::get('/home', 'PublicizeController@indexnew');
 
 Route::get('/publicizes','PublicizeController@indexpublicizes');
 
-Route::get('/template', function() {
-    return view('elderly/template');
-});
+Route::get('/about','StoryController@about');
 
 Route::get('/addpublicizes', function() {
     return view('elderly/addpublicizes');
-});
-
-Route::get('/about', function() {
-	return view('elderly/about');
 });
 
 
