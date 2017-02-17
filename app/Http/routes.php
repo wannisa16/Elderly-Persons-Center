@@ -25,4 +25,11 @@ Route::get('/addpublicizes', function() {
 
 
 
+Route::get('/ie', function() {
+    return view('elderly/indexelderly');
+});
 
+
+Route::get('/home', function() {
+    return view('elderly/home');
+});
