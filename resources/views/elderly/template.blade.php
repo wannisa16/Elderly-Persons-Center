@@ -3,7 +3,6 @@
     <head>
         <title>@yield('title')</title>
         
-
         @yield('link')
 
             <!--Import Google Icon Font-->
@@ -103,8 +102,9 @@
             <script type="text/javascript" src="js/materialize.min.js"></script>
                
             <!-- Compiled and minified JavaScript -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.mi"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
             <script src="{{ asset('/elderly/js/template.js') }}"></script>
+            
 <script>
         $(document).ready(function(){
       $('.carousel').carousel();

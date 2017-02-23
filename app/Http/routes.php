@@ -11,17 +11,20 @@
 |
 */
 
-Route::get('/home', 'PublicizeController@indexnew');
+Route::get('/home', 'PublicizeController@indexNew');
 
-Route::get('/publicizes','PublicizeController@indexpublicizes');
+Route::get('/publicizes','PublicizeController@indexPublicizes');
 
 Route::get('/about','StoryController@about');
 
 Route::get('/indexElderlies','ElderlyController@indexelderly');
 
-Route::get('/addpublicizes', function() {
-    return view('elderly/addpublicizes');
-});
+Route::get('/addPublicizes','PublicizeController@addForm');
+
+Route::post('/addPublicize','PublicizeController@addPublicizes');
+
+Route::get('/addDonate','DonateController@addForm');
+
 
 
 
