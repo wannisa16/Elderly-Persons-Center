@@ -19,9 +19,12 @@ Route::get('/about','StoryController@about');
 
 Route::get('/indexElderlies','ElderlyController@indexelderly');
 
+
 Route::get('/addPublicizes','PublicizeController@addForm');
 
 Route::post('/addPublicize','PublicizeController@addPublicizes');
+
+Route::get('/indexActivity','PublicizeController@indexactivity');
 
 Route::get('/addpublicizes', function() {
     return view('elderly/addpublicizes');

@@ -69,6 +69,15 @@ class PublicizeController extends Controller
     
         return Redirect::to('publicizes');
 
+    public function indexactivity()
+    {
+        $ativities = Publicize::ofDataType('ativity') 
+            ->with('Images')
+            ->orderBy('publicizeID','DESC')
+            ->paginate(9); 
+            dd($ativities);
+
+        return view('elderly.activity')->with('activities',$ativities);
     }
 
 }

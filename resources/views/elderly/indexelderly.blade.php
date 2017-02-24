@@ -19,7 +19,9 @@
     </div>
 
     <div class="row">
-        <div class="col s12 ">
+    
+
+        <div class="col m12 s12 ">
 
               <table class="striped">
         <thead>
@@ -30,30 +32,21 @@
               <th data-field="age">อายุ</th>
           </tr>
         </thead>
-
+        @foreach ($elderlies as $elderly)
         <tbody>
           <tr>
-            <td>1</td>
-            <td>นางวันเพ็ญ</td>
-            <td>เดือนสิบสอง</td>
-            <td>90</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>นายมาแล้ว</td>
-            <td>ระวังนะ</td>
-            <td>99</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>นางสาวเอาแต่ใจ</td>
-            <td>จริงนะ</td>
-            <td>108</td>
+            <td>{{$elderly->id}}</td>
+            <td>{{$elderly->name}}</td>
+            <td>{{$elderly->surname}}</td>
+            <td>{{$elderly->age}}</td>
           </tr>
         </tbody>
+        @endforeach
       </table>
-        
+        <div align="center">{{$elderlies->render()}}</div>    
     </div>
+    
+</div>
 </div>
 @endsection
 
