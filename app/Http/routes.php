@@ -23,16 +23,12 @@ Route::get('/addPublicizes','PublicizeController@addForm');
 
 Route::post('/addPublicize','PublicizeController@addPublicizes');
 
-Route::get('/addDonate','DonateController@addForm');
+Route::get('/addpublicizes', function() {
+    return view('elderly/addpublicizes');
+});
 
-
-
-
-Route::get('/ie', function() {
-    return view('elderly/indexelderly');
+Route::get('/activity', function() {
+    return view('elderly/activity');
 });
 
 
-Route::get('/home', function() {
-    return view('elderly/home');
-});
