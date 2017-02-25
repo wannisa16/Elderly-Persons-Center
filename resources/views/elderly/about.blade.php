@@ -97,5 +97,5 @@
 @endsection
 
 @section('script')
- <script src="{{ asset('/elderly/js/publicize.js') }}"></script> 
+ <script src="{{ asset('/elderly/js/about.js') }}"></script> 
 @endsection

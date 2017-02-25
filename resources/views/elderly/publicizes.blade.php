@@ -21,28 +21,30 @@
 
 	<div class="row">
 		@foreach ($publicizes as $publicize)
-
+			@foreach ($publicize->Images as $Image)
+			
 		<div class="col m4">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="images/3.jpg">
+					<img class="activator" src="{{$Image->imagename}} " width="150" height="200">
 				</div>
+				
 				<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">more_vert</i></span>
-					
+					<span class="card-title activator grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">more_vert</i></span>	
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">close</i></span>
 					<p>{{$publicize->content}}</p>
 				</div>
 			</div>
+			
 		</div>
-
+		@endforeach	
 		@endforeach
 
+	</div>
+	<div class="row">
 		<div align="center">{{$publicizes->render()}}</div>
-		
-
 	</div>
 
 </div>

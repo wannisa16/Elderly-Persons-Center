@@ -14,7 +14,8 @@
 <div class="container">
     <div class="add z-depth-2"><h4>เพิ่มประชาสัมพันธ์</h4></div>
 
-    <form action="addPublicize" method="POST" role="form">
+    {!! Form::open(['url' => 'addPublicize', 'files' => true]) !!}
+
         <div class="title row">
             <div class="input-field col s6">
                 <input id="input_text" type="text" name="title">
@@ -30,15 +31,9 @@
         </div>
 
         
-        <div class="file-field input-field">
-            <div class="btn">
-                <span class="photo">เลือกรูปภาพ</span>
-                <input type="file" multiple name="filePhoto">
-            </div>
-
-            <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder=" เพิ่มรูปภาพได้มากกว่าหนึ่งรูป">
-            </div>
+        <div class="form-group">
+            {!! Form::label('เลือกรูปภาพ') !!}
+            {!! Form::file('image', null) !!}
         </div>
         
 
@@ -51,7 +46,7 @@
             </div>
         </div>
 
-    </form>
+    {!! Form::close() !!}
 </div>
 @endsection
 

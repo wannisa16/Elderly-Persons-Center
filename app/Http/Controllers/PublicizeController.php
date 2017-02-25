@@ -47,7 +47,7 @@ class PublicizeController extends Controller
         $publicizes = Publicize::ofDataType('publicize') 
             ->with('Images')
             ->orderBy('publicizeID','DESC')
-            ->paginate(9); 
+            ->paginate(9);
 
         return view('elderly.publicizes',compact('publicizes'));
     }
@@ -65,8 +65,14 @@ class PublicizeController extends Controller
         $publicizes->dataType = "publicize";
         $publicizes->save();
 
-        $a=$publicizes->publicizeID;
-    
+        $id=$publicizes->publicizeID;
+        
+        $images = new Image;
+        $image = $request->file('image');
+        $image->move(public_path("/images"), $id.".png");
+        $images->imagename = $id.".png";
+        $images->contentID = $id;
+        $images->save();
         return Redirect::to('publicizes');
     }
 
