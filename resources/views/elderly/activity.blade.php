@@ -1,4 +1,4 @@
-@extends('elderly.template')
+*@extends('elderly.template')
 @section('title')
 @endsection
 
@@ -15,6 +15,7 @@
     </div>
 
     <div class="container">
+        @foreach ($activities as $activity)
         <div class="col s12 m7">
             <div class="card horizontal">
                 <div class="card-image">
@@ -23,7 +24,7 @@
                 
                 <div class="card-stacked">
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        <p>{{$activity->content}}</p>
                     </div>
 
                     <div class="card-action">
@@ -44,6 +45,9 @@
                 </div>
             </div>
         </div>
+        @endforeach
+
+        <div align="center">{{$activities->render()}}</div>
     </div>
 @endsection
 
