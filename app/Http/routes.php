@@ -34,4 +34,8 @@ Route::get('/activity', function() {
     return view('elderly/activity');
 });
 
+Route::get('/contact', function() {
+    return view('elderly/contact');
+});
+
 
