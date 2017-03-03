@@ -26,13 +26,10 @@ Route::post('/addPublicize','PublicizeController@addPublicizes');
 
 Route::get('/indexActivity','PublicizeController@indexactivity');
 
-Route::get('/addpublicizes', function() {
-    return view('elderly/addpublicizes');
+Route::get('/addDonate', function() {
+    return view('elderly/addDonate');
 });
 
-Route::get('/activity', function() {
-    return view('elderly/activity');
-});
 
 Route::get('/contact', function() {
     return view('elderly/contact');
