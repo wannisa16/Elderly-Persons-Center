@@ -1,4 +1,4 @@
-*@extends('elderly.template')
+@extends('elderly.template')
 @section('title')
 @endsection
 
@@ -16,20 +16,23 @@
 
     <div class="container">
         @foreach ($activities as $activity)
-        <div class="col s12 m7">
+        <div class="row">
+        <div class="col s14 m12">
             <div class="card horizontal">
                 <div class="card-image">
-                    <img src="images/2.png" alt="LOGO" class="img-responsive" height="400">
+                    <img src="images/2.png" alt="LOGO" class="img-responsive" width="200" height="200" >
                 </div>
                 
                 <div class="card-stacked">
                     <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{$activity->title}}</span>
+
                         <p>{{$activity->content}}</p>
                     </div>
 
                     <div class="card-action">
                          <!-- Modal Trigger -->
-                        <a data-target="modal1" class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
+                        <right><a data-target="modal1" class="modal-trigger waves-effect waves-light btn right" href="#modal1" >รูปภาพ</a></right>
 
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal modal-fixed-footer">
@@ -44,6 +47,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         @endforeach
 

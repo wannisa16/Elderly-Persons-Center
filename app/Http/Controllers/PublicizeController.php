@@ -81,9 +81,9 @@ class PublicizeController extends Controller
         $activities = Publicize::ofDataType('activity') 
             ->with('Images')
             ->orderBy('publicizeID','DESC')
-            ->paginate(9); 
+            ->paginate(9);
 
         return view('elderly.activity')->with('activities',$activities);
     }
-
+    
 }

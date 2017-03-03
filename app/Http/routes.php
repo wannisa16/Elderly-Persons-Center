@@ -17,8 +17,9 @@ Route::get('/publicizes','PublicizeController@indexPublicizes');
 
 Route::get('/about','StoryController@about');
 
-Route::get('/indexElderlies','ElderlyController@indexelderly');
+Route::get('/indexElderlies','ElderlyController@indexElderly');
 
+Route::get('/detailElderlies','ElderlyController@detailElderly');
 
 Route::get('/addPublicizes','PublicizeController@addForm');
 
@@ -33,6 +34,10 @@ Route::get('/addDonate', function() {
 
 Route::get('/contact', function() {
     return view('elderly/contact');
+});
+
+Route::get('/detail', function() {
+    return view('elderly/detailelderly');
 });
 
 
