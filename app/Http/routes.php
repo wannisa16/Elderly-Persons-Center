@@ -40,4 +40,7 @@ Route::get('/detail', function() {
     return view('elderly/detailelderly');
 });
 
+Route::get('/test', function() {
+    return view('elderly/test');
+});
 
