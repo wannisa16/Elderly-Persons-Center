@@ -5,6 +5,7 @@
 
 @section('link')
 <link href="{{URL::asset('elderly/css/addDonate.css')}}" rel="stylesheet" type="text/css" media="all" />
+
 @endsection
 
 @section('band')
@@ -96,17 +97,12 @@
                 </div>
             </div>    
             <div class="row">
-                <div style="text-align: center;">
-                    <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.899142009709!2d23.72354!3d37.979482999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd238977fb45%3A0xbdf5a6106a003293!2sFashion+Workshop+by+Vicky+Kaya!5e0!3m2!1sen!2sin!4v1440569426817" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                <div id="map"></div>
             </div>
         </div>        
     </div>
+
+
     <div id="t2" class="col s12">
         <div class="card card-define col m12">
             <div class="row">
@@ -183,8 +179,8 @@
 
                 </div>
             </div>    
-            <div class="row" onload="init();>
-                    <div id="map"></div>
+            <div class="row">
+                <div id="map"></div>
             </div>
         </div>   
         </div>
@@ -196,13 +192,4 @@
 
 @section('script')
 <script src="{{ asset('/elderly/js/donate.js') }}"></script> 
-<script src="https://api.longdo.com/map/?key=4fa4cd39bdee9145dd7d1f3cec8337ea"></script>
-<script>
-  var map;
-  function init() {
-    map = new longdo.Map({
-      placeholder: document.getElementById('map')
-    });
-  }
-</script>
 @endsection

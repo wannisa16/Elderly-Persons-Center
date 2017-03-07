@@ -4,7 +4,15 @@
         <title>@yield('title')</title>
         
         @yield('link')
-
+            <script src="https://api.longdo.com/map/?key=4fa4cd39bdee9145dd7d1f3cec8337ea"></script>
+            <script>
+  var map;
+  function init() {
+    map = new longdo.Map({
+      placeholder: document.getElementById('map')
+    });
+  }
+</script>
             <!--Import Google Icon Font-->
             <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
@@ -19,7 +27,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body onload="init();">
         @yield('band')
 
             <!-- Dropdown Structure -->
