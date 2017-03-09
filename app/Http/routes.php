@@ -13,19 +13,21 @@
 
 Route::get('/home', 'PublicizeController@indexNew');
 
-Route::get('/publicizes','PublicizeController@indexPublicizes');
+Route::get('/publicizes', 'PublicizeController@indexPublicizes');
 
-Route::get('/about','StoryController@about');
+Route::get('/about', 'StoryController@about');
 
-Route::get('/indexElderlies','ElderlyController@indexElderly');
+Route::get('/indexElderlies', 'ElderlyController@indexElderly');
 
-Route::get('/detailElderlies','ElderlyController@detailElderly');
+Route::get('/detailElderlies', 'ElderlyController@detailElderly');
 
-Route::get('/addPublicizes','PublicizeController@addForm');
+Route::get('/addPublicizes', 'PublicizeController@addForm');
 
-Route::post('/addPublicize','PublicizeController@addPublicizes');
+Route::post('/addPublicize', 'PublicizeController@addPublicizes');
 
-Route::get('/indexActivity','PublicizeController@indexactivity');
+Route::get('/indexActivity', 'PublicizeController@indexactivity');
+
+Route::get('/indexDonate','DonateController@indexDonate');
 
 Route::get('/addDonate', function() {
     return view('elderly/addDonate');
