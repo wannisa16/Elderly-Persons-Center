@@ -13,7 +13,7 @@ class Image extends Model
     public function publicize()
         {
         	return $this->belongsTo('App\publicizes');
-        }
+        }   
 
     public function scopOfImage ($query, $publicizeID)
     	{

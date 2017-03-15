@@ -1,6 +1,7 @@
 @extends('elderly.template')
 
-@section('title') 
+@section('title')
+รายละเอียดผู้สูงอายุ 
 @endsection
 
 @section('link')

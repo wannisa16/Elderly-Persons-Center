@@ -29,6 +29,8 @@ Route::get('/indexActivity', 'PublicizeController@indexactivity');
 
 Route::get('/indexDonate','DonateController@indexDonate');
 
+Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
+
 Route::get('/addDonate', function() {
     return view('elderly/addDonate');
 });
@@ -39,6 +41,6 @@ Route::get('/contact', function() {
 });
 
 Route::get('/detail', function() {
-    return view('elderly/detailelderly');
+    return view('elderly/detailDonate');
 });
 

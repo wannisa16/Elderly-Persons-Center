@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Donor;
+use App\Image;
 
 class DonateController extends Controller
 {
@@ -15,5 +16,13 @@ class DonateController extends Controller
         	->paginate(10);
 
         return view('elderly.indexDonate')->with('donors',$donors);
+    }
+
+    public function detailDonate($id)
+    {
+    	$donate = Donor::find($id);
+
+    	return view('elderly.detailDonate')->with('donate',$donate);
+    	
     }
 }
