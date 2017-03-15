@@ -15,87 +15,87 @@
 
 <div class="container">
 
-  <div class="row">
+    <div class="row">
     <div class="col s12 m12">
       <div class="card ">
       <div class="card-image waves-effect waves-block waves-light">
-        <label class="layout-title col m12 s12 z-depth-3 " style="margin-top: auto"><p class="font-title "><i class="material-icons">perm_identity</i> ข้อมูลทั่วไป</p></label>
+        <label class="layout-title col m12 s12 z-depth-3 " -><p class="font-title "><i class="material-icons">perm_identity</i> ข้อมูลทั่วไป</p></label>
         
         <div class="row">
-            <div class="col m6">
-                <div class="col m4"><p class="font-detail ">รหัส :</p></div>
-                <div class="col m8"><p class="font-detail ">123456</p></div>
+            <div class="col m6 s12">
+                <div class="col m4 s4"><p class="font-detail ">รหัส :</p></div>
+                <div class="col m8 s8"><p class="font-detail ">{{$elderly->id}}</p></div>
             </div>
-            <div class="col m6"></div>
+            <div class="col m6 s6"></div>
         </div>
         <div class="row">
-            <div class="col m6">
-                <div class="col m4"><p class="font-detail ">ชื่อ :</p></div>
-                <div class="col m5"><p class="font-detail ">นายสมแล้ว</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4"><p class="font-detail ">ชื่อ :</p></div>
+                <div class="col m5 s5"><p class="font-detail ">{{$elderly->name}}</p></div>
             </div>
-            <div class="col m6">
-                <div class="col m4"><p class="font-detail ">สกุล :</p></div>
-                <div class="col m5"><p class="font-detail ">ที่เป็น</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4"><p class="font-detail ">สกุล :</p></div>
+                <div class="col m5 s5"><p class="font-detail ">{{$elderly->surname}}</p></div>
             </div>
         </div> 
         <div class="row">
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">เพศ :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">ชาย</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">เพศ :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->sex}}</p></div>
             </div>
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">อายุ :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">50</p></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">เกิด :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">12/7/30</p></div>
-            </div>
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">สถาณะ :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">แต่งงาน</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">อายุ :</p></div>
+                <div class="col m5 s4" class="font-detail "><p class="font-detail ">{{$elderly->age}}</p></div>
             </div>
         </div>
         <div class="row">
-            <div class="col m12">
-                <div class="col m2" class="font-detail "><p class="font-detail ">ที่อยู :</p></div>
-                <div class="col m10" class="font-detail "><p class="font-detail ">บ้านเลขที่ 17/18 หมู่ 1 ต.ห้วยนาง อ.ห้วยยอด จ.ตรัง</p></div>
-
-        </div>        
-        <div class="row">
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">อาชีพ :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">รับจ้าง</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">เกิด :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->brithday}}</p></div>
             </div>
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">ระดับการศึกษา :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">ม4</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">สถาณะ :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->status}}</p></div>
             </div>
         </div>
         <div class="row">
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">บุตร :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">0</p></div>
+            <div class="col m12 s12">
+                <div class="col m2 s2" class="font-detail "><p class="font-detail ">ที่อยู :</p></div>
+                <div class="col m10 s10" class="font-detail "><p class="font-detail ">{{$elderly->address}}</p></div>
+            </div>        
+        <div class="row">
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">อาชีพ :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->occupation}}</p></div>
             </div>
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">เหตุผล :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">ไม่ทราบ</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">ระดับการศึกษา :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->education}}</p></div>
             </div>
         </div>
         <div class="row">
-            <div class="col m6">
-                <div class="col m4" class="font-detail "><p class="font-detail ">flie :</p></div>
-                <div class="col m5" class="font-detail "><p class="font-detail ">0</p></div>
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">บุตร :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->child}}</p></div>
             </div>
-            <div class="col m6">
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">เหตุผล :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->reason}}</p></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m6 s6">
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">flie :</p></div>
+                <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->flie}}</p></div>
+            </div>
+            <div class="col m6 s6">
             </div>
         </div>
 
         </div>
       </div>
     </div>
+  </div>
   </div>
   </div>
 

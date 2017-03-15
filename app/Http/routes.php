@@ -19,7 +19,7 @@ Route::get('/about','StoryController@about');
 
 Route::get('/indexElderlies','ElderlyController@indexElderly');
 
-Route::get('/detailElderlies','ElderlyController@detailElderly');
+Route::get('/detailElderlies/{id}','ElderlyController@detailElderly');
 
 Route::get('/addPublicizes','PublicizeController@addForm');
 
