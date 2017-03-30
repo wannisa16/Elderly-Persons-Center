@@ -16,4 +16,12 @@ class ElderlyController extends Controller
 
     	return view('elderly.indexelderly')->with('elderlies',$elderlies);
     }
+
+    public function detailElderly($id)
+    {
+    	$elderly = Elderly::find($id); 
+
+    	
+    	return view('elderly.detailelderly')->with('elderly',$elderly);
+    }
 }
