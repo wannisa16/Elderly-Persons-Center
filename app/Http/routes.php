@@ -31,6 +31,7 @@ Route::get('/indexDonate','DonateController@indexDonate');
 
 Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
 
+
 Route::get('/addDonate', function() {
     return view('elderly/addDonate');
 });

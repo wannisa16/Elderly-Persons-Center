@@ -5,7 +5,7 @@
         
         @yield('link')
             <script src="https://api.longdo.com/map/?key=4fa4cd39bdee9145dd7d1f3cec8337ea"></script>
-            <script>
+<script>
   var map;
   function init() {
     map = new longdo.Map({
@@ -17,7 +17,7 @@
             <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
             <!-- Compiled and minified CSS -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+            <link rel="stylesheet" href="{{url('css/materialize.min.css')}}">
     
             <link href="{{ URL::asset('elderly/css/templateLayout.css') }}" rel="stylesheet" type="text/css" media="all" />
 
@@ -43,7 +43,7 @@
 
             <nav class="white">
                 <div class="nav-wrapper">
-                    <a href="elderly"><img src="images/logo.png" alt="LOGO" class="img-responsive" /></a>
+                    <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
                             <li class="active"><a  href="collapsible.html">หน้าหลัก</a></li>
@@ -73,7 +73,6 @@
         @yield('footer')
             <footer class="page-footer center">
                 <div class="row">
-
                     <div class="col l4 s12">
                         <h5>สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h5>
                         <p >11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล อ.ถลาง ภูเก็ต</p>
@@ -87,9 +86,9 @@
 
                         <div class="col l4 offset-l0 s12">
                             <h5>ติดตามหรือติดต่อได้ที่</h5>
-                            <a href="template"><img src="images/email1.png" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
-                            <a href="template"><img src="images/call1.png" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
-                            <a href="template"><img src="images/face.png" alt="facebook" height="40" width="40" class="img-responsive" /></a>
+                            <a href="template"><img src="{{url('images/email1.png')}}" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
+                            <a href="template"><img src="{{url('images/call1.png')}}" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
+                            <a href="template"><img src="{{url('images/face.png')}}" alt="facebook" height="40" width="40" class="img-responsive" /></a>
                         </div>
                 </div>
                     
@@ -105,11 +104,11 @@
 
 
             <!--Import jQuery before materialize.js-->
-            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="{{url('js/jquery-2.1.1.min.js')}}"></script>
             
-            <script type="text/javascript" src="js/materialize.min.js"></script>
+            <script type="text/javascript" src="{{url('js/materialize.min.js')}}"></script>
             
-            <script src="{{ asset('/elderly/js/template.js') }}"></script>
+            <script src="{{ URL::asset('/elderly/js/template.js') }}"></script>
             @yield('script')
 
     </body>

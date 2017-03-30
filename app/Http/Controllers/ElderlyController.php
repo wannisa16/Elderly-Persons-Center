@@ -14,7 +14,6 @@ class ElderlyController extends Controller
     	$elderlies = Elderly::orderBy('id','ASC')
         	 ->paginate(10); 
 
-    	
     	return view('elderly.indexelderly')->with('elderlies',$elderlies);
     }
 }
