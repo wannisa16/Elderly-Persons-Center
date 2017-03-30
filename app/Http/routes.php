@@ -38,4 +38,6 @@ Route::get('/contact', function() {
     return view('elderly/contact');
 });
 
-
+Route::get('/indexdonate', function() {
+    return view('elderly/indexdonate');
+});
