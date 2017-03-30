@@ -1,6 +1,4 @@
-.map{
-	
-}
+
 
 h4{
 	color: #ffffff;
@@ -15,28 +13,44 @@ h4{
 }
 
 .add{
-	padding-top: 25px;
-	padding-left: 100px;
-	color: #263238 !important;
+	text-align: center;
+	color: #ff8a80 !important;
+	
 }
 
 .call{
-
-	padding-top: 25px;
-	padding-left: 100px;
-	
-	color: #263238 !important;
+	text-align: center;
+	color: #00e676 !important;
 }
 
 .mail{
-	
-	padding-top: 25px;
-	padding-left: 100px;
-	
-	color: #263238 !important;
+	text-align: center;
+	color: #40c4ff !important;
 }
 
-p{
-	font-size: 23px !important;
-	color :#00796b !important;
+
+.padd{
+	text-align: center;
+	font-size: 21px !important;
+	color :#424242 !important;
+}
+
+.pcall{
+	text-align: center;
+	font-size: 21px !important;
+	color :#424242 !important;
+
+}
+
+.pmail{
+	text-align: center;
+	font-size: 21px !important;
+	color :#424242 !important;
+	
+}
+
+.card-panel{
+	height: 300px !important;
+	border-radius: 100% !important;
+	border: 7px solid #e53935;
 }

@@ -41,7 +41,7 @@ Route::get('/contact', function() {
     return view('elderly/contact');
 });
 
-Route::get('/detail', function() {
-    return view('elderly/detailDonate');
+Route::get('/indexdonate', function() {
+    return view('elderly/indexdonate');
 });
 
