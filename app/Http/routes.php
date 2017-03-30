@@ -36,7 +36,7 @@ Route::get('/contact', function() {
     return view('elderly/contact');
 });
 
-Route::get('/detail', function() {
-    return view('elderly/detailelderly');
+Route::get('/indexProblems', function() {
+    return view('elderly/indexProblems');
 });
 

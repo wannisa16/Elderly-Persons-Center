@@ -23,30 +23,33 @@
 
         <div class="col m12 s12 ">
 
-              <table class="striped">
-        <thead>
-          <tr>
-              <th data-field="id">รหัส</th>
-              <th data-field="sname">ชื่อ</th>
-              <th data-field="lname">สกุล</th>
-              <th data-field="age">อายุ</th>
-          </tr>
-        </thead>
-        @foreach ($elderlies as $elderly)
-        <tbody>
-          <tr>
-            <td>{{$elderly->id}}</td>
-            <td>{{$elderly->name}}</td>
-            <td>{{$elderly->surname}}</td>
-            <td>{{$elderly->age}}</td>
-          </tr>
-        </tbody>
-        @endforeach
-      </table>
-        <div align="center">{{$elderlies->render()}}</div>    
-    </div>
+            <table class="striped">
+                    <thead>
+                    <tr>
+                        <th data-field="id">รหัส</th>
+                        <th data-field="sname">ชื่อ</th>
+                        <th data-field="lname">สกุล</th>
+                        <th data-field="age">อายุ</th>
+                    </tr>
+                    </thead>
+        
+                    <tbody>
+                    @foreach ($elderlies as $elderly)
+                    <tr>
+                   
+                        <td>{{$elderly->id}}</td>
+                        <td>{{$elderly->name}}</td>
+                        <td>{{$elderly->surname}}</td>
+                        <td>{{$elderly->age}}</td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+            </table>
+        
+            <div align="center">{{$elderlies->render()}}</div>    
+        </div>
     
-</div>
+    </div>
 </div>
 @endsection
 
