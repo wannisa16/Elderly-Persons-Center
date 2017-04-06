@@ -8,6 +8,7 @@
 <link href="{{ URL::asset('elderly/css/publicize.css') }}" rel="stylesheet" type="text/css" media="all" />
 
 @endsection
+
 @section('band')
 @endsection
 
@@ -21,8 +22,7 @@
 
 	<div class="row">
 		@foreach ($publicizes as $publicize)
-			@foreach ($publicize->Images as $Image)
-			
+			@foreach ($publicize->Images as $Image)	
 		<div class="col m4">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light">
@@ -30,7 +30,7 @@
 				</div>
 				
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">more_vert</i></span>	
+					<span class="card-title activator truncate grey-text text-darken-4">{{$publicize->title}}</span>	
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">close</i></span>
