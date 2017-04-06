@@ -43,12 +43,9 @@ Route::get('/contact', function() {
     return view('elderly/contact');
 });
 
-<<<<<<< HEAD
-Route::get('/indexdonate', function() {
-    return view('elderly/indexdonate');
-=======
+
 Route::get('/indexProblems', function() {
     return view('elderly/indexProblems');
->>>>>>> feature/Feature-1
 });
+
 
