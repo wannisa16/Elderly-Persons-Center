@@ -109,6 +109,7 @@
             <script type="text/javascript" src="{{url('js/materialize.min.js')}}"></script>
             
             <script src="{{ URL::asset('/elderly/js/template.js') }}"></script>
+            
             @yield('script')
 
     </body>

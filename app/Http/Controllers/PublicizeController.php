@@ -27,13 +27,14 @@ class PublicizeController extends Controller
             ->limit(3)
             ->get();
 
-        $ativities = Publicize::ofDataType('ativity')
+        $activities = Publicize::ofDataType('activity')
             ->with('Images')
             ->orderBy('publicizeID','DESC')
             ->limit(3)
             ->get();
 
-        return view('elderly.home',compact('publicizes','ativities'));
+        return view('elderly.home')->with('publicizes',$publicizes)
+            ->with('activities',$activities);
     }
 
     public function show()
