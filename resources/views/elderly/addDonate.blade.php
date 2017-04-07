@@ -11,7 +11,6 @@
 @section('band')
 @endsection
 
-
 @section('content')
 <div class="container">
     <div class="row">
@@ -95,9 +94,16 @@
                     </div>
 
                 </div>
-            </div>    
+            </div> 
             <div class="row">
-                <div id="map"></div>
+                <div class="col m12">
+                    <a class="waves-effect waves-light btn" onclick="map.location(longdo.LocationMode.Geolocation);">คลิกที่อยู่ปัจจุบัน</a>
+                </div>
+            </div> 
+            
+
+            <div class="row">
+                <div class="map" id="map"></div>
             </div>
         </div>        
     </div>
@@ -176,11 +182,10 @@
                     <div class="col m3">
                         <div class="layout-title"><h5>ที่อยู่ของผู้ที่บริจาค</h5></div>
                     </div>
-
                 </div>
-            </div>    
+            </div>  
             <div class="row">
-                <div id="map"></div>
+                <div class="map" id="map"></div>
             </div>
         </div>   
         </div>
