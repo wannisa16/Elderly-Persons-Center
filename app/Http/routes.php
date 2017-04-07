@@ -19,9 +19,7 @@ Route::get('/about', 'StoryController@about');
 
 Route::get('/indexElderlies', 'ElderlyController@indexElderly');
 
-
-Route::get('/detailElderlies', 'ElderlyController@detailElderly');
-
+Route::get('/detailElderlies/{id}', 'ElderlyController@detailElderly');
 
 Route::get('/addPublicizes', 'PublicizeController@addForm');
 
@@ -33,6 +31,8 @@ Route::get('/indexDonate','DonateController@indexDonate');
 
 Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
 
+Route::get('/indexProblems', 'ProblemController@indexProblems');
+
 
 Route::get('/addDonate', function() {
     return view('elderly/addDonate');
@@ -43,12 +43,10 @@ Route::get('/contact', function() {
     return view('elderly/contact');
 });
 
-<<<<<<< HEAD
+
 Route::get('/indexdonate', function() {
     return view('elderly/indexdonate');
-=======
-Route::get('/indexProblems', function() {
-    return view('elderly/indexProblems');
->>>>>>> feature/Feature-1
 });
+
+
 
