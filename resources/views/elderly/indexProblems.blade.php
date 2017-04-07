@@ -26,27 +26,27 @@
               <table class="striped">
                 <thead>
                   <tr>
-                    <th data-field="id">วัน/เดือน/ปี</th>
-                    <th data-field="sname">เรื่อง</th>
-                    <th data-field="lname">สถานะการช่วยเหลือ</th>
+                    <th data-field="id">รหัส</th>
+                    <th data-field="name">ชื่อ</th>
+                    <th data-field="surname">สกุล</th>
+                    <th data-field="status">สถานะการช่วยเหลือ</th>
                   </tr>
                 </thead>
         
                 <tbody>
-                  <tr>
-                    <td>123</td>
-                    <td>asdfdddddddddddddddddddddddddddddddddddddddddddddddddddd</td>
-                    <td>แล้ว</td>
-                  </tr>
-                  <tr>
-                    <td>123</td>
-                    <td>asdfdddddddddddddddddddddddddddddddddddddddddddddddddddd</td>
-                    <td>แล้ว</td>
-                  </tr>
-                </tbody>
+                    @foreach ($problems as $problem)
+                    <tr>
+                   
+                        <td>{{$problem->Victim_id}}</td>
+                        <td>{{$problem->v_name}}</td>
+                        <td>{{$problem->v_surname}}</td>
+                        <td>{{$problem->v_status}}</td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+            </table>
         
-              </table>
-                
+            <div align="center">{{$problems->render()}}</div>    
         </div>
     
     </div>
