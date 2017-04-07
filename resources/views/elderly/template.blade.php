@@ -29,9 +29,8 @@
 
     <body onload="init();">
         @yield('band')
-
             <!-- Dropdown Structure -->
-             <ul id="dropdown1" class="dropdown-content">
+            <ul id="dropdown1" class="dropdown-content">
                 <li><a href="#!">เข้าสู่ระบบ</a></li>
                 <li class="divider"></li>
                 <li><a href="#!">ข้อมูลผู้สูงอายุ</a></li>
@@ -99,10 +98,6 @@
                     </div>
             </footer>
        
- 
-
-
-
             <!--Import jQuery before materialize.js-->
             <script type="text/javascript" src="{{url('js/jquery-2.1.1.min.js')}}"></script>
             

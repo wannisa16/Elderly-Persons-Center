@@ -33,24 +33,14 @@ Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
 
 Route::get('/indexProblems', 'ProblemController@indexProblems');
 
-
 Route::get('/addDonate', function() {
-    return view('elderly/addDonate');
+    return view('elderly/adddonate');
 });
-
 
 Route::get('/contact', function() {
     return view('elderly/contact');
 });
 
-
-
-
-
-
-Route::get('/indexdonate', function() {
-    return view('elderly/indexdonate');
-});
 
 
 

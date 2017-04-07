@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Elderly;
 use App\Http\Requests;
+use App\Elderly;
 
 class ElderlyController extends Controller
 {
@@ -21,7 +20,6 @@ class ElderlyController extends Controller
     {
     	$elderly = Elderly::find($id); 
 
-    	
     	return view('elderly.detailelderly')->with('elderly',$elderly);
     }
 }

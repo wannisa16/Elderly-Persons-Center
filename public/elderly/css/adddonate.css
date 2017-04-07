@@ -26,3 +26,8 @@ label.label-check {
 	font-size: 48px;
 	color: #26a69a;
 }
+
+div.map {
+	width: 700px;
+    height: 400px;
+}
