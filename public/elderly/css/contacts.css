@@ -1,0 +1,56 @@
+
+h4{
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.contact{
+	background-color: #00bfa5 !important; 
+	border-radius: 10px;
+	margin-top: 25px;
+}
+
+.add{
+	text-align: center;
+	color: #ff8a80 !important;
+	
+}
+
+.call{
+	text-align: center;
+	color: #00e676 !important;
+}
+
+.mail{
+	text-align: center;
+	color: #40c4ff !important;
+}
+
+
+.padd{
+	text-align: center;
+	font-size: 20px !important;
+	color :#424242 !important;
+}
+
+.pcall{
+	text-align: center;
+	font-size: 20px !important;
+	color :#424242 !important;
+
+}
+
+.pmail{
+	margin-top: 0px !important;
+	text-align: center;
+	font-size: 20px !important;
+	color :#424242 !important;
+	
+}
+
+.card-panel{
+	height: 300px !important;
+	border-radius: 100% !important;
+	border: 7px solid #e53935;
+}
