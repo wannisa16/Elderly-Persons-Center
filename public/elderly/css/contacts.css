@@ -1,5 +1,4 @@
 
-
 h4{
 	color: #ffffff;
 	padding-top: 17px;
@@ -31,20 +30,21 @@ h4{
 
 .padd{
 	text-align: center;
-	font-size: 21px !important;
+	font-size: 20px !important;
 	color :#424242 !important;
 }
 
 .pcall{
 	text-align: center;
-	font-size: 21px !important;
+	font-size: 20px !important;
 	color :#424242 !important;
 
 }
 
 .pmail{
+	margin-top: 0px !important;
 	text-align: center;
-	font-size: 21px !important;
+	font-size: 20px !important;
 	color :#424242 !important;
 	
 }

@@ -39,9 +39,6 @@ Route::get('/addDonate', function() {
 });
 
 
-Route::get('/contact', function() {
-    return view('elderly/contact');
-});
 
 
 Route::get('/indexProblems', function() {
@@ -49,3 +46,8 @@ Route::get('/indexProblems', function() {
 });
 
 
+Route::group(['middleware' => ['web']], function () {
+
+Route::resource('contacts','Contacts\\ContactsController');
+
+});

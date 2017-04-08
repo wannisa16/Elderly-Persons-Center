@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/contact.css') }}" rel="stylesheet" type="text/css" media="all" /> 
+<link href="{{ URL::asset('elderly/css/contacts.css') }}" rel="stylesheet" type="text/css" media="all" /> 
 @endsection
 
 @section('band')
@@ -21,11 +21,13 @@
               <i class="medium material-icons">location_on</i>
             </div>
           </div>
+           @foreach ($addresss as $address)
             <div class="row">
             <div class="padd col s12 m12">
-              <p>สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต 11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล อ.ถลาง จังหวัด ภูเก็ต</p> 
+              <p>{{$address->content}}</p> 
             </div>
-            </div> 
+            </div>
+          @endforeach 
     		</div>
       </div>
     	<div class="col s12 m4">
@@ -35,12 +37,13 @@
               <i class="medium material-icons">phone</i>
             </div>
           </div>
+            @foreach ($tels as $tel)
               <div class="row">
               <div class="pcall col s12 m12">
-    			    <p>โทรศัพท์: 076-529700</p>
-              <p>โทรศัพท์: 076-529699</p>
+    			    <p>โทรศัพท์ : {{$tel->content}}</p>
               </div>
               </div>
+            @endforeach
     		</div>
       </div>
     
@@ -54,8 +57,12 @@
           </div>
               <div class="row">
               <div class="pmail col s12 m12">
-              <p>อีเมล์ : nartruthai.nkr@gmail.com</p>
-              <p>Facebook : สถานสงเคราะห์ผู้สูงอายุ</p>
+              @foreach ($emails as $email)
+              <p>อีเมล์ : {{$email->content}}</p>
+              @endforeach
+              @foreach ($facebooks as $facebook)
+              <p>Facebook : {{$facebook->content}}</p>
+              @endforeach
               </div>
               </div> 
     		</div>
