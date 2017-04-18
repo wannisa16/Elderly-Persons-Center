@@ -55,7 +55,7 @@
                 <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->brithday}}</p></div>
             </div>
             <div class="col m6 s6">
-                <div class="col m4 s4" class="font-detail "><p class="font-detail ">สถาณะ :</p></div>
+                <div class="col m4 s4" class="font-detail "><p class="font-detail ">สถานะ :</p></div>
                 <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->status}}</p></div>
             </div>
         </div>

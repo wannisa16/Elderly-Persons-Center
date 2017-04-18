@@ -24,16 +24,18 @@
                             <th>สิ่งของที่บริจาค</th>
                         </tr>
                     </thead>
-                @foreach ($donors as $donor)
+                
                     <tbody>
+                    @foreach ($donors as $donor)   
                         <tr>
                             <td>{{$donor->id}}</td>
                             <td>{{$donor->d_name}}</td>
                             <td>{{$donor->d_surname}}</td>
                             <td>{{$donor->d_object}}</td>
                         </tr>
+                    @endforeach        
                     </tbody>
-                @endforeach
+               
                 </table>
             </div>
         </div>

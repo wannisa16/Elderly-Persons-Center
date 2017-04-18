@@ -42,5 +42,9 @@ Route::get('/contact', function() {
 });
 
 
+Route::get('/t',function() {
+	return view('elderly/template');
+});
+
 
 

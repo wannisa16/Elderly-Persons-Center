@@ -14,7 +14,7 @@
 <div class="container">
 
     <div class="row">
-            <label class="layout-title col m12 s12 z-depth-3 "><center><p class="font-title ">รายชื่อ</p></center>
+            <label class="layout-title col m12 s12 z-depth-3 "><center><p class="font-title ">รายชื่อผู้ประสบปัญหาทางสังคม</p></center>
             </label>
     </div>
 
@@ -23,7 +23,7 @@
 
         <div class="col m12 s12 ">
 
-              <table class="striped">
+              <table class="striped centered">
                 <thead>
                   <tr>
                     <th data-field="id">รหัส</th>

@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html >
     <head>
         <title>@yield('title')</title>
         
         @yield('link')
-            <script src="https://api.longdo.com/map/?key=4fa4cd39bdee9145dd7d1f3cec8337ea"></script>
-<script>
-  var map;
-  function init() {
-    map = new longdo.Map({
-      placeholder: document.getElementById('map')
-    });
-  }
-</script>
+
             <!--Import Google Icon Font-->
             <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
@@ -27,20 +19,24 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body onload="init();">
+    <body>
         @yield('band')
-            <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">เข้าสู่ระบบ</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">ข้อมูลผู้สูงอายุ</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">ส่งไฟล์</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">ปฏิทิน</a></li>
-            </ul>
-
-            <nav class="white">
+            
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav >
+    <ul class="right ">
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login<i class="medium material-icons right">perm_identity</i></a></li>
+    </ul>
+  
+</nav>
+            <nav>
                 <div class="nav-wrapper">
                     <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -50,10 +46,9 @@
                             <li><a href="elderly/donate">บริจาค</a></li>
                             <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
                             <li><a href="elderly/board">บอร์ดสนทนา</a></li>
-                            <li><a href="elderly/contact">ติดต่อเรา</a></li>
-                            <!-- Dropdown Trigger -->
-                            <li><a class="dropdown-button  text-accent-4" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a href="elderly/contact">ติดต่อเรา</a></li> 
                         </ul>
+
                         <ul class="side-nav" id="mobile-demo">
                             <li class="active"><a href="collapsible.html">หน้าหลัก</a></li>
                             <li><a href="elderly/about">เกี่ยวกับเรา</a></li>
@@ -61,8 +56,6 @@
                             <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
                             <li><a href="elderly/board">บอร์ดสนทนา</a></li>
                             <li><a href="elderly/contact">ติดต่อเรา</a></li>
-                            <!-- Dropdown Trigger -->
-                            <li><a class="dropdown-button  text-accent-4" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
                 </div>
             </nav>
@@ -100,11 +93,10 @@
        
             <!--Import jQuery before materialize.js-->
             <script type="text/javascript" src="{{url('js/jquery-2.1.1.min.js')}}"></script>
+            <script type="text/javascript" src="{{url('js/materialize.min.js')}}"></script>     
+            <script src="{{ URL::asset('/elderly/js/template.js') }}"> </script>
             
-            <script type="text/javascript" src="{{url('js/materialize.min.js')}}"></script>
-            
-            <script src="{{ URL::asset('/elderly/js/template.js') }}"></script>
-            
+
             @yield('script')
 
     </body>

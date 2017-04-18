@@ -5,7 +5,6 @@
 
 @section('link')
 <link href="{{URL::asset('elderly/css/addDonate.css')}}" rel="stylesheet" type="text/css" media="all" />
-
 @endsection
 
 @section('band')
@@ -16,7 +15,7 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="donate-buttom tab col s3 " ><a class="font" href="#t1">สถานสงเคราะห์ประสงค์</a></li>
+                <li class="donate-buttom tab col s3 "><a class="font" href="#t1">สถานสงเคราะห์ประสงค์</a></li>
                 <li class="donate-buttom tab col s3 offset-s1"><a class="font"  href="#t2">ผู้บริจาคประสงค์</a></li>
                 <li class="donate-buttom tab col s3 offset-s1"><a class="font" href="#test3">บริจาคเงิน</a></li>
             </ul>
@@ -95,15 +94,11 @@
 
                 </div>
             </div> 
-            <div class="row">
-                <div class="col m12">
-                    <a class="waves-effect waves-light btn" onclick="map.location(longdo.LocationMode.Geolocation);">คลิกที่อยู่ปัจจุบัน</a>
-                </div>
-            </div> 
             
 
             <div class="row">
-                <div class="map" id="map"></div>
+                <h3>My Google Maps Demo</h3>
+                <div id="map"></div>
             </div>
         </div>        
     </div>
@@ -185,8 +180,8 @@
                 </div>
             </div>  
             <div class="row">
-                <div class="map" id="map"></div>
-            </div>
+                <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
         </div>   
         </div>
 </div>
@@ -196,5 +191,9 @@
 @endsection
 
 @section('script')
-<script src="{{ asset('/elderly/js/donate.js') }}"></script> 
+<script src="{{ asset('/elderly/js/donate.js') }}"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoip-VVT4adGe3l3B57csOa0GxpAzfUd0&callback=initMap">
+    </script>    
+     
 @endsection
