@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+
 	<div class="card card-define col m12">
 		<div class="row">
 			<div class="layout-title col m10 offset-m1">รายละเอียดการบริจาค</div>
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 @endsection
 
 @section('footer')

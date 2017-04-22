@@ -18,6 +18,10 @@ div.nav-wrapper {
 	background-color: #212121;
 }
 
+.nav-bar {
+	background-color: #26a69a;
+}
+
 nav ul a:hover {
     background-color: #ee6e73;
 }
