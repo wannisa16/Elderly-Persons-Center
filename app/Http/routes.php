@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/home', 'PublicizeController@indexNew');
-
 Route::get('/publicizes', 'PublicizeController@indexPublicizes');
 
 Route::get('/about', 'StoryController@about');
@@ -37,9 +35,15 @@ Route::get('/addDonate', function() {
     return view('elderly/adddonate');
 });
 
+Route::get('/index', 'PublicizeController@indexNew');
 Route::resource('contacts','Contacts\\ContactsController');
+
 
 Route::get('/problemsdetail', function() {
     return view('elderly/problemsDetail');
 });
 
+Route::group(['middleware' => ['web']], function () {    
+   Route::auth();
+   Route::get('/home', 'HomeController@index');
+});   

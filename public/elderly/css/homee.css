@@ -12,3 +12,13 @@ p.font-title{
 	font-size: 30px;
 	
 }
+
+.carousel .carousel-item img{
+    width: 100% !important;
+    height: 100%;
+}
+
+.title-community {
+	font-size: xx-large;
+    color: salmon;
+}

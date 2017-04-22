@@ -21,32 +21,17 @@
 
     <body>
         @yield('band')
-            
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
-<nav >
-    <ul class="right ">
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login<i class="medium material-icons right">perm_identity</i></a></li>
-    </ul>
-  
-</nav>
             <nav>
                 <div class="nav-wrapper">
                     <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
                             <li class="active"><a  href="collapsible.html">หน้าหลัก</a></li>
-                            <li><a href="elderly/about">เกี่ยวกับเรา</a></li>
-                            <li><a href="elderly/donate">บริจาค</a></li>
+                            <li><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li><a href="{{url('addDonate')}}">บริจาค</a></li>
                             <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
                             <li><a href="elderly/board">บอร์ดสนทนา</a></li>
-                            <li><a href="elderly/contact">ติดต่อเรา</a></li> 
+                            <li><a href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
                         <ul class="side-nav" id="mobile-demo">
@@ -59,6 +44,30 @@
                         </ul>
                 </div>
             </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                @if (Auth::guest())
+                <li><a href="{{ url('/login') }}" >เข้าสู่ระบบ</a></li>
+                @else
+                <li><a href="{{ url('/logout') }}">ออกจากระบบ</a></li>
+                <li><a href="#!">ส่งไฟล์</a></li>
+                <li><a href="#!">ผู้สูงอายุ</a></li>
+                <li><a href="#!">รายการบริจาค</a></li>
+                <li><a href="#!">รายการผู้ประสบปัญหาทางสังคม</a></li>
+                @endif
+            </ul>
+            <nav >
+                <ul class="right ">
+                <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+                    @if (Auth::guest())
+                        ลงชื่อเข้าใช้
+                    @else
+                    {{ Auth::user()->name }}
+                    @endif<i class="medium material-icons right">perm_identity</i></a></li>
+                </ul>
+            </nav>
+           
 
         @yield('content')
 
@@ -97,7 +106,6 @@
             <script src="{{ URL::asset('/elderly/js/template.js') }}"> </script>
             
 
-            @yield('script')
-
+        @yield('script')
     </body>
 </html>
