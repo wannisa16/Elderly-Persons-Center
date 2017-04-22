@@ -42,3 +42,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::resource('contacts','Contacts\\ContactsController');
 
 });
+
+Route::get('/problemsdetail', function() {
+    return view('elderly/problemsDetail');
+});
