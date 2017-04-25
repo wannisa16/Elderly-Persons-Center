@@ -52,5 +52,10 @@ Route::get('/indexdonate', function() {
     return view('elderly/indexdonate');
 });
 
+Route::get('/ab', function() {
+    return view('elderly/AddBoard');
+});
 
+Route::auth();
 
+Route::get('/home', 'HomeController@index');
