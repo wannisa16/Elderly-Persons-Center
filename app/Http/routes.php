@@ -43,6 +43,7 @@ Route::get('/problemsdetail', function() {
     return view('elderly/problemsDetail');
 });
 
+<<<<<<< HEAD
 Route::group(['middleware' => ['web']], function () {    
    Route::auth();
    Route::get('/home', 'HomeController@index');
@@ -52,3 +53,8 @@ Route::get('/ab', function() {
     return view('elderly/AddBoard');
 });
 
+=======
+Route::get('/indexborad', function() {
+    return view('elderly/indexBorad');
+});
+>>>>>>> feature/feature1
