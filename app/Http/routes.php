@@ -43,3 +43,6 @@ Route::get('/problemsdetail', function() {
     return view('elderly/problemsDetail');
 });
 
+Route::get('/indexborad', function() {
+    return view('elderly/indexBorad');
+});
