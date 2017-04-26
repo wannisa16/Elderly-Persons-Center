@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/home.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/homee.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -14,13 +14,10 @@
 <div class="container">
 
     <div class="row">
-            <label class="layout-title col m12 s12 z-depth-3 "><center><p class="font-title ">รายชื่อ</p></center>
+            <label class="layout-title col m12 s12 z-depth-3 "><center><p class="font-title ">รายชื่อผู้สูงอายุ</p></center>
             </label>
     </div>
-
     <div class="row">
-    
-
         <div class="col m12 s12 ">
 
             <table class="striped">
@@ -36,7 +33,6 @@
                     <tbody>
                     @foreach ($elderlies as $elderly)
                     <tr>
-                   
                         <td>{{$elderly->id}}</td>
                         <td>{{$elderly->name}}</td>
                         <td>{{$elderly->surname}}</td>

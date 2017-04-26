@@ -1,47 +1,37 @@
 <?php
 
-namespace App\Http\Controllers\Contacts;
+namespace App\Http\Controllers\Donates;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Contact;
+use App\Donor;
+use App\Image;
 
-class ContactsController extends Controller
+class DonatesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        $addresss = Contact::ofTitle('address')
-            ->get();
-        $tels = Contact::ofTitle('tel')
-            ->get();
-        $emails = Contact::ofTitle('email')
-            ->get();
-        $facebooks = Contact::ofTitle('facebook')
-            ->get();
-
+        $donors = Donor::orderBy('id','ASC')
+            ->paginate(10);
         $home = "";
         $about = "";
-        $donate = "";
-        $contact = "active";
+        $donate = "active";
+        $contact = "";
         $elderly = "";
 
-        return view('elderly.contact')->with('addresss',$addresss)
-            ->with('tels',$tels)
-            ->with('emails',$emails)
-            ->with('facebooks',$facebooks)
+        return view('elderly.indexDonate')->with('donors',$donors)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly' ,$elderly);
+            ->with('elderly', $elderly);
     }
 
     /**
@@ -51,7 +41,14 @@ class ContactsController extends Controller
      */
     public function create()
     {
-        //
+        $home = "";
+        $about = "";
+        $donate = "active";
+        $contact = "";
+        return view('elderly.addDonate')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact);
     }
 
     /**
@@ -73,7 +70,19 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-        //
+        $donor = Donor::find($id);
+        $home = "";
+        $about = "";
+        $donate = "active";
+        $contact = "";
+        $elderly = "";
+
+        return view('elderly.detailDonate')->with('donor',$donor)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
     }
 
     /**

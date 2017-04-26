@@ -31,7 +31,7 @@
 
                         <tr>
                             <td>{{$donor->id}}</td>
-                            <td>{{$donor->d_name}}</td>
+                            <td><a href="donates/{{$donor->id}}">{{$donor->d_name}}</a></td>
                             <td>{{$donor->d_surname}}</td>
                             <td>{{$donor->d_object}}</td>
                         </tr>

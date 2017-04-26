@@ -10,7 +10,6 @@ p.font-title{
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 30px;
-	
 }
 
 .carousel .carousel-item img{
@@ -22,3 +21,8 @@ p.font-title{
 	font-size: xx-large;
     color: salmon;
 }
+
+.carousel-slider {
+	height: 450px !important;
+}
+
