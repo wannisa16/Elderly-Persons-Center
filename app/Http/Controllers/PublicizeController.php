@@ -39,6 +39,7 @@ class PublicizeController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
+        $pro = "";
 
         return view('elderly.home')->with('publicizes', $publicizes)
             ->with('activities', $activities)
@@ -46,7 +47,8 @@ class PublicizeController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly', $elderly);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
     public function show()
@@ -67,13 +69,15 @@ class PublicizeController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
+        $pro = "";
 
         return view('elderly.publicizes')->with('publicizes', $publicizes)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly', $elderly);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
     public function addForm()
@@ -83,11 +87,14 @@ class PublicizeController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
+        $pro = "";
+
         return view('elderly.addpublicizes')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly', $elderly);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
     public function addPublicizes(Request $request )
@@ -121,13 +128,15 @@ class PublicizeController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
+        $pro = "";
 
         return view('elderly.activity')->with('activities',$activities)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly', $elderly);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
     
 }

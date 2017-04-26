@@ -24,13 +24,14 @@ class DonatesController extends Controller
         $about = "";
         $donate = "active";
         $contact = "";
-        
+        $pro = "";
 
         return view('elderly.indexDonate')->with('donors',$donors)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
-            ->with('contact', $contact);
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
@@ -44,11 +45,13 @@ class DonatesController extends Controller
         $about = "";
         $donate = "active";
         $contact = "";
+        $pro = "";
 
         return view('elderly.addDonate')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
-            ->with('contact', $contact);
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
@@ -76,13 +79,15 @@ class DonatesController extends Controller
         $donate = "active";
         $contact = "";
         $elderly = "";
+        $pro = "";
 
         return view('elderly.detailDonate')->with('donor',$donor)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly', $elderly);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
     /**

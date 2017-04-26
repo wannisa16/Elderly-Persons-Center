@@ -20,6 +20,7 @@ class StoryController extends Controller
         $about = "active";
         $donate = "";
         $contact = "";
+        $pro = "";
 
 
         return view('elderly.about')->with('historys',$historys)
@@ -30,6 +31,7 @@ class StoryController extends Controller
             ->with('home', $home)
             ->with('donate', $donate)
             ->with('about', $about)
-            ->with('contact', $contact);
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 }

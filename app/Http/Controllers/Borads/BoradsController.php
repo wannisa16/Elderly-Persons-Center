@@ -1,49 +1,34 @@
 <?php
 
-namespace App\Http\Controllers\Contacts;
+namespace App\Http\Controllers\Borads;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Contact;
 
-class ContactsController extends Controller
+class BoradsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        $addresss = Contact::ofTitle('address')
-            ->get();
-        $tels = Contact::ofTitle('tel')
-            ->get();
-        $emails = Contact::ofTitle('email')
-            ->get();
-        $facebooks = Contact::ofTitle('facebook')
-            ->get();
-
-        $home = "";
+        $home = "active";
         $about = "";
         $donate = "";
-        $contact = "active";
+        $contact = "";
         $elderly = "";
         $pro = "";
 
-        return view('elderly.contact')->with('addresss',$addresss)
-            ->with('tels',$tels)
-            ->with('emails',$emails)
-            ->with('facebooks',$facebooks)
-            ->with('home', $home)
+         return view('elderly.indexBorad')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly' ,$elderly)
-            ->with('pro' ,$pro);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
     /**

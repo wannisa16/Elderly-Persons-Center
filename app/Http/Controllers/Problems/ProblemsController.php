@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Problems;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Helper;
+use App\Victim;
 
-class BoardController extends Controller
+class ProblemsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +18,9 @@ class BoardController extends Controller
      */
     public function index()
     {
-        //
+        $problems = Victim::orderBy('Victim_id','ASC')
+             ->paginate(10);
+         return view('elderly.indexProblems')->with('problems',$problems);
     }
 
     /**
@@ -25,7 +30,17 @@ class BoardController extends Controller
      */
     public function create()
     {
-        //
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "active";
+
+        return view('elderly.addProblems')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**

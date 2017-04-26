@@ -14,8 +14,6 @@ class ProblemController extends Controller
     {
         $problems = Victim::orderBy('Victim_id','ASC')
              ->paginate(10);
-
-
          return view('elderly.indexProblems')->with('problems',$problems);
     }
 

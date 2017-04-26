@@ -29,8 +29,8 @@
                             <li class="{{ $home }}"><a  href="{{url('/index')}}">หน้าหลัก</a></li>
                             <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
                             <li class="{{ $donate }}" > <a href="{{url('/donates/create')}}">บริจาค</a></li>
-                            <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a href="elderly/board">บอร์ดสนทนา</a></li>
+                            <li><a href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
+                            <li><a href="{{url('/ab')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
@@ -38,8 +38,8 @@
                             <li class="{{ $home }}"><a href="{{url('/index')}}">หน้าหลัก</a></li>
                             <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
                             <li class="{{ $donate }}"><a href="{{url('/donates/create')}}">บริจาค</a></li>
-                            <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a href="elderly/board">บอร์ดสนทนา</a></li>
+                            <li class="{{ $pro }}" ><a href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
+                            <li><a href="{{url('/ab')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
                 </div>
