@@ -34,7 +34,7 @@ Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
 Route::get('/indexProblems', 'ProblemController@indexProblems');
 
 Route::get('/addDonate', function() {
-    return view('elderly/adddonate');
+    return view('elderly/addDonate');
 });
 
 Route::resource('contacts','Contacts\\ContactsController');
@@ -43,3 +43,10 @@ Route::get('/problemsdetail', function() {
     return view('elderly/problemsDetail');
 });
 
+Route::get('/indexborad', function() {
+    return view('elderly/indexBorad');
+});
+
+Route::get('/addproblems', function() {
+    return view('elderly/addProblems');
+});
