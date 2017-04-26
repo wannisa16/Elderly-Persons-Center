@@ -33,12 +33,15 @@
                             <td>สมชาย สวางจัง</td>
                         </tr>
 
+                        <tr>
+                            <td>2</td>
+                            <td>ต้องการทราบว่าวันที่26พฤษภาคมว่างไหมคะ</td>
+                            <td>สวยใส สุดสุด</td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="row">
-            <div align="center">{{$donors->render()}}</div>
         </div>
 </div>
 @endsection

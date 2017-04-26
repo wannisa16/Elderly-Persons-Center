@@ -30,7 +30,7 @@ Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
 Route::get('/indexProblems', 'ProblemController@indexProblems');
 
 Route::get('/addDonate', function() {
-    return view('elderly/adddonate');
+    return view('elderly/addDonate');
 });
 
 Route::get('/index', 'PublicizeController@indexNew');
@@ -42,7 +42,6 @@ Route::get('/problemsdetail', function() {
     return view('elderly/problemsDetail');
 });
 
-<<<<<<< HEAD
 Route::group(['middleware' => ['web']], function () {    
    Route::auth();
    Route::get('/home', 'HomeController@index');
@@ -52,8 +51,11 @@ Route::get('/ab', function() {
     return view('elderly/AddBoard');
 });
 
-=======
 Route::get('/indexborad', function() {
     return view('elderly/indexBorad');
 });
->>>>>>> feature/feature1
+
+Route::get('/addproblems', function() {
+    return view('elderly/addProblems');
+});
+
