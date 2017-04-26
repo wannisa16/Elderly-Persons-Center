@@ -36,8 +36,6 @@ Route::get('/addDonate', function() {
 Route::get('/index', 'PublicizeController@indexNew');
 Route::resource('contacts','Contacts\\ContactsController');
 Route::resource('donates','Donates\\DonatesController');
-
-
 Route::get('/problemsdetail', function() {
     return view('elderly/problemsDetail');
 });
