@@ -19,6 +19,7 @@ class PublicizeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function indexNew()
     {
         $publicizes = Publicize::ofDataType('publicize')
@@ -33,8 +34,19 @@ class PublicizeController extends Controller
             ->limit(3)
             ->get();
 
-        return view('elderly.home')->with('publicizes',$publicizes)
-            ->with('activities',$activities);
+        $home = "active";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
+
+        return view('elderly.home')->with('publicizes', $publicizes)
+            ->with('activities', $activities)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
     }
 
     public function show()
@@ -50,12 +62,32 @@ class PublicizeController extends Controller
             ->orderBy('publicizeID','DESC')
             ->paginate(9);
 
-        return view('elderly.publicizes',compact('publicizes'));
+        $home = "active";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
+
+        return view('elderly.publicizes')->with('publicizes', $publicizes)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
     }
 
     public function addForm()
     {
-        return view('elderly/addpublicizes');
+        $home = "active";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
+        return view('elderly.addpublicizes')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
     }
 
     public function addPublicizes(Request $request )
@@ -71,7 +103,7 @@ class PublicizeController extends Controller
         $images = new Image;
         $image = $request->file('image');
         $image->move(public_path("/images"), $id.".png");
-        $images->imagename = $id.".png";
+        $images->imagename = "images/".$id.".png";
         $images->contentID = $id;
         $images->save();
         return Redirect::to('publicizes');
@@ -82,9 +114,20 @@ class PublicizeController extends Controller
         $activities = Publicize::ofDataType('activity') 
             ->with('Images')
             ->orderBy('publicizeID','DESC')
-            ->paginate(9);
+            ->paginate(2);
+       
+        $home = "active";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
 
-        return view('elderly.activity')->with('activities',$activities);
+        return view('elderly.activity')->with('activities',$activities)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
     }
     
 }

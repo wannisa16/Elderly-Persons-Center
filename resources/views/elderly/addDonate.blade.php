@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col m6">
                     <div class="card-image waves-effect  waves-light">
-                        <img class="activator" src="images/1.jpg">
+                        <img class="activator" src="{{url('images/donate1.jpg')}}">
                     </div>
                 </div>
                 <div class="col m6">
@@ -97,7 +97,7 @@
             
 
             <div class="row">
-                <h3>My Google Maps Demo</h3>
+
                 <div id="map"></div>
             </div>
         </div>        
@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col m6">
                     <div class="card-image waves-effect  waves-light">
-                        <img class="activator" src="images/1.jpg">
+                        <img class="activator" src="{{url('images/donate2.jpg')}}">
                     </div>
                 </div>
                 <div class="col m6">  

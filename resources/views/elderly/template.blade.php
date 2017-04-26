@@ -26,21 +26,21 @@
                     <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
-                            <li class="active"><a  href="collapsible.html">หน้าหลัก</a></li>
-                            <li><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
-                            <li><a href="{{url('addDonate')}}">บริจาค</a></li>
+                            <li class="{{ $home }}"><a  href="{{url('/index')}}">หน้าหลัก</a></li>
+                            <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li class="{{ $donate }}" > <a href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
                             <li><a href="elderly/board">บอร์ดสนทนา</a></li>
-                            <li><a href="{{url('contacts')}}">ติดต่อเรา</a></li> 
+                            <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
                         <ul class="side-nav" id="mobile-demo">
-                            <li class="active"><a href="collapsible.html">หน้าหลัก</a></li>
-                            <li><a href="elderly/about">เกี่ยวกับเรา</a></li>
-                            <li><a href="elderly/donate">บริจาค</a></li>
+                            <li class="{{ $home }}"><a href="{{url('/index')}}">หน้าหลัก</a></li>
+                            <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li class="{{ $donate }}"><a href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li><a href="badges.html">ผู้ประสบปัญหาทางสังคม</a></li>
                             <li><a href="elderly/board">บอร์ดสนทนา</a></li>
-                            <li><a href="elderly/contact">ติดต่อเรา</a></li>
+                            <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
                 </div>
             </nav>
@@ -51,8 +51,8 @@
                 @else
                 <li><a href="{{ url('/logout') }}">ออกจากระบบ</a></li>
                 <li><a href="#!">ส่งไฟล์</a></li>
-                <li><a href="#!">ผู้สูงอายุ</a></li>
-                <li><a href="#!">รายการบริจาค</a></li>
+                <li class="{{ $elderly }}" ><a href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
+                <li><a href="{{ url('/donates') }}">รายการบริจาค</a></li>
                 <li><a href="#!">รายการผู้ประสบปัญหาทางสังคม</a></li>
                 @endif
             </ul>
@@ -75,14 +75,14 @@
             <footer class="page-footer center">
                 <div class="row">
                     <div class="col l4 s12">
-                        <h5>สถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h5>
+                        <h5>ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h5>
                         <p >11/41 หมู่4 ถ.บ้านดอนเชิงทะเล ต.เชิงทะเล อ.ถลาง ภูเก็ต</p>
                     </div>
 
                     <div class="col l4 offset-l0 s12">
                         <h5>ติดต่อเราได้ที่</h5>
-                        <p>โทรศัพท์ : 086 952 5113</p>
-                        <p>อีเมล์ : nartruthai.nkr@gmail.com</p>
+                        <p>โทรศัพท์ : 076-529699</p>
+                        <p>อีเมล์ : banphuket_132@hotmail.com</p>
                     </div>
 
                         <div class="col l4 offset-l0 s12">
@@ -103,9 +103,9 @@
             <!--Import jQuery before materialize.js-->
             <script type="text/javascript" src="{{url('js/jquery-2.1.1.min.js')}}"></script>
             <script type="text/javascript" src="{{url('js/materialize.min.js')}}"></script>     
-            <script src="{{ URL::asset('/elderly/js/template.js') }}"> </script>
+           
             
-
         @yield('script')
+         <script src="{{ URL::asset('/elderly/js/template.js') }}"> </script>
     </body>
 </html>

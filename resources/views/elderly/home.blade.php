@@ -5,20 +5,30 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/homee.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/home.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
 @endsection
 
-@section('content')  
-<div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="images/38.png"></a>
-    <a class="carousel-item" href="#two!"><img src="images/41.png"></a>
-    <a class="carousel-item" href="#three!"><img src="images/39.png"></a>
-    <a class="carousel-item" href="#four!"><img src="images/40.png"></a>
-    <a class="carousel-item" href="#five!"><img src="images/41.png"></a>
-</div>
+@section('content') 
+
+    <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+    </div>
+    <div class="carousel-item">
+      <img src="images/26.png" alt="">
+    </div>
+        <div class="carousel-item">
+      <img src="images/28.png" alt="">
+    </div>
+        <div class="carousel-item">
+      <img src="images/29.png" alt="">
+    </div>
+  </div>
+
+
+        
 
 <div class="container">
     <div class="row">
@@ -31,7 +41,7 @@
         <div class="col s12 m4">
             <div class="card z-depth-5">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator"  src="{{ $Image->imagename }}" alt="office">
+                    <img class="activator"  src="{{ $Image->imagename }}" alt="office" width="150" height="200">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
@@ -46,6 +56,8 @@
         </div>
         @endforeach
         @endforeach
+
+        <div class="right"><a href="{{url('/publicizes')}}">ดูทั้งหมด</a></div>
     </div>
 
     <div class="row">
@@ -56,15 +68,15 @@
 
     <div class="row">
         @foreach($activities as $activity)
-        @foreach ($publicize->Images as $Image)
+        @foreach ($activity->Images as $Image)
         <div class="col s12 m4">
             <div class="card z-depth-5">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator"  src="{{ $Image->imagename }}" alt="office">
+                    <img class="activator"  src="{{ $Image->imagename }}" alt="office" width="150" height="200">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
-                        <p>{{ $publicize->title }}</p><i class="mdi-navigation-more-vert right"></i>
+                        <p>{{ $activity->title }}</p><i class="mdi-navigation-more-vert right"></i>
                     </span>                
                 </div>
                 <div class="card-reveal">
@@ -75,6 +87,7 @@
         </div>
         @endforeach
         @endforeach
+        <div class="right"><a href="{{url('/indexActivity')}}">ดูทั้งหมด</a></div>
     </div>
 
     <div class="row">
@@ -82,6 +95,7 @@
             <p class=" ">ชุมชนที่เกี่ยวข้องภายในจังหวัดภูเก็ต</p>
         </label>
     </div>
+    <div></div>
     <
 </div>
 

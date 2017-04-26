@@ -25,8 +25,6 @@ Route::post('/addPublicize', 'PublicizeController@addPublicizes');
 
 Route::get('/indexActivity', 'PublicizeController@indexactivity');
 
-Route::get('/indexDonate','DonateController@indexDonate');
-
 Route::get('/detailDonate/{id}', 'DonateController@detailDonate');
 
 Route::get('/indexProblems', 'ProblemController@indexProblems');
@@ -37,6 +35,7 @@ Route::get('/addDonate', function() {
 
 Route::get('/index', 'PublicizeController@indexNew');
 Route::resource('contacts','Contacts\\ContactsController');
+Route::resource('donates','Donates\\DonatesController');
 
 
 Route::get('/problemsdetail', function() {

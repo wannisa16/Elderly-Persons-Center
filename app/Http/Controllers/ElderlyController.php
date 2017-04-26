@@ -8,12 +8,28 @@ use App\Elderly;
 
 class ElderlyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function indexElderly()
     {
     	$elderlies = Elderly::orderBy('id','ASC')
         	 ->paginate(10); 
 
-    	return view('elderly.indexelderly')->with('elderlies',$elderlies);
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+
+    	return view('elderly.indexelderly')->with('elderlies',$elderlies)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
     }
 
     public function detailElderly($id)

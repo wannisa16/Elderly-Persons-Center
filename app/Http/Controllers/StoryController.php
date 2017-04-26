@@ -16,11 +16,20 @@ class StoryController extends Controller
         $obligations = Story::ofDataType('obligation')->get();
         $roles = Story::ofDataType('role')->get();
         $visions = Story::ofDataType('vision')->get();
+        $home = "";
+        $about = "active";
+        $donate = "";
+        $contact = "";
+
 
         return view('elderly.about')->with('historys',$historys)
         	->with('goals',$goals)
         	->with('obligations',$obligations)
         	->with('roles',$roles)
-        	->with('visions',$visions);
+        	->with('visions',$visions)
+            ->with('home', $home)
+            ->with('donate', $donate)
+            ->with('about', $about)
+            ->with('contact', $contact);
     }
 }
