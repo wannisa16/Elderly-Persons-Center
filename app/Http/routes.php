@@ -46,8 +46,8 @@ Route::group(['middleware' => ['web']], function () {
    Route::get('/home', 'HomeController@index');
 });   
 
-Route::get('/ab', function() {
-    return view('elderly/AddBoard');
+Route::get('/addboard', function() {
+    return view('elderly/addBoard');
 });
 
 Route::get('/indexborad', function() {

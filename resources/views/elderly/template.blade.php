@@ -30,7 +30,7 @@
                             <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
                             <li class="{{ $donate }}" > <a href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li><a href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a href="{{url('/ab')}}">บอร์ดสนทนา</a></li>
+                            <li><a href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
@@ -39,7 +39,7 @@
                             <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
                             <li class="{{ $donate }}"><a href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li class="{{ $pro }}" ><a href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a href="{{url('/ab')}}">บอร์ดสนทนา</a></li>
+                            <li><a href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
                 </div>

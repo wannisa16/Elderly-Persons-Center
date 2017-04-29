@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Question;
 
 class BoradsController extends Controller
 {
@@ -16,6 +17,10 @@ class BoradsController extends Controller
      */
     public function index()
     {
+        $questions = Question::orderBy('id','ASC')
+             ->paginate(10); 
+
+
         $home = "active";
         $about = "";
         $donate = "";
@@ -23,12 +28,14 @@ class BoradsController extends Controller
         $elderly = "";
         $pro = "";
 
-         return view('elderly.indexBorad')->with('home', $home)
+         return view('elderly.indexBorad')->with('questions', $questions)
+            ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro);
+        
     }
 
     /**
@@ -38,7 +45,17 @@ class BoradsController extends Controller
      */
     public function create()
     {
-        //
+        $home = "";
+        $about = "";
+        $donate = "active";
+        $contact = "";
+        $pro = "";
+
+        return view('elderly.AddBoard')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**

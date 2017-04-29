@@ -13,6 +13,9 @@
 @section('content')
 <div class="container">
     <div class="indexborad z-depth-2 center-align"><h4>บอร์ดสนทนา ศูนย์พัฒนาการจัดสวัสดิการสังคม ผู้สูงอายุภูเก็ต</h4></div>
+    <div class="row">
+        <a href="{{url('/borads/create')}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
+    </div>
         <div class="row">
             <div class="col m12 s12 ">
                 <table class="striped centered">
@@ -26,21 +29,17 @@
 
                 
                     <tbody>   
-
+                        @foreach ($questions as $question)
                         <tr>
-                            <td>1</td>
-                            <td>ต้องการทราบว่าวันที่23พฤษภาคมว่างไหมคะ</td>
-                            <td>สมชาย สวางจัง</td>
+                            <td>{{$question->id}}</td>
+                            <td>{{$question->subject}}</td>
+                            <td>{{$question->detail}}</td>
+                            <td>{{$question->questioner_id}}</td>
                         </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>ต้องการทราบว่าวันที่26พฤษภาคมว่างไหมคะ</td>
-                            <td>สวยใส สุดสุด</td>
-                        </tr>
-
+                        @endforeach
                     </tbody>
                 </table>
+                <div align="center">{{$questions->render()}}</div>
             </div>
         </div>
 </div>

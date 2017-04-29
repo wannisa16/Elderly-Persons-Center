@@ -4,15 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Questions extends Model
+class Question extends Model
 {
-    protected $table = 'helpers';
-    protected $primaryKey = 'helper_id';
+        protected $table = 'questions';
+    protected $primaryKey = 'id';
     public $timestamps = false;
 
 	public function questioners()
         {
         	return $this->hasMany('App\Questioner', 'questioner_id', 'id');
         }
-
 }
