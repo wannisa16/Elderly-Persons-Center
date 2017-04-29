@@ -50,4 +50,4 @@ Route::get('/addboard', function() {
     return view('elderly/addBoard');
 });
 
-
+Route::resource('activitys','Activitys\\ActivitysController');

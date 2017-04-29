@@ -308,13 +308,13 @@
                 </div>
             </div>
             <div class="row">
-            <div class="col s6 right-align">
-                <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
+                <div class="col s6 right-align">
+                    <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
+                </div>
+                <div class="col s6">
+                    <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                </div>
             </div>
-            <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
-            </div>
-        </div>
            
     </div>
 
