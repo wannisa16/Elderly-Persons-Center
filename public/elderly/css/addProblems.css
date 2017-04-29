@@ -19,8 +19,25 @@ h4{
 .card {
 	margin-top: 10px !important;
     padding: 20px;
+    border-radius: 5px !important;
+    background-color: #fafafa !important;
 }
 
 .layout-text {
 	font-size: 20px;
 }
+
+a.cancel{
+	font-size: 18px;
+	background-color: #e53935 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+button.add{
+	font-size: 18px;
+	padding-left: 57px;
+	padding-right: 57px;
+
+}
+

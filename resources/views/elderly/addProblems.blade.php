@@ -21,14 +21,14 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ชื่อ</label>
+                            <input id="name" type="text" class="validate" name="name">
+                            <label for="name">ชื่อ</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">นามสกุล</label>
+                            <input id="surname" type="text" class="validate" name="surname">
+                            <label for="surname">นามสกุล</label>
                         </div>
                     </div>                    
                 </div>
@@ -37,14 +37,14 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="number" class="validate">
-                            <label for="icon_telephone">เลขที่บัตรประชาชน</label>
+                            <input id="IDcardnumber" type="number" class="validate" name="IDcardnumber">
+                            <label for="IDcardnumber">เลขที่บัตรประชาชน</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">กรณีไม่มีเนื่องจาก</label>
+                            <input id="no" type="text" class="validate" name="no">
+                            <label for="no">กรณีไม่มีเนื่องจาก</label>
                         </div>
                     </div>                    
                 </div>
@@ -53,14 +53,14 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input type="date" class="datepicker">
+                            <input type="date" class="datepicker" name="birthday">
                             <label>วัน/เดือน/ปีเกิด</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="number" class="validate">
-                            <label for="icon_telephone">อายุ</label>
+                            <input id="age" type="number" class="validate" name="age">
+                            <label for="age">อายุ</label>
                         </div>
                     </div>                    
                 </div>
@@ -70,26 +70,26 @@
                 <div class="col m11 ">
                     <div class="col m2 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">เพศ</label>
+                            <input id="sex" type="text" class="validate" name="sex">
+                            <label for="sex">เพศ</label>
                         </div>
                     </div>
                     <div class="col m3 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">เชื้อชาติ</label>
+                            <input id="race" type="text" class="validate" name="race">
+                            <label for="race">เชื้อชาติ</label>
                         </div>
                     </div>
                     <div class="col m3 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">สัญชาติ</label>
+                            <input id="nationality" type="text" class="validate" name="nationality">
+                            <label for="nationality">สัญชาติ</label>
                         </div>
                     </div>
                     <div class="col m3 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ศาสนา</label>
+                            <input id="religion" type="text" class="validate" name="religion">
+                            <label for="religion">ศาสนา</label>
                         </div>
                     </div>                          
                 </div>
@@ -103,20 +103,20 @@
                     </div>
                     <div class="col m3 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test1" />
-                            <label class="label-check" for="test1">โสด</label>
+                            <input class="with-gap" name="status" type="radio" id="single"  />
+                            <label for="single">โสด</label>
                         </p>
                     </div>
                     <div class="col m3 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test2" />
-                            <label class="label-check" for="test2">สมรสอยู่ด้วยกัน</label>
+                            <input class="with-gap" name="status" type="radio" id="marrytogether"  />
+                            <label for="marrytogether">สมรสอยู่ด้วยกัน</label>
                         </p>
                     </div>
                     <div class="col m3 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test3" />
-                            <label class="label-check" for="test3">สมรสแยกกันอยู่</label>
+                            <input class="with-gap" name="status" type="radio" id="marryseparately" />
+                            <label for="marryseparately">สมรสแยกกันอยู่</label>
                         </p>
                     </div>                          
                 </div>
@@ -128,20 +128,20 @@
                 <div class="col m11 ">
                     <div class="col m3 offset-m3">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test4" />
-                            <label class="label-check" for="test4">หย่าร้าง</label>
+                            <input class="with-gap" name="status" type="radio" id="divorce" />
+                            <label for="divorce">หย่าร้าง</label>
                         </p>
                     </div>
                     <div class="col m3 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test5" />
-                            <label class="label-check" for="test5">ไม่ได้สมรสแต่อยู่ด้วยกัน</label>
+                            <input class="with-gap" name="status" type="radio" id="unmarriedtogether" />
+                            <label for="unmarriedtogether">ไม่ได้สมรสแต่อยู่ด้วยกัน</label>
                         </p>
                     </div>
                     <div class="col m3 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test6" />
-                            <label class="label-check" for="test6">หม้าย(คู่สมรสเสียชีวิต)</label>
+                            <input class="with-gap" name="status" type="radio" id="widow" />
+                            <label for="widow">หม้าย(คู่สมรสเสียชีวิต)</label>
                         </p>
                     </div>                      
                 </div>
@@ -152,14 +152,14 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">อาชีพ</label>
+                            <input id="career" type="text" class="validate" name="career">
+                            <label for="career">อาชีพ</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="number" class="validate">
-                            <label for="icon_telephone">รายได้เฉลี่ยต่อเดือน</label>
+                            <input id="income" type="number" class="validate" name="income">
+                            <label for="income">รายได้เฉลี่ยต่อเดือน</label>
                         </div>
                     </div>                    
                 </div>
@@ -173,20 +173,20 @@
                     </div>
                     <div class="col m3 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test7" />
-                            <label class="label-check" for="test7">ด้วยตัวเอง</label>
+                            <input class="with-gap" name="revenue" type="radio" id="test7" />
+                            <label for="test7">ด้วยตัวเอง</label>
                         </p>
                     </div>
                     <div class="col m2 ">
                         <p>
-                            <input type="checkbox" class="filled-in" id="test8" />
-                            <label class="label-check" for="test8">ผู้อื่นให้</label>
+                            <input class="with-gap" name="revenue" type="radio" id="test8" />
+                            <label for="test8">ผู้อื่นให้</label>
                         </p>
                     </div>
                     <div class="col m2 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">(ระบุ)</label>
+                            <input id="specify" type="text" class="validate" name="specify">
+                            <label for="specify">(ระบุ)</label>
                         </div>
                     </div>                          
                 </div>
@@ -202,26 +202,26 @@
                 <div class="col m11 ">
                     <div class="col m3 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">บ้านเลขที่</label>
+                            <input id="housenumber" type="text" class="validate" name="housenumber">
+                            <label for="housenumber">บ้านเลขที่</label>
                         </div>
                     </div>
                     <div class="col m2 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">หมู่ที่</label>
+                            <input id="villageno" type="text" class="validate" name="villageno">
+                            <label for="villageno">หมู่ที่</label>
                         </div>
                     </div>
                     <div class="col m3 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ตรอก</label>
+                            <input id="alley" type="text" class="validate" name="alley">
+                            <label for="alley">ตรอก</label>
                         </div>
                     </div>
                     <div class="col m3 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ซอย</label>
+                            <input id="alleyway" type="text" class="validate" name="alleyway">
+                            <label for="alleyway">ซอย</label>
                         </div>
                     </div>                          
                 </div>
@@ -231,20 +231,20 @@
                 <div class="col m11 ">
                     <div class="col m4 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ถนน</label>
+                            <input id="road" type="text" class="validate" name="road">
+                            <label for="road">ถนน</label>
                         </div>
                     </div>
                     <div class="col m4 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ตำบล/แขวง</label>
+                            <input id="canton" type="text" class="validate" name="canton">
+                            <label for="canton">ตำบล/แขวง</label>
                         </div>
                     </div>
                     <div class="col m3 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">อำเภอ/เขต</label>
+                            <input id="district" type="text" class="validate" name="district">
+                            <label for="district">อำเภอ/เขต</label>
                         </div>
                     </div>           
                 </div>
@@ -254,14 +254,14 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">จังหวัด</label>
+                            <input id="province" type="text" class="validate" name="province">
+                            <label for="province">จังหวัด</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">รหัสไปรษณีย์</label>
+                            <input id="postcode" type="text" class="validate" name="postcode">
+                            <label for="postcode">รหัสไปรษณีย์</label>
                         </div>
                     </div>                    
                 </div>
@@ -277,14 +277,14 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ชื่อ</label>
+                            <input id="name1" type="text" class="validate" name="name1">
+                            <label for="name1">ชื่อ</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">นามสกุล</label>
+                            <input id="surname1" type="text" class="validate" name="surname1">
+                            <label for="surname1">นามสกุล</label>
                         </div>
                     </div>                    
                 </div>
@@ -294,19 +294,28 @@
                 <div class="col m11 ">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <input id="icon_telephone" type="number" class="validate">
-                            <label for="icon_telephone">เบอร์โทรศัพท์</label>
+                            <input id="tel" type="number" class="validate" name="tel">
+                            <label for="tel">เบอร์โทรศัพท์</label>
                         </div>
                     </div>
                     <div class="col m6 ">
                         <div class="input-field">
-                            <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">อีเมล์</label>
+                            <input id="email" type="email" class="validate" name="email">
+                            <label for="email">อีเมล์</label>
                         </div>
                     </div>                    
                 </div>
                 </div>
             </div>
+            <div class="row">
+            <div class="col s6 right-align">
+                <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
+            </div>
+            <div class="col s6">
+                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+            </div>
+        </div>
+           
     </div>
 
 
@@ -316,4 +325,5 @@
 @endsection
 
 @section('script')
+<script src="{{ URL::asset('/elderly/js/addProblems.js') }}"> </script>
 @endsection

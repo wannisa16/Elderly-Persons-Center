@@ -50,11 +50,4 @@ Route::get('/ab', function() {
     return view('elderly/AddBoard');
 });
 
-Route::get('/indexborad', function() {
-    return view('elderly/indexBorad');
-});
-
-Route::get('/addproblems', function() {
-    return view('elderly/addProblems');
-});
 
