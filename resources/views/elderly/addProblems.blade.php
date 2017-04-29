@@ -301,7 +301,7 @@
                     <div class="col m6 ">
                         <div class="input-field">
                             <input id="icon_telephone" type="text" class="validate">
-                            <label for="icon_telephone">ฮีเมล์</label>
+                            <label for="icon_telephone">อีเมล์</label>
                         </div>
                     </div>                    
                 </div>
@@ -316,8 +316,4 @@
 @endsection
 
 @section('script')
-<script>$('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
-  });</script>
 @endsection
