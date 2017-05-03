@@ -1,3 +1,4 @@
+
 @extends('elderly.template')
 @section('title')
 แจ้งผู้ประสบปัญหาทางสังคม
