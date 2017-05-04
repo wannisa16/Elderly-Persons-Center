@@ -37,7 +37,7 @@
                     @foreach ($problems as $problem)
                     <tr>
                    
-                        <td>{{$problem->Victim_id}}</td>
+                        <td>{{$problem->victim_id}}</td>
                         <td>{{$problem->v_name}}</td>
                         <td>{{$problem->v_surname}}</td>
                         <td>{{$problem->v_status}}</td>
