@@ -46,8 +46,6 @@ Route::group(['middleware' => ['web']], function () {
    Route::get('/home', 'HomeController@index');
 });   
 
-Route::get('/addboard', function() {
-    return view('elderly/addBoard');
-});
-
 Route::resource('activitys','Activitys\\ActivitysController');
+
+Route::get('/criterion', 'ElderlyController@criterionGraph');

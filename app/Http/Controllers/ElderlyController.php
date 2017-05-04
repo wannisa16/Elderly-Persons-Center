@@ -38,4 +38,20 @@ class ElderlyController extends Controller
 
     	return view('elderly.detailelderly')->with('elderly',$elderly);
     }
+
+    public function criterionGraph()
+    {
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+
+        return view('elderly.criterionGraph')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
+    }
+
 }
