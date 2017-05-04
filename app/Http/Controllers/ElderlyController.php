@@ -16,7 +16,7 @@ class ElderlyController extends Controller
     public function indexElderly()
     {
     	$elderlies = Elderly::orderBy('id','ASC')
-        	 ->paginate(10); 
+        	->paginate(10); 
 
         $home = "";
         $about = "";
@@ -37,5 +37,13 @@ class ElderlyController extends Controller
     	$elderly = Elderly::find($id); 
 
     	return view('elderly.detailelderly')->with('elderly',$elderly);
+    }
+
+    public function ageChart()
+    {
+        $elderly = Elderly::select('id', 'age', 'sex')->get();
+        dd($elderly);
+
+        return "kik";
     }
 }

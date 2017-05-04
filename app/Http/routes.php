@@ -15,6 +15,8 @@ Route::get('/publicizes', 'PublicizeController@indexPublicizes');
 
 Route::get('/about', 'StoryController@about');
 
+Route::get('/chart', 'ElderlyController@ageChart');
+
 Route::get('/indexElderlies', 'ElderlyController@indexElderly');
 
 Route::get('/detailElderlies/{id}', 'ElderlyController@detailElderly');
