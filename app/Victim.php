@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Victim extends Model
 {
         protected $table = 'victims';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'victim_id';
     public $timestamps = false;
 		
-	public function helpers()
+	public function helper()
         {
-        	return $this->hasMany('App\Helper', 'helperID', 'id');
+        	return $this->belongsTo('App\Helper');
         }
 
 }

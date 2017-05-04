@@ -23,7 +23,6 @@
                         <tr>
                             <th>ลำดับ</th>
                             <th>หัวข้อเรื่อง</th>
-                            <th>เจ้าของกะทู้</th>
                         </tr>
                     </thead>
 
@@ -32,9 +31,7 @@
                         @foreach ($questions as $question)
                         <tr>
                             <td>{{$question->id}}</td>
-                            <td>{{$question->subject}}</td>
-                            <td>{{$question->detail}}</td>
-                            <td>{{$question->questioner_id}}</td>
+                            <td><a HREF = " ">{{$question->subject}}</a></td>
                         </tr>
                         @endforeach
                     </tbody>

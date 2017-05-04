@@ -18,9 +18,22 @@ class ProblemsController extends Controller
      */
     public function index()
     {
-        $problems = Victim::orderBy('Victim_id','ASC')
+        $problems = Victim::orderBy('victim_id','ASC')
              ->paginate(10);
-         return view('elderly.indexProblems')->with('problems',$problems);
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+        $pro = "";
+
+         return view('elderly.indexProblems')->with('problems',$problems)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
     /**
@@ -62,7 +75,23 @@ class ProblemsController extends Controller
      */
     public function show($id)
     {
-        //
+        $victim = Victim::find($id)
+        ->with('Helper') 
+        ->get();
+        
+
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "active";
+
+        return view('elderly.problemsDetail')->with('victim', $victim)
+            ->with('home', $home)        
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
