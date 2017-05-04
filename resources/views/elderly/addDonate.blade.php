@@ -51,21 +51,47 @@
 
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
                           <i class="material-icons prefix">account_circle</i>
                           <input id="icon_prefix" name="name" type="text" class="validate">
                           <label for="icon_prefix">ชื่อ</label>
+                </div>
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <div class="input-field">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="name" type="text" class="validate">
+                      <label class="name" for="icon_prefix">ชื่อ-สกุล</label>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col m11 ">
+                    <div class="col m5 offset-m1">
+                        <div class="input-field">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">เบอร์โทรศัพท์</label>
+
                         </div>
                     </div>
                     <div class="col m5 ">
                         <div class="input-field">
+
                             <input id="icon_prefix" name="surname" type="text" class="validate">
                             <label for="icon_prefix">สกุล</label>
+
+                            <i class="material-icons prefix">email</i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">อีเมล์</label>
+
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col m11 ">
                         <div class="col m5 offset-m1">
@@ -82,6 +108,15 @@
                                 <label for="icon_telephone">อีเมล์</label>
                             </div>
                         </div>                    
+
+            </div>
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">comment</i>
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">ที่อยู่</label>
+
                     </div>
                 </div>
                 <div class="row">
@@ -219,21 +254,48 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="icon_prefix" name="name" type="text" class="validate">
                         <label for="icon_prefix">ชื่อ</label>
+
+            </div>
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <div class="input-field">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">ชื่อ-สกุล</label>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col m11 ">
+                    <div class="col m5 offset-m1">
+                        <div class="input-field">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">เบอร์โทรศัพท์</label>
+
                         </div>
                     </div>
                     <div class="col m5 ">
                         <div class="input-field">
+
                         <input id="icon_prefix" name="surname" type="text" class="validate">
                         <label for="icon_prefix">สกุล</label>
+
+                            <i class="material-icons prefix">email</i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">อีเมล์</label>
+
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col m11 ">
                         <div class="col m5 offset-m1">
@@ -250,6 +312,8 @@
                                 <label for="icon_telephone">อีเมล์</label>
                             </div>
                         </div>                    
+
+
                     </div>
                 </div>
                 <div class="row">

@@ -46,4 +46,20 @@ class ElderlyController extends Controller
 
         return "kik";
     }
-}
+
+    public function criterionGraph()
+    {
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+
+        return view('elderly.criterionGraph')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly);
+    }
+
+
