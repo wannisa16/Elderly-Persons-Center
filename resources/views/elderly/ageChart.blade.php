@@ -5,6 +5,7 @@
 @endsection
 
 @section('link')
+<link href="{{ URL::asset('elderly/css/ageChart.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -12,10 +13,12 @@
 
 @section('content')
     <div class="container">
-
-        <div class="chart"  id="columnchart_material" style="width: 800px; height: 500px;"></div>
+        <div class="chart"></div>
+        <div  id="columnchart_material" style="width: 800px; height: 500px;"></div>
+        <div class="chart"></div>
+        <a class="waves-effect waves-light btn-large">ย้อนกลับ</a>
+        <div class="chart"></div>
     </div>
-  
 @endsection
 
 
@@ -48,8 +51,8 @@
 
         var options = {
           chart: {
-            title: 'กราฟแสดงจำนวนผู้สูงอายุต่อเพศ',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+            title: 'กราฟแสดงจำนวนผู้สูงอายุ',
+            subtitle: 'เปรียบเทียบจำนวนผู้สูงอายุในแต่ละช่วงอายุและเพศ',
           }
         };
 

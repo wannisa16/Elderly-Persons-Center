@@ -105,7 +105,8 @@ class ElderlyController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly', $elderly);
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
     }
 
-
+}
