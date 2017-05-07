@@ -12,6 +12,6 @@ class Helper extends Model
 
 	public function victim()
         {
-        	return $this->hasMany('App\victim', 'victim_id', 'helper_id');
+        	return $this->hasMany('App\victim', 'victim_id', 'helperID');
         }
     }

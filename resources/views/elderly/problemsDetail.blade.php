@@ -26,25 +26,25 @@
 			</div>
 			<div class="layout-text col m6">
 				<div class="row">
-					<div class="col m6 s12">ชื่อ : นาย สมาย</div>
+					<div class="col m6 s12">ชื่อ : {{$victim->v_name}}</div>
 				</div>
 				<div class="row">
-					<div class="col m6 s12">นามสกุล : ช่วยเกิน</div>
+					<div class="col m6 s12">นามสกุล : {{$victim->v_surname}}</div>
 				</div>
 				<div class="row">
-					<div class="col m6 s12">เพศ : ชาย</div>
+					<div class="col m6 s12">เพศ : {{$victim->v_sex}}</div>
 				</div>
 				<div class="row">
-					<div class="col m6 s12">อายุ : 55 ปี</div>
+					<div class="col m6 s12">อายุ : {{$victim->v_age}}</div>
 				</div>
 				<div class="row">
-					<div class="col m12 s12">เบอร์โทร : 089-1234567</div>
+					<div class="col m12 s12">เบอร์โทร : {{$victim->v_tel}}</div>
 				</div>
 				<div class="row">
-					<div class="col m12 ">รายละเอียด : มีแผลที่แขน ขนาดปานกลาง </div>
+					<div class="col m12 ">รายละเอียด : {{$victim->v_detail}}</div>
 				</div>
 				<div class="row">
-					<div class="col m12">สถานะการช่วยเหลือ : ไม่ได้รับการช่วยเหลือ</div>
+					<div class="col m12">สถานะการช่วยเหลือ : {{$victim->v_status}}</div>
 				</div>
 			</div>
 		</div>

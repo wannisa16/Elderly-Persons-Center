@@ -75,9 +75,7 @@ class ProblemsController extends Controller
      */
     public function show($id)
     {
-        $victim = Victim::find($id)
-        ->with('Helper') 
-        ->get();
+        $victim = Victim::find($id);
         
 
         $home = "";

@@ -12,7 +12,7 @@ class Victim extends Model
 		
 	public function helper()
         {
-        	return $this->belongsTo('App\Helper');
+        	return $this->belongsTo('App\Helper','helperID');
         }
 
 }
