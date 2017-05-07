@@ -32,3 +32,7 @@ label.label-check {
     height: 400px;
     background-color: grey;
 }
+
+.input-field label{
+	font-size: 20px !important;
+}

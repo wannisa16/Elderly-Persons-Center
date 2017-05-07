@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{URL::asset('elderly/css/addActivitys.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{URL::asset('elderly/css/addActivity.css')}}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -60,5 +60,4 @@
 @endsection
 
 @section('script')
-<script src="{{ URL::asset('/elderly/js/activity.js') }}"> </script>
 @endsection

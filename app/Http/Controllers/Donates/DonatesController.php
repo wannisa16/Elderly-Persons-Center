@@ -124,7 +124,21 @@ class DonatesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $donor = Donor::findOrFail($id);
+        
+        $home = "";
+        $about = "";
+        $donate = "active";
+        $contact = "";
+        $pro = "";
+
+        return view('elderly.editDonate')->with('id',$id)
+            ->with('donor',$donor)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);    
     }
 
     /**
@@ -136,7 +150,28 @@ class DonatesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $donor = Donor::findOrFail($id);
+        $donor->d_name = $request->input('name');
+        $donor->d_surname = $request->input('surname');
+        $donor->d_tel = $request->input('tel');
+        $donor->d_email = $request->input('email');
+        $donor->d_detail = $request->input('detail');
+        $donor->d_number = $request->input('number');
+        $donor->d_village = $request->input('village');
+        $donor->d_alley = $request->input('alley');
+        $donor->d_lane = $request->input('lane');
+        $donor->d_road = $request->input('road');
+        $donor->d_subdistrict = $request->input('subDistrict');
+        $donor->d_district = $request->input('district');
+        $donor->d_province = $request->input('province');
+        $donor->d_postal = $request->input('postal');
+        $donor->d_object = $request->input('object');
+        $image = $request->file('photo');
+        $image->move(public_path("/images"), $image->getClientOriginalName());
+        $donor->d_picture = "images/".$image->getClientOriginalName();
+        $donor->save();
+        return redirect('donates');
+        $donor->update($request->all());
     }
 
     /**
@@ -147,6 +182,7 @@ class DonatesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Donor::destroy($id);
+        return redirect('donates');
     }
 }
