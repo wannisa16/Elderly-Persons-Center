@@ -1,6 +1,6 @@
 @extends('elderly/template')
 @section('title')
-เกี่ยวกับ
+แก้ไขเกี่ยวกับ
 @endsection
 
 @section('link')
@@ -12,17 +12,14 @@
 
 @section('content')
 <div class="container">
-    
 	<div class="row">
 		<div class="col m2 layout-title">ประวัติ</div>
 	</div>
-
+<form action="/students/{{$id}}" method="POST" role="form">
 	@foreach ($historys as $history)
 	<p class="flow-text">{{$history->content}}</p>
 	@endforeach
-    
 
-    
 	<div class="row">
 
 		<div class="tab-title col s12">
@@ -95,7 +92,7 @@
         </div>
 
     </div>
-    
+</form>
 </div>
    
 @endsection

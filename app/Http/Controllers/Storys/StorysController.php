@@ -1,49 +1,57 @@
 <?php
 
-namespace App\Http\Controllers\Contacts;
+namespace App\Http\Controllers\Storys;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Contact;
+use App\Story;
 
-class ContactsController extends Controller
+class StorysController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        $addresss = Contact::ofTitle('address')
-            ->get();
-        $tels = Contact::ofTitle('tel')
-            ->get();
-        $emails = Contact::ofTitle('email')
-            ->get();
-        $facebooks = Contact::ofTitle('facebook')
-            ->get();
-
+        $historys = Story::ofDataType('history')->get();
+        $goals = Story::ofDataType('goal')->get();
+        $obligations = Story::ofDataType('obligation')->get();
+        $roles = Story::ofDataType('role')->get();
+        $visions = Story::ofDataType('vision')->get();
         $home = "";
-        $about = "";
+        $about = "active";
         $donate = "";
-        $contact = "active";
-        $elderly = "";
+        $contact = "";
         $pro = "";
 
-        return view('elderly.contact')->with('addresss',$addresss)
-            ->with('tels',$tels)
-            ->with('emails',$emails)
-            ->with('facebooks',$facebooks)
+
+        return view('elderly.about')->with('historys',$historys)
+            ->with('goals',$goals)
+            ->with('obligations',$obligations)
+            ->with('roles',$roles)
+            ->with('visions',$visions)
+            ->with('home', $home)
+            ->with('donate', $donate)
+            ->with('about', $about)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
+
+        $home = "";
+        $about = "active";
+        $donate = "";
+        $contact = "";
+        $pro = "";
+
+        return view('elderly.about')->with('donors',$donors)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('elderly' ,$elderly)
-            ->with('pro' ,$pro);
+            ->with('pro', $pro);
     }
 
     /**
@@ -53,17 +61,7 @@ class ContactsController extends Controller
      */
     public function create()
     {
-        $home = "";
-        $about = "";
-        $donate = "";
-        $contact = "active";
-        $pro = "";
-
-        return view('elderly.contact')->with('home', $home)
-            ->with('about', $about)
-            ->with('donate', $donate)
-            ->with('contact', $contact)
-            ->with('pro', $pro);
+        //
     }
 
     /**
@@ -96,7 +94,8 @@ class ContactsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $about = Story::findOrFail($id);
+        return view('elderly.editAbout', compact('about','id'));
     }
 
     /**
