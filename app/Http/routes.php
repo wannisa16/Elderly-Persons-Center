@@ -51,3 +51,5 @@ Route::group(['middleware' => ['web']], function () {
 Route::resource('activitys','Activitys\\ActivitysController');
 
 Route::get('/criterion', 'ElderlyController@criterionGraph');
+
+Route::get('/elderlygraph', 'ElderlyController@elderlyGraph');
