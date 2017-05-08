@@ -66,7 +66,9 @@ class BoradsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $borad = Question::findOrFail($id);
+        $borad->update($request->all());
+        return redirect('borads');
     }
 
     /**
