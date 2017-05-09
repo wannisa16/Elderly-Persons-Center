@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{URL::asset('elderly/css/adddonate.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{URL::asset('elderly/css/addDonate.css')}}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -182,7 +182,16 @@
                     </div>
                 </div>
                 <input type="text" name="type" value="noImage">
+
             </form>
+        </div>
+        <div class="row">
+            <div class="col s6 right-align">
+                <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+            </div>
+            <div class="col s6">
+                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+            </div>
         </div>        
     </div>
 
@@ -345,6 +354,7 @@
                         </div>                    
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col s6 right-align">
                         <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
@@ -354,7 +364,16 @@
                     </div>
                 </div>
                 <input type="text" name="type" value="image">
+
             </form>
+        </div>
+        <div class="row">
+            <div class="col s6 right-align">
+                <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+            </div>
+            <div class="col s6">
+                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+            </div>
         </div>
     </div>
 </div>

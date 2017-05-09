@@ -36,3 +36,17 @@ label.label-check {
 .input-field label{
 	font-size: 20px !important;
 }
+
+a.cancel{
+	font-size: 18px;
+	background-color: #e53935 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+button.addto{
+	font-size: 18px;
+	padding-left: 57px;
+	padding-right: 57px;
+
+}

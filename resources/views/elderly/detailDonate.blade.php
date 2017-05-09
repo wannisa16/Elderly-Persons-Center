@@ -5,7 +5,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/detailD.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/detailDonates.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -49,16 +49,16 @@
 			</div>
 		</div>
 	</div>
-	<form action="../donates/{{$donor->id}}" method="post">
-	<div class="row">
+	<form action="../donates/{{$donor->id}}" method="post" role="form">
+		<div class="row">
             <div class="col s6 right-align">
-                <a href="{{$donor->id}}/edit" type="submit" class="agree waves-effect waves-light btn-large">แก้ไข</a>
+                <a href="{{$donor->id}}/edit" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
             </div>
             <div class="col s6">
             	<input type="hidden" name="_method" value="DELETE" />
-                <button class="cancel waves-effect waves-light btn-large">ลบ</button>
+            	<button class="cancel waves-effect waves-light btn-large">ลบ</button>
             </div>
-    </div>
+    	</div>
     </form>
 </div>
 	

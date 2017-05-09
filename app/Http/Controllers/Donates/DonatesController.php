@@ -184,7 +184,6 @@ class DonatesController extends Controller
 
         $donor->save();
         return redirect('donates');
-        $donor->update($request->all());
     }
 
     /**

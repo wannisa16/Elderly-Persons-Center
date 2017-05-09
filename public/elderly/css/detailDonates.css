@@ -5,24 +5,12 @@
 }
 
 .card {
-	margin-top: 10px !important;
+	margin-top: 20px !important;
     padding: 20px;
 }
 
 .layout-text {
 	font-size: 20px;
-}
-
-h4{
-	color: #ffffff;
-	padding-top: 17px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-}
-.pd{
-	background-color: #00bfa5 !important; 
-	border-radius: 10px;
-	margin-top: 25px;
 }
 
 button.cancel{
