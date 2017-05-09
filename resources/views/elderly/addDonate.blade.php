@@ -26,7 +26,7 @@
         <div class="card card-define col m12">
             <form action="../donates" method="post" accept-charset="utf-8">
                 <div class="row">
-                    <div class="col m6">
+                    <div class="col m6"> 
                         <div class="card-image waves-effect  waves-light">
                             <img class="activator" src="{{url('images/donate1.jpg')}}">
                         </div>
@@ -181,6 +181,7 @@
                         <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
                     </div>
                 </div>
+                <input type="text" name="type" value="noImage">
             </form>
         </div>        
     </div>
@@ -352,6 +353,7 @@
                         <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
                     </div>
                 </div>
+                <input type="text" name="type" value="image">
             </form>
         </div>
     </div>

@@ -84,9 +84,16 @@ class DonatesController extends Controller
         $object1 = $request->input('object1');
         $object2 = $request->input('object2');
         $donate->d_object = $object1." ".$object2;
-        $image = $request->file('photo');
-        $image->move(public_path("/images"), $image->getClientOriginalName());
-        $donate->d_picture = "images/".$image->getClientOriginalName();
+        $type = $request->input('type');
+
+        if($type == "onImage"){
+            
+        }elseif($type == "image"){
+            $image = $request->file('photo');
+            $image->move(public_path("/images"), $image->getClientOriginalName());
+            $donate->d_picture = "images/".$image->getClientOriginalName();
+        }
+        
         $donate->save();
         return redirect('donates');
     }
@@ -167,8 +174,14 @@ class DonatesController extends Controller
         $donor->d_postal = $request->input('postal');
         $donor->d_object = $request->input('object');
         $image = $request->file('photo');
-        $image->move(public_path("/images"), $image->getClientOriginalName());
-        $donor->d_picture = "images/".$image->getClientOriginalName();
+
+        if( $image == " "){
+
+        }elseif( $image != ""){
+            $image->move(public_path("/images"), $image->getClientOriginalName());
+            $donor->d_picture = "images/".$image->getClientOriginalName(); 
+        }
+
         $donor->save();
         return redirect('donates');
         $donor->update($request->all());
