@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Story;
 
@@ -33,5 +33,33 @@ class StoryController extends Controller
             ->with('about', $about)
             ->with('contact', $contact)
             ->with('pro', $pro);
+    }
+
+
+    public function editAbout(Request $request, $id)
+    {
+        $story = Story::find($id);
+        $home = "";
+        $about = "active";
+        $donate = "";
+        $contact = "";
+        $pro = "";
+
+
+        return view('elderly.editAbout')->with('story',$story)
+            ->with('home', $home)
+            ->with('donate', $donate)
+            ->with('about', $about)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
+    }
+
+    public function stroeAbout(Request $request, $id)
+    {
+        $story = Story::findOrFail($id);
+        $story->content = $request->input('story');
+        $story->save();
+
+        return redirect('about');
     }
 }

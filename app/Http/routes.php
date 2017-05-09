@@ -15,6 +15,10 @@ Route::get('/publicizes', 'PublicizeController@indexPublicizes');
 
 Route::get('/about', 'StoryController@about');
 
+Route::get('/editAbout/{id}', 'StoryController@editAbout');
+
+Route::post('/editAbout/{id}', 'StoryController@stroeAbout');
+
 Route::get('/ageChart', 'ElderlyController@ageChart');
 
 Route::get('/indexElderlies', 'ElderlyController@indexElderly');
@@ -50,4 +54,4 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::resource('activitys','Activitys\\ActivitysController');
 
-Route::get('/criterion', 'ElderlyController@criterionGraph');
+Route::get('/gradeChart', 'ElderlyController@criterionGraph');
