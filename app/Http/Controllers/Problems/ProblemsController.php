@@ -64,7 +64,7 @@ class ProblemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -77,6 +77,7 @@ class ProblemsController extends Controller
     {
         $victim = Victim::find($id);
         
+        $helper = Helper::find($victim->helperID);
 
         $home = "";
         $about = "";
@@ -85,6 +86,7 @@ class ProblemsController extends Controller
         $pro = "active";
 
         return view('elderly.problemsDetail')->with('victim', $victim)
+            ->view('helper', $helper)
             ->with('home', $home)        
             ->with('about', $about)
             ->with('donate', $donate)
