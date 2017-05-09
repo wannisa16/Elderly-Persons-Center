@@ -33,10 +33,16 @@
                                 <textarea id="textarea1" name="detail" class="materialize-textarea "></textarea>
                                     <label  for="textarea1">รายละเอียด</label>
                                         <div class="row">
-                                            <div class="input-field col m6 s12 ">
+                                            @if (Auth::guest())<div class="input-field col m6 s12 ">
                                                 <i class="material-icons prefix">account_circle</i>
                                                 <input id="icon_prefix" type="text" name="name" class="validate">
                                                 <label for="icon_prefix">ชื่อผู้ตั้งกระทู้</label></div>
+                                                @else
+                                                <div class="input-field col m6 s12 ">
+                                                <i class="material-icons prefix">account_circle</i>
+                                                <input id="icon_prefix" type="text" name="name" value="{{ Auth::user()->name }}" class="validate">
+                                                <label for="icon_prefix"></label></div>
+                                            @endif
                                         </div>
                                     <div class="row right">
                                         <div class="col s6 ">
