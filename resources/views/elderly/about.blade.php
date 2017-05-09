@@ -20,9 +20,12 @@
 	@foreach ($historys as $history)
 	<p class="flow-text">{{$history->content}}</p>
 	@endforeach
+    @if (Auth::guest())
+    @else    
     <div class="row">
         <a class="right" href="editAbout/{{ $history->id }}"><h5>แก้ไขประวัติ</h5></a>
     </div>
+    @endif
 
     
 	<div class="row">
@@ -47,9 +50,12 @@
     			    <p class="layout-text">{{ $goal->content }}</p>
     		   </div>
     	    </div>
+            @if (Auth::guest())
+            @else
             <div class="row">
                 <a class="right" href="editAbout/{{$goal->id}}"><p>แก้ไข</p></a>
             </div>
+            @endif
         {{--*/$i++/*--}}
         @endforeach
         </div>
@@ -65,9 +71,12 @@
                     <p class="layout-text">{{ $obligation->content }}</p>
                 </div>
             </div>
+            @if (Auth::guest())
+            @else
             <div class="row">
                 <a class="right" href="editAbout/{{$obligation->id}}"><p>แก้ไข</p></a>
             </div>
+            @endif
         {{--*/$i++/*--}}
         @endforeach
         </div>
@@ -83,9 +92,12 @@
                     <p class="layout-text">{{ $role->content }}</p>
                 </div>
             </div>
+            @if (Auth::guest())
+            @else
             <div class="row">
                 <a class="right" href="editAbout/{{$role->id}}"><p>แก้ไข</p></a>
             </div>
+            @endif
         {{--*/$i++/*--}}
         @endforeach 
         </div>
@@ -101,9 +113,12 @@
                     <p class="layout-text">{{ $vision->content }}</p>
                 </div>
             </div>
+            @if (Auth::guest())
+            @else
             <div class="row">
                 <a class="right" href="editAbout/{{$vision->id}}"><p>แก้ไข</p></a>
             </div>
+            @endif
         {{--*/$i++/*--}}
         @endforeach
         </div>
