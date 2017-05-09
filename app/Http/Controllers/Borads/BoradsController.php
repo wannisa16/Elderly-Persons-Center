@@ -22,12 +22,13 @@ class BoradsController extends Controller
              ->paginate(10); 
 
 
-        $home = "active";
+        $home = "";
         $about = "";
         $donate = "";
         $contact = "";
         $elderly = "";
-        $pro = "";
+        $borad = "";
+        $pro = "active";
 
          return view('elderly.indexBorad')->with('questions', $questions)
             ->with('home', $home)
@@ -48,8 +49,10 @@ class BoradsController extends Controller
     {
         $home = "";
         $about = "";
-        $donate = "active";
+        $donate = "";
         $contact = "";
+        $elderly = "";
+        $borads = "active";
         $pro = "";
 
         return view('elderly.AddBoard')->with('home', $home)
@@ -73,6 +76,7 @@ class BoradsController extends Controller
         $question = new Question;
         $question->subject = $request->input('subject');
         $question->detail = $request->input('detail');
+        $question->questioner_id = $questioner->id;
         $question->save();
         
         return redirect('borads');

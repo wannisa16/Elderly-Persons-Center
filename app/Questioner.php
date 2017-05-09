@@ -9,4 +9,9 @@ class Questioner extends Model
     protected $table = 'questioners';
     protected $primaryKey = 'id';
     public $timestamps = false;
+
+    public function question()
+       {
+       	return $this->hasMany('App\Question', 'questioner_id', 'id');
+       }
 }
