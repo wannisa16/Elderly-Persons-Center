@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Question;
+use App\Questioner;
 
 class BoradsController extends Controller
 {
@@ -66,8 +67,14 @@ class BoradsController extends Controller
      */
     public function store(Request $request)
     {
-        $borad = Question::findOrFail($id);
-        $borad->update($request->all());
+        $questioner = new Questioner;
+        $questioner->name = $request->input('name');
+        $questioner->save();
+        $question = new Question;
+        $question->subject = $request->input('subject');
+        $question->detail = $request->input('detail');
+        $question->save();
+        
         return redirect('borads');
     }
 
