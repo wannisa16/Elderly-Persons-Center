@@ -121,7 +121,7 @@ class ElderlyController extends Controller
         $elderly = "active";
         $pro = "";
 
-        return view('elderly.criterionGraph')->with('home', $home)
+        return view('elderly.gradeChart')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)

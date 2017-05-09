@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/aboutmee.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/editAbout.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -12,87 +12,24 @@
 
 @section('content')
 <div class="container">
-	<div class="row">
-		<div class="col m2 layout-title">ประวัติ</div>
-	</div>
-<form action="/students/{{$id}}" method="POST" role="form">
-	@foreach ($historys as $history)
-	<p class="flow-text">{{$history->content}}</p>
-	@endforeach
+    <form action="../editAbout/{{ $story->id }}" method="POST" role="form">
+    	<div class="row">
+			<div class="col m12 layout-title">แก้ไขข้อมูลเกี่ยวกับ</div>
+		</div>
+		
+		<div class="row">
+        	<div class="input-field col s12">
+         	    <textarea name="story" id="textarea1" class="materialize-textarea">{{ $story->content }}</textarea>
+        	</div>
+    	</div>
 
-	<div class="row">
-
-		<div class="tab-title col s12">
-        <ul class="tabs">
-            <li class="tab col s3"><a class="active" href="#goal"><h4>เป้าหมาย</h4></a></li>
-            <li class="tab col s3"><a  href="#obligation"><h4>พันธกิจ</h4></a></li>
-            <li class="tab col s3"><a href="#role"><h4>ภารกิจ</h4></a></li>
-            <li class="tab col s3"><a href="#vision"><h4>วิสัยทัศน์</h4></a></li>
-        </ul>
-        </div>
-
-        <div id="goal">
-        {{--*/$i = 1/*--}}
-        @foreach ($goals as $goal)
-            <div class="row">  
-    		    <div class="col m1 offset-m1 col s2">
-    			    <p class="layout-number center-align">{{ $i }}</p>
-    	        </div>
-    		    <div class="col m9 col s10">
-    			    <p class="layout-text">{{ $goal->content }}</p>
-    		   </div>
-    	    </div>
-        {{--*/$i++/*--}}
-        @endforeach
-        </div>
-
-        <div id="obligation">
-        {{--*/$i = 1/*--}}
-        @foreach ($obligations as $obligation)
-            <div class="row">
-                <div class="col m1 offset-m1 col s2">
-                    <p class="layout-number center-align">{{ $i }}</p>
-                </div>
-                <div class="col m9 col s10">
-                    <p class="layout-text">{{ $obligation->content }}</p>
-                </div>
-            </div>
-        {{--*/$i++/*--}}
-        @endforeach
-        </div>
-
-        <div id="role">
-        {{--*/$i = 1/*--}}
-        @foreach ($roles as $role)
-            <div class="row">
-                <div class="col m1 offset-m1 col s2">
-                    <p class="layout-number center-align">{{ $i }}</p>
-                </div>
-                <div class="col m9 col s10">
-                    <p class="layout-text">{{ $role->content }}</p>
-                </div>
-            </div>
-        {{--*/$i++/*--}}
-        @endforeach 
-        </div>
-
-        <div id="vision">
-        {{--*/$i = 1/*--}}
-        @foreach ($visions as $vision)
-            <div class="row">
-                <div class="col m1 offset-m1 col s2">
-                    <p class="layout-number center-align">{{ $i }}</p>
-                </div>
-                <div class="col m9 col s10">
-                    <p class="layout-text">{{ $vision->content }}</p>
-                </div>
-            </div>
-        {{--*/$i++/*--}}
-        @endforeach
-        </div>
-
-    </div>
-</form>
+    	<div class="row">
+    		<button class="btn waves-effect waves-light right " type="submit" name="action">Submit
+    		<i class="material-icons right">send</i>
+    		</button>
+    	</div>  
+    	
+    </form>
 </div>
    
 @endsection

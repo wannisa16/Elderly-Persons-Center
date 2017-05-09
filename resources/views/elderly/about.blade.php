@@ -20,7 +20,9 @@
 	@foreach ($historys as $history)
 	<p class="flow-text">{{$history->content}}</p>
 	@endforeach
-    
+    <div class="row">
+        <a class="right" href="editAbout/{{ $history->id }}"><h5>แก้ไขประวัติ</h5></a>
+    </div>
 
     
 	<div class="row">
@@ -45,6 +47,9 @@
     			    <p class="layout-text">{{ $goal->content }}</p>
     		   </div>
     	    </div>
+            <div class="row">
+                <a class="right" href="editAbout/{{$goal->id}}"><p>แก้ไข</p></a>
+            </div>
         {{--*/$i++/*--}}
         @endforeach
         </div>
@@ -59,6 +64,9 @@
                 <div class="col m9 col s10">
                     <p class="layout-text">{{ $obligation->content }}</p>
                 </div>
+            </div>
+            <div class="row">
+                <a class="right" href="editAbout/{{$obligation->id}}"><p>แก้ไข</p></a>
             </div>
         {{--*/$i++/*--}}
         @endforeach
@@ -75,6 +83,9 @@
                     <p class="layout-text">{{ $role->content }}</p>
                 </div>
             </div>
+            <div class="row">
+                <a class="right" href="editAbout/{{$role->id}}"><p>แก้ไข</p></a>
+            </div>
         {{--*/$i++/*--}}
         @endforeach 
         </div>
@@ -89,6 +100,9 @@
                 <div class="col m9 col s10">
                     <p class="layout-text">{{ $vision->content }}</p>
                 </div>
+            </div>
+            <div class="row">
+                <a class="right" href="editAbout/{{$vision->id}}"><p>แก้ไข</p></a>
             </div>
         {{--*/$i++/*--}}
         @endforeach
