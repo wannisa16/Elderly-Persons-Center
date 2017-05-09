@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/homee.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/indexelderly.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -13,10 +13,8 @@
 @section('content')
 <div class="container">
 
-    <div class="row">
-            <label class="layout-title col m12 s12 z-depth-3 "><center><p class="font-title ">รายชื่อผู้สูงอายุ</p></center>
-            </label>
-    </div>
+    <div class="indexelderly z-depth-2 center-align"><h4>รายชื่อผู้สูงอายุ</h4></div>
+
     <div class="row">
         <div class="col m12 s12 ">
 
