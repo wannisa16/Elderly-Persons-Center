@@ -53,7 +53,7 @@
                 <li><a href="#!">ส่งไฟล์</a></li>
                 <li class="" ><a href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
                 <li><a href="{{ url('/donates') }}">รายการบริจาค</a></li>
-                <li><a href="#!">รายการผู้ประสบปัญหาทางสังคม</a></li>
+                <li><a href="{{ url('/problems') }}">รายการผู้ประสบปัญหาทางสังคม</a></li>
                 @endif
             </ul>
             <nav >
@@ -81,15 +81,15 @@
 
                     <div class="col l4 offset-l0 s12">
                         <h5>ติดต่อเราได้ที่</h5>
-                        <p>โทรศัพท์ : 076-529699</p>
+                        <p>โทรศัพท์ : 076-529700,076-529699</p>
                         <p>อีเมล์ : banphuket_132@hotmail.com</p>
                     </div>
 
                         <div class="col l4 offset-l0 s12">
                             <h5>ติดตามหรือติดต่อได้ที่</h5>
-                            <a href="template"><img src="{{url('images/email1.png')}}" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
-                            <a href="template"><img src="{{url('images/call1.png')}}" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
-                            <a href="template"><img src="{{url('images/face.png')}}" alt="facebook" height="40" width="40" class="img-responsive" /></a>
+                            <a href="contacts"><img src="{{url('images/email1.png')}}" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
+                            <a href="contacts"><img src="{{url('images/call1.png')}}" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
+                            <a href="https://www.facebook.com/profile.php?id=100003943813556&fref=ts"><img src="{{url('images/face.png')}}" alt="facebook" height="40" width="40" class="img-responsive" /></a>
                         </div>
                 </div>
                     

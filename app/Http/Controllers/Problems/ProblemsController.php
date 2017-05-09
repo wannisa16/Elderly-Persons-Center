@@ -24,8 +24,8 @@ class ProblemsController extends Controller
         $about = "";
         $donate = "";
         $contact = "";
-        $elderly = "active";
-        $pro = "";
+        $elderly = "";
+        $pro = "active";
 
          return view('elderly.indexProblems')->with('problems',$problems)
             ->with('home', $home)
@@ -64,17 +64,7 @@ class ProblemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
+        
         $victim = Victim::find($id);
         
 
@@ -90,6 +80,33 @@ class ProblemsController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro);
+    
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $victim = Victim::find($id);
+        $helper = Helper::find($id);
+
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "active";
+
+        return view('elderly.problemsDetail')->with('victim', $victim)
+            ->with('helper',$helper)
+            ->with('home', $home)        
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
@@ -100,7 +117,22 @@ class ProblemsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $victim = Victim::findOrFail($id);
+        $helper = Helper::findOrFail($id);
+
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "active";
+
+        return view('elderly.editProblems')->with('victim', $victim)
+            ->with('helper',$helper)
+            ->with('home', $home)        
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
@@ -112,7 +144,40 @@ class ProblemsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $victim = Victim::findOrFail($id);
+        $victim->v_name = $request->input('v_name');
+        $victim->v_surname = $request->input('v_surname');
+        $victim->v_idcard = $request->input('v_idcard');
+        $victim->v_whyno = $request->input('v_whyno');
+        $victim->v_birthday = $request->input('v_birthday');
+        $victim->v_age = $request->input('v_age');
+        $victim->v_sex = $request->input('v_sex');
+        $victim->v_race = $request->input('v_race');
+        $victim->v_nationality = $request->input('v_nationality');
+        $victim->v_religion = $request->input('v_religion');
+        $victim->v_status = $request->input('status');
+        $victim->v_career = $request->input('v_career');
+        $victim->v_income = $request->input('v_income');
+        $victim->v_source = $request->input('source');
+        $victim->v_housenumber = $request->input('v_housenumber');
+        $victim->v_villageno = $request->input('v_villageno');
+        $victim->v_alley = $request->input('v_alley');
+        $victim->v_alleyway = $request->input('v_alleyway');
+        $victim->v_road = $request->input('v_road');
+        $victim->v_district = $request->input('v_district');
+        $victim->v_province = $request->input('v_province');
+        $victim->v_postcode = $request->input('v_postcode');
+        $victim->v_situation = $request->input('v_situation');
+        $victim->save();
+
+        $helper = Helper::findOrFail($id);
+        $helper->h_name = $request->input('h_name');
+        $helper->h_surname = $request->input('h_surname');
+        $helper->h_tel = $request->input('h_tel');
+        $helper->h_email = $request->input('h_email');
+        $helper->save();
+
+        return redirect('problems');
     }
 
     /**
@@ -123,6 +188,8 @@ class ProblemsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Victim::destroy($id);        
+        return redirect('problems');
+
     }
 }

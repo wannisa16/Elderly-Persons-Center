@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/home.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/indexProblems.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -14,13 +14,10 @@
 <div class="container">
 
     <div class="row">
-            <label class="layout-title col m12 s12 z-depth-3 "><center><p class="font-title ">รายชื่อผู้ประสบปัญหาทางสังคม</p></center>
-            </label>
+        <div class="indexproblems z-depth-2 center-align"><h4>รายชื่อการแจ้งผู้ประสบปัญหาทางสังคม</h4></div>
     </div>
 
     <div class="row">
-    
-
         <div class="col m12 s12 ">
 
               <table class="striped centered">
@@ -38,9 +35,9 @@
                     <tr>
                    
                         <td>{{$problem->victim_id}}</td>
-                        <td>{{$problem->v_name}}</td>
+                        <td><a href="problems/{{$problem->victim_id}}">{{$problem->v_name}}</a></td>
                         <td>{{$problem->v_surname}}</td>
-                        <td>{{$problem->v_status}}</td>
+                        <td>{{$problem->v_situation}}</td>
                     </tr>
                     @endforeach
                     </tbody>

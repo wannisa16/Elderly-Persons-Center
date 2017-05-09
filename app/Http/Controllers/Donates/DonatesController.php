@@ -171,7 +171,6 @@ class DonatesController extends Controller
         $donor->d_picture = "images/".$image->getClientOriginalName();
         $donor->save();
         return redirect('donates');
-        $donor->update($request->all());
     }
 
     /**

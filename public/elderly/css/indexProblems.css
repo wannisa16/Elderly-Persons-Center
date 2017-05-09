@@ -1,0 +1,23 @@
+h4{
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.indexproblems{
+	background-color: #00bfa5 !important; 
+	border-radius: 10px;
+	margin-top: 25px;
+}
+
+.striped{
+	font-size: 18px !important;
+}
+
+ul.pagination {
+	font-size: 20px !important;
+}
+
+span {
+	padding: 10px;
+}
