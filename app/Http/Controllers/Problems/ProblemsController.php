@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Helper;
 use App\Victim;
-use View;
+use Illuminate\Support\Facades\View;
 
 class ProblemsController extends Controller
 {
