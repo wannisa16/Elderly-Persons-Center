@@ -1,6 +1,7 @@
 @extends('elderly.template')
 
-@section('title') 
+@section('title')
+รายชื่อการแจ้งผู้ประสบปัญหาทางสังคม 
 @endsection
 
 @section('link')
