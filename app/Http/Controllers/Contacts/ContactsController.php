@@ -75,6 +75,7 @@ class ContactsController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -85,7 +86,7 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -96,7 +97,22 @@ class ContactsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contacts = Contact::findOrFail($id);
+
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "active";
+        $pro = "";
+
+
+        return view('elderly.editContact')->with('contacts',$contacts)
+            ->with('id',$id)
+            ->with('home', $home)
+            ->with('donate', $donate)
+            ->with('about', $about)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
@@ -108,7 +124,11 @@ class ContactsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $contacts = Contact::findOrFail($id);
+        $contacts->content = $request->input('contact');
+        $contacts->save();
+
+        return redirect('contacts');
     }
 
     /**

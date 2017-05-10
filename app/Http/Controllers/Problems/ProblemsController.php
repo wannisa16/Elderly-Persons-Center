@@ -103,6 +103,7 @@ class ProblemsController extends Controller
         
         return view('elderly.problemsDetail')->with('victim', $victim)
             ->view('helper', $helper)
+            ->with('id',$id)
             ->with('home', $home)        
             ->with('about', $about)
             ->with('donate', $donate)
@@ -129,6 +130,7 @@ class ProblemsController extends Controller
 
         return view('elderly.editProblems')->with('victim', $victim)
             ->with('helper',$helper)
+            ->with('id',$id)
             ->with('home', $home)        
             ->with('about', $about)
             ->with('donate', $donate)

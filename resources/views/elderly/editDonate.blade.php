@@ -18,9 +18,9 @@
 
             <div class="card card-define col m12">
             
-            <div class="row">
-                <div class="layout-title col m10 offset-m1"><h5>ข้อมูลผู้บริจาค</h5></div>
-            </div>
+                <div class="row">
+                    <div class="layout-title col m10 offset-m1"><h5>ข้อมูลผู้บริจาค</h5></div>
+                </div>
             
             <div class="row">
                 <div class="col m5 offset-m1">
