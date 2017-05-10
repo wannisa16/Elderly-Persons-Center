@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Borads;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Question;
 use App\Questioner;
 

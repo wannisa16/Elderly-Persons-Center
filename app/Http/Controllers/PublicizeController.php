@@ -119,9 +119,8 @@ class PublicizeController extends Controller
     public function indexactivity()
     {
         $activities = Publicize::ofDataType('activity') 
-            ->with('Images')
             ->orderBy('publicizeID','DESC')
-            ->paginate(2);
+            ->paginate(9);
        
         $home = "active";
         $about = "";
@@ -130,13 +129,49 @@ class PublicizeController extends Controller
         $elderly = "";
         $pro = "";
 
-        return view('elderly.activity')->with('activities',$activities)
+        return view('elderly.indexActivity')->with('activities',$activities)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro);
+    }
+
+    public function formActivity()
+    {
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "active";
+
+        return view('elderly.addActivity')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
+    }
+
+    public function addActivity(Request $request)
+    {   
+        $publicizes = new Publicize;
+        $publicizes->title = $request->input('title');
+
+        $publicizes->content = $request->input('content');
+        $publicizes->dataType = "activity";
+        $publicizes->save();
+        $id=$publicizes->publicizeID;
+        
+        foreach(Input::file("photo") as $file) {
+            $images = new Image;
+            $file->move(public_path("/images"), $file->getClientOriginalName());
+            $images->imagename = "images/".$file->getClientOriginalName();
+            $images->contentID = $id;
+            $images->save();
+        }
+
+        return Redirect::to('indexActivity');
     }
     
 }

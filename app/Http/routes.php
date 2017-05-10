@@ -33,26 +33,20 @@ Route::get('/indexActivity', 'PublicizeController@indexactivity');
 
 Route::get('/indexProblems', 'ProblemController@indexProblems');
 
-Route::get('/addDonate', function() {
-    return view('elderly/addDonate');
-});
-
 Route::get('/index', 'PublicizeController@indexNew');
 Route::resource('contacts','Contacts\\ContactsController');
 Route::resource('donates','Donates\\DonatesController');
 Route::resource('problems','Problems\\ProblemsController');
 Route::resource('borads','Borads\\BoradsController');
 
-Route::get('/problemsdetail', function() {
-    return view('elderly/problemsDetail');
-});
-
 Route::group(['middleware' => ['web']], function () {    
    Route::auth();
    Route::get('/home', 'HomeController@index');
 });   
 
-Route::resource('activitys','Activitys\\ActivitysController');
+Route::get('/addActivity', 'PublicizeController@formActivity');
+
+Route::post('/addActivity', 'PublicizeController@addActivity');
 
 Route::get('/elderlygraph', 'ElderlyController@elderlyGraph');
 
