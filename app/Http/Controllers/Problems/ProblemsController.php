@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Helper;
 use App\Victim;
+use View;
 
 class ProblemsController extends Controller
 {
@@ -64,8 +65,6 @@ class ProblemsController extends Controller
      */
     public function store(Request $request)
     {
-        
-
         $victim = Victim::find($id);
         
 
@@ -93,20 +92,16 @@ class ProblemsController extends Controller
      */
     public function show($id)
     {
-        $victim = Victim::find($id);
-
-        
-        $helper = Helper::find($victim->helperID);
-
+        $victim = Victim::findOrFail($id);
+        $helper = Helper::findOrFail($id);
 
         $home = "";
         $about = "";
         $donate = "";
         $contact = "";
         $pro = "active";
-
+        
         return view('elderly.problemsDetail')->with('victim', $victim)
-
             ->view('helper', $helper)
             ->with('home', $home)        
             ->with('about', $about)
@@ -194,7 +189,8 @@ class ProblemsController extends Controller
      */
     public function destroy($id)
     {
-        Victim::destroy($id);        
+        Victim::destroy($id);
+        Helper::destroy($id);        
         return redirect('problems');
 
     }

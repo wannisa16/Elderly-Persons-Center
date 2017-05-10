@@ -43,10 +43,6 @@ Route::resource('donates','Donates\\DonatesController');
 Route::resource('problems','Problems\\ProblemsController');
 Route::resource('borads','Borads\\BoradsController');
 
-Route::get('/problemsdetail', function() {
-    return view('elderly/problemsDetail');
-});
-
 Route::group(['middleware' => ['web']], function () {    
    Route::auth();
    Route::get('/home', 'HomeController@index');
