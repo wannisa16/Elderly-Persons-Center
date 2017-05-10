@@ -34,9 +34,13 @@ Route::get('/indexActivity', 'PublicizeController@indexactivity');
 Route::get('/indexProblems', 'ProblemController@indexProblems');
 
 Route::get('/index', 'PublicizeController@indexNew');
+
 Route::resource('contacts','Contacts\\ContactsController');
+
 Route::resource('donates','Donates\\DonatesController');
+
 Route::resource('problems','Problems\\ProblemsController');
+
 Route::resource('borads','Borads\\BoradsController');
 
 Route::group(['middleware' => ['web']], function () {    
