@@ -12,7 +12,8 @@
 
 @section('content')
 <div class="container">
-    <div class="indexborad z-depth-2 center-align"><h4>บอร์ดสนทนา ศูนย์พัฒนาการจัดสวัสดิการสังคม ผู้สูงอายุภูเก็ต</h4></div>
+    <div class="indexborad z-depth-2 center-align"><h4>บอร์ดสนทนา ศูนย์พัฒนาการจัดสวัสดิการสังคม ผู้สูงอายุภูเก็ต</h4>
+    </div>
     <div class="row">
         <a href="{{url('/borads/create')}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
     </div>
