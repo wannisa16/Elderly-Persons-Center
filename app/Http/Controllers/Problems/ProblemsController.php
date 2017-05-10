@@ -19,7 +19,7 @@ class ProblemsController extends Controller
     public function index()
     {
         $problems = Victim::orderBy('victim_id','ASC')
-             ->paginate(10);
+            ->paginate(10);
         $home = "";
         $about = "";
         $donate = "";
@@ -64,9 +64,45 @@ class ProblemsController extends Controller
      */
     public function store(Request $request)
     {
-        
 
-        $victim = Victim::find($id);
+        $helper = new Helper;
+        $helper->h_name = $request->input('h_name');
+        $helper->h_surname = $request->input('h_surname');
+        $helper->h_tel = $request->input('h_tel');
+        $helper->h_email = $request->input('h_email');
+        $helper->save();
+
+
+        $victim = new Victim;
+        $victim->helperID = $helper->helper_id;
+        $victim->v_name = $request->input('v_name');
+        $victim->v_surname = $request->input('v_surname');
+        $victim->v_idcard = $request->input('v_idcard');
+        $victim->v_whyno = $request->input('v_whyno');
+        $victim->v_birthday = $request->input('v_birthday');
+        $victim->v_age = $victim->age;
+        $victim->v_sex = $request->input('v_sex');
+        $victim->v_race = $request->input('v_race');
+        $victim->v_nationality = $request->input('v_nationality');
+        $victim->v_religion = $request->input('v_religion');
+        $victim->v_status = $request->input('v_status');
+        $victim->v_career = $request->input('v_career');
+        $victim->v_income = $request->input('v_income');
+        $victim->v_source = $request->input('v_source');
+        $victim->v_source = $request->input('v_specify');
+        $victim->v_housenumber = $request->input('v_housenumber');
+        $victim->v_villageno = $request->input('v_villageno');
+        $victim->v_alley = $request->input('v_alley');
+        $victim->v_alleyway = $request->input('v_alleyway');
+        $victim->v_road = $request->input('v_road');
+        $victim->v_district = $request->input('v_canton');
+        $victim->v_district = $request->input('v_district');
+        $victim->v_province = $request->input('v_province');
+        $victim->v_postcode = $request->input('v_postcode');
+        $victim->v_situation = "รอการช่วยเหลือ";
+        $victim->save();
+
+
         
 
         $home = "";
@@ -75,12 +111,7 @@ class ProblemsController extends Controller
         $contact = "";
         $pro = "active";
 
-        return view('elderly.problemsDetail')->with('victim', $victim)
-            ->with('home', $home)        
-            ->with('about', $about)
-            ->with('donate', $donate)
-            ->with('contact', $contact)
-            ->with('pro', $pro);
+        return redirect('problems');
     
 
     }
@@ -98,17 +129,15 @@ class ProblemsController extends Controller
         
         $helper = Helper::find($victim->helperID);
 
-
         $home = "";
         $about = "";
         $donate = "";
         $contact = "";
         $pro = "active";
 
-        return view('elderly.problemsDetail')->with('victim', $victim)
-
-            ->view('helper', $helper)
-            ->with('home', $home)        
+        return view('elderly.problemsDetail')->with('victim',$victim)
+            ->with('helper',$helper)
+            ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)

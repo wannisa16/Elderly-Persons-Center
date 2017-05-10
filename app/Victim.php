@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Victim extends Model
 {
@@ -11,8 +12,15 @@ class Victim extends Model
     public $timestamps = false;
 		
 	public function helper()
-        {
-        	return $this->belongsTo('App\Helper','helper_id');
-        }
+    {
+        return $this->belongsTo('App\Helper','helper_id');
+    }
+
+    public function getAgeAttribute()
+	{
+    	return Carbon::parse($this->attributes['v_birthday'])->age;
+	}
+
+
 
 }

@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col m12 s12 ">
 
-              <table class="striped centered">
+            <table class="striped centered">
                 <thead>
                   <tr>
                     <th data-field="id">รหัส</th>
@@ -33,10 +33,9 @@
                 <tbody>
                     @foreach ($problems as $problem)
                     <tr>
-                   
                         <td>{{$problem->victim_id}}</td>
                         <td><a href="problems/{{$problem->victim_id}}">{{$problem->v_name}}</a></td>
-                        <td>{{$problem->v_surname}}</td>
+                        <td><a href="problems/{{$problem->victim_id}}">{{$problem->v_surname}}</a></td>
                         <td>{{$problem->v_situation}}</td>
                     </tr>
                     @endforeach
