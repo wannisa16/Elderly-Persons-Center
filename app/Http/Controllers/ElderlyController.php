@@ -95,25 +95,29 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 
-    public function elderlyGraph()
-    {
-        $home = "";
-        $about = "";
-        $donate = "";
-        $contact = "";
-        $elderly = "active";
-        $pro = "";
-
-        return view('elderly.elderlyGraph')->with('home', $home)
-            ->with('about', $about)
-            ->with('donate', $donate)
-            ->with('contact', $contact)
-            ->with('elderly', $elderly)
-            ->with('pro', $pro);
-    }
-
     public function criterionGraph()
-    {
+    {   
+        $elderlies = Elderly::select('id', 'grade')->get();
+        $total['A'] = 0;
+        $total['B'] = 0;
+        $total['C'] = 0;
+        $total['D'] = 0;
+
+        foreach ($elderlies as $elderly) {
+            $grade = $elderly->grade;
+
+
+            if($grade == "A (ทำงานได้)") {
+                $total['A']++; 
+            }elseif($grade == "B (ช่วยเหลือตนเองและผู้อื่นได้)") {
+                $total['B']++; 
+            }elseif($grade == "C (ช่วยเหลือตนเองได้เท่านั้น)") {
+                $total['C']++; 
+            }elseif($grade == "D (ช่วยเหลือตนเองไม่ได้)") {
+                $total['D']++; 
+            }
+        }
+
         $home = "";
         $about = "";
         $donate = "";
@@ -121,7 +125,8 @@ class ElderlyController extends Controller
         $elderly = "active";
         $pro = "";
 
-        return view('elderly.gradeChart')->with('home', $home)
+        return view('elderly.gradeChart')->with('total', $total)
+            ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
