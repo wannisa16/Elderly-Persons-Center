@@ -33,6 +33,8 @@ Route::get('/indexActivity', 'PublicizeController@indexactivity');
 
 Route::get('/indexProblems', 'ProblemController@indexProblems');
 
+Route::get('/detailActivity/{id}', 'PublicizeController@detailActivity');
+
 Route::get('/addDonate', function() {
     return view('elderly/addDonate');
 });
@@ -52,7 +54,6 @@ Route::group(['middleware' => ['web']], function () {
    Route::get('/home', 'HomeController@index');
 });   
 
-Route::resource('activitys','Activitys\\ActivitysController');
 
 Route::get('/elderlygraph', 'ElderlyController@elderlyGraph');
 
