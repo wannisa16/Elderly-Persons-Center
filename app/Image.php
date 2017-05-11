@@ -10,12 +10,14 @@ class Image extends Model
     protected $primaryKey = 'imageID';
     public $timestamps = false;
 
+
+
     public function publicize()
         {
         	return $this->belongsTo('App\publicizes');
         }   
 
-    public function scopOfImage ($query, $publicizeID)
+    public function scopeOfImage ($query, $publicizeID)
     	{
     		return $query->where('contentID', $publicizeID); 
     	}

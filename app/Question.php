@@ -12,6 +12,6 @@ class Question extends Model
 
 	public function questioners()
         {
-        	return $this->belongsTo('App\Questioner', 'id');
+        	return $this->belongsTo('App\Questioner');
         }
 }

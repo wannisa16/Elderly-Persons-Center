@@ -14,18 +14,18 @@
 <div class="container">
 	<div class="elderlygraph z-depth-2 center-align"><h4>รายงานสรุปข้อมูลผู้สูงอายุ</h4></div><br>
 	<div class="row col m6 center">
-		<a href=""><img src="{{url('images/age.png')}}" alt="LOGO" class="img-responsive" width="400"></a>
+		<a href="{{url('/ageChart')}}"><img src="{{url('images/age.png')}}" alt="LOGO" class="img-responsive" width="400"></a>
 	<div class="col m6">
-		<a href="criterion"><img src="{{url('images/criterion.png')}}" alt="LOGO" class="img-responsive" width="400"></a>
+		<a href="{{url('/gradeChart')}}"><img src="{{url('images/criterion.png')}}" alt="LOGO" class="img-responsive" width="400"></a>
 	</div>
 	</div>
 
 	<div class="row">
                 <div class="col s6 center-align">
-                    <a href="criterion" type="submit" class="seegraph1 waves-effect waves-light btn-large">ดูกราฟ</a>
+                    <a href="{{url('/gradeChart')}}" type="submit" class="seegraph1 waves-effect waves-light btn-large">ดูกราฟ</a>
                 </div>
                 <div class="col s6 center-align">
-                    <a href="criterion" class="seegraph2 waves-effect waves-light btn-large">ดูกราฟ</a>
+                    <a href="{{url('/ageChart')}}" class="seegraph2 waves-effect waves-light btn-large">ดูกราฟ</a>
                 </div>
             </div>
 </div>

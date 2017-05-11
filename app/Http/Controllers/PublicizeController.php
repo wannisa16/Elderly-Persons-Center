@@ -176,4 +176,30 @@ class PublicizeController extends Controller
         return Redirect::to('indexActivity');
     }
     
+
+    public function detailActivity($id)
+    {
+        $activity = Publicize::find($id);
+        $images = Image::ofImage($activity->publicizeID)->get();
+
+            
+
+        $home = "active";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
+        $pro = "";
+
+        return view('elderly.detailActivity')->with('activity',$activity)
+            ->with('images', $images)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
+
+    }
+    
 }
