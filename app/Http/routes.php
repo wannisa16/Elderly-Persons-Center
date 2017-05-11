@@ -52,11 +52,9 @@ Route::group(['middleware' => ['web']], function () {
    Route::get('/home', 'HomeController@index');
 });   
 
-
 Route::get('/addActivity', 'PublicizeController@formActivity');
 
 Route::post('/addActivity', 'PublicizeController@addActivity');
-
 
 Route::get('/elderlygraph', 'ElderlyController@elderlyGraph');
 

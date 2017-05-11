@@ -18,7 +18,7 @@
     <div class="contact z-depth-2 center-align"><h4>ติดต่อสถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h4></div><br>
         <div class="row">
     	   <div class="col s12 m4">
-                <div class="card-panel z-depth-3">   
+                <div class="card-panel z-depth-3 s12">   
                     <div class="row">
                         <div class="add col s12 m12">
                             <i class="medium material-icons">location_on</i>
@@ -41,7 +41,7 @@
             </div>
 
     	    <div class="col s12 m4">
-                <div class="card-panel z-depth-3">
+                <div class="card-panel z-depth-3 s12">
                     <div class="row">
                         <div class="call col s12 m12">
                             <i class="medium material-icons">phone</i>
@@ -64,7 +64,7 @@
             </div>
 
     	    <div class="col s12 m4">
-                <div class="card-panel z-depth-3">
+                <div class="card-panel z-depth-3 s12">
                     <div class="row">
                         <div class="mail col s12 m12">
                             <i class="medium material-icons">person_pin</i>

@@ -122,7 +122,7 @@ class ProblemsController extends Controller
     {
         $victim = Victim::find($id);
 
-        $helper = Helper::findOrFail($id);
+        $helper = Helper::find($victim->helperID);
 
 
         $home = "";
