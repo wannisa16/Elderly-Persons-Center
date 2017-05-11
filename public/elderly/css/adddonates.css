@@ -52,3 +52,15 @@ button.addto{
 .image{
 	color: #ffffff !important;
 }
+
+input.validate{
+	font-size: 20px !important;
+}
+
+input.datepicker{
+	font-size: 20px !important;
+}
+
+input.file{
+	font-size: 20px !important;
+}
