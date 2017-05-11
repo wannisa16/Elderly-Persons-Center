@@ -131,8 +131,8 @@ class ProblemsController extends Controller
         $contact = "";
         $pro = "active";
 
-        return view('elderly.problemsDetail')->with('victim',$victim)
-            ->with('helper',$helper)
+        return view('elderly.problemsDetail')->with('victim', $victim)
+            ->with('helper', $helper)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)

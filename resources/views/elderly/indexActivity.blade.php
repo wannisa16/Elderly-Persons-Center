@@ -26,7 +26,7 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><p class="font-title">{{$activity->title}}</p></span>
 
-                        <p class="font-content">{{$activity->content}}</p>
+                        <p class="font-content truncate">{{$activity->content}}</p>
                     </div>
 
                     <div class="card-action">

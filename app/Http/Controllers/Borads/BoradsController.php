@@ -18,8 +18,9 @@ class BoradsController extends Controller
     public function index()
     {
         $questions = Question::orderBy('id','ASC')
-             ->paginate(10); 
-
+            
+            ->paginate(10); 
+        
 
         $home = "";
         $about = "";
@@ -71,6 +72,7 @@ class BoradsController extends Controller
     {
         $questioner = new Questioner;
         $questioner->name = $request->input('name');
+        $questioner->level = $request->input('level');
         $questioner->save();
         $question = new Question;
         $question->subject = $request->input('subject');

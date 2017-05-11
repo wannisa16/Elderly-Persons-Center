@@ -14,6 +14,8 @@
 	<div class="container">
 		<div class="criteriongraph z-depth-2 center-align"><h4>กราฟแบ่งตามเกณฑ์</h4></div>
 		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <a href="{{ url('/elderlygraph') }}" class="waves-effect waves-light btn-large">ย้อนกลับ</a>
+    <div class="chart"></div>
 	</div>
 @endsection
 
@@ -23,13 +25,17 @@
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
+        var A = {{ $total['A'] }}
+        var B = {{ $total['B'] }}
+        var C = {{ $total['C'] }}
+        var D = {{ $total['D'] }}
+
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['A : ทำงานได้', A],
+          ['B : ช่วยเหลือตนเองและผู้อื่นได้', B],
+          ['C : ช่วยเหลือตนเองได้เท่านั้น',  C],
+          ['D : ช่วยเหลือตนเองไม่ได้', D]
         ]);
 
         var options = {

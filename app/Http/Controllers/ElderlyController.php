@@ -134,5 +134,22 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 
+    public function elderlyGraph()
+    {
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+        $pro = "";
+
+        return view('elderly.elderlyGraph')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
+    }
+
 }
 
