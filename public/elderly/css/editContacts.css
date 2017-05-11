@@ -4,3 +4,7 @@
 	color: #26a69a;
 	padding-top: 27px !important;
 }
+
+textarea .materialize-textarea{
+	font-size: 40px !important;
+}
