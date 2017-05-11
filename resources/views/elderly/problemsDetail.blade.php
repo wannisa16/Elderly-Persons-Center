@@ -112,18 +112,18 @@
 		        <div class="row">
 			        <div class="layout-title col m10 offset-m1">รายละเอียดผู้แจ้ง</div>
 		        </div>
-			    <div class="layout-text col m6 offset-m1">
+			    <div class="layout-text col m10 offset-m1">
 				    <div class="row">
-					   <div class="col m6 s12">ชื่อ : {{$helper->h_name}}</div>
+					   <div class="col m6 offset-m1 s12">ชื่อ : {{$helper->h_name}}</div>
 				    </div>
 				    <div class="row">
-					   <div class="col m6 s12">นามสกุล : {{$helper->h_surname}}</div>
+					   <div class="col m6 offset-m1 s12">นามสกุล : {{$helper->h_surname}}</div>
 				    </div>
 				    <div class="row">
-					   <div class="col m12 s12">เบอร์โทร : {{$helper->h_tel}}</div>
+					   <div class="col m12 offset-m1 s12">เบอร์โทร : {{$helper->h_tel}}</div>
 				    </div>
 				    <div class="row">
-					   <div class="col m12 ">อีเมล์ : {{$helper->h_email}}</div>
+					   <div class="col m12 offset-m1 s12">อีเมล์ : {{$helper->h_email}}</div>
 				    </div>
 			    </div>
 		    </div>
