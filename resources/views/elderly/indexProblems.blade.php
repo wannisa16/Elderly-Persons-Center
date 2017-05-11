@@ -37,7 +37,7 @@
                    
                         <td>{{$problem->victim_id}}</td>
                         <td><a href="problems/{{$problem->victim_id}}">{{$problem->v_name}}</a></td>
-                        <td>{{$problem->v_surname}}</td>
+                        <td><a href="problems/{{$problem->victim_id}}">{{$problem->v_surname}}</a></td>
                         <td>{{$problem->v_situation}}</td>
                     </tr>
                     @endforeach

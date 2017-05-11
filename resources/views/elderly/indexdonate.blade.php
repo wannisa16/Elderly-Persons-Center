@@ -32,7 +32,7 @@
                         <tr>
                             <td>{{$donor->id}}</td>
                             <td><a href="donates/{{$donor->id}}">{{$donor->d_name}}</a></td>
-                            <td>{{$donor->d_surname}}</td>
+                            <td><a href="donates/{{$donor->id}}">{{$donor->d_surname}}</a></td>
                             <td>{{$donor->d_object}}</td>
                         </tr>
 

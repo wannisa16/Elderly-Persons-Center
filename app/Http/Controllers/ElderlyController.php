@@ -129,5 +129,23 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 
+    public function addElderly()
+    {
+
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+        $pro = "";
+
+        return view('elderly.addElderly')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
+    }
+
 }
 

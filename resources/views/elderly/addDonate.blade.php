@@ -363,6 +363,9 @@
 </div>
 @endsection
 
+@section('footer')
+@endsection
+
 @section('script')
 <script src="{{ asset('/elderly/js/donate.js') }}"></script>      
 @endsection

@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col m12 s12 ">
 
-            <table class="striped">
+            <table class="striped centered">
                     <thead>
                     <tr>
                         <th data-field="id">รหัส</th>

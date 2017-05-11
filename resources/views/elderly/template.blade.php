@@ -11,7 +11,7 @@
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" href="{{url('css/materialize.min.css')}}">
     
-            <link href="{{ URL::asset('elderly/css/templateLayout.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ URL::asset('elderly/css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
 
             <link rel="stylesheet" href="{{ URL::asset('fonts/RSU_Regular.ttf') }}">
     
@@ -50,7 +50,7 @@
                 <li><a href="{{ url('/login') }}" >เข้าสู่ระบบ</a></li>
                 @else
                 <li><a href="{{ url('/logout') }}">ออกจากระบบ</a></li>
-                <li><a href="#!">ส่งไฟล์</a></li>
+                <li><a href="{{ url('/elderlygraph') }}">รายงานข้อมูลผู้สูงอายุ</a></li>
                 <li class="" ><a href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
                 <li><a href="{{ url('/donates') }}">รายการบริจาค</a></li>
                 <li><a href="{{ url('/problems') }}">รายการผู้ประสบปัญหาทางสังคม</a></li>
