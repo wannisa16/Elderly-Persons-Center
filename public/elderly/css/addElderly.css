@@ -52,7 +52,7 @@ input.validate{
 	font-size: 20px !important;
 }
 
-input.datepicker{
+input #myDate{
 	font-size: 20px !important;
 }
 

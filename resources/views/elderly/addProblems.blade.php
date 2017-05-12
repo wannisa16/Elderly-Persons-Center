@@ -196,7 +196,7 @@
         <div class="card card-define col m12">
             <div class="row">
                 <div class="layout-title col m10 offset-m1">สถานที่ที่พบเจอผู้ประสบปัญหาทางสังคม</div>
-                </div>
+            </div>
             <div class="row">
                 <div class="col m11 ">
                     <div class="col m3 offset-m1 s12">
