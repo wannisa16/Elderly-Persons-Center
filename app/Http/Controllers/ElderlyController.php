@@ -101,20 +101,17 @@ class ElderlyController extends Controller
         $total['A'] = 0;
         $total['B'] = 0;
         $total['C'] = 0;
-        $total['D'] = 0;
 
         foreach ($elderlies as $elderly) {
             $grade = $elderly->grade;
 
 
-            if($grade == "A (ทำงานได้)") {
+            if($grade == "A (ช่วยเหลือตัวเองได้)") {
                 $total['A']++; 
-            }elseif($grade == "B (ช่วยเหลือตนเองและผู้อื่นได้)") {
+            }elseif($grade == "B (พึ่งพาอุปกรณ์ในการดำเนินชีวิต)") {
                 $total['B']++; 
-            }elseif($grade == "C (ช่วยเหลือตนเองได้เท่านั้น)") {
+            }elseif($grade == "C (ผู้สูงอายุที่ต้องการการดูแล)") {
                 $total['C']++; 
-            }elseif($grade == "D (ช่วยเหลือตนเองไม่ได้)") {
-                $total['D']++; 
             }
         }
 
@@ -168,4 +165,5 @@ class ElderlyController extends Controller
             ->with('elderly', $elderly)
             ->with('pro', $pro);
     }
+}
 
