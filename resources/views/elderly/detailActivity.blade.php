@@ -32,13 +32,15 @@
                        <right><a data-target="modal1" class="modal-trigger waves-effect waves-light btn right" href="#modal1" >รูปภาพ</a></right>
 
                        <!-- Modal Structure -->
+
                        <div id="modal1" class="modal modal-fixed-footer">
 
                         <div class="modal-content">
+                        <h5>รูปภาพทั้งหมด</h5>
                         @foreach($images as $image)
-                            <h5>รูปภาพทั้งหมด</h5>
                             
-                            <img src="{{url($image->imagename)}}" alt="t"> 
+                            
+                            <img class="materialboxed" src="{{url($image->imagename)}}" alt="NO IMAGE"  width="200" height="200"> 
                         @endforeach
                         </div>
                             <div class="modal-footer">

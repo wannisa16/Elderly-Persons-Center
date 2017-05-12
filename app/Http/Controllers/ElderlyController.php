@@ -153,6 +153,7 @@ class ElderlyController extends Controller
 
     public function elderlyGraph()
     {
+
         $home = "";
         $about = "";
         $donate = "";
@@ -167,6 +168,4 @@ class ElderlyController extends Controller
             ->with('elderly', $elderly)
             ->with('pro', $pro);
     }
-
-}
 

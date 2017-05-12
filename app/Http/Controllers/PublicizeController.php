@@ -34,6 +34,7 @@ class PublicizeController extends Controller
             ->limit(3)
             ->get();
 
+
         $home = "active";
         $about = "";
         $donate = "";
