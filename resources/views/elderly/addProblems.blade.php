@@ -53,7 +53,10 @@
             </div>
 
             <div class="row">
-                <div class="col m10 offset-m1 s12">
+                    <div class="col m2 offset-m1 s12">
+                        <h5>วัน/เดือน/ปีเกิด</h5>
+                    </div>
+                <div class="col m8  s12">
                     <input type="date" id="myDate" name="v_birthday">
                 </div>                   
             </div>
