@@ -26,7 +26,7 @@
                             <label for="name">ชื่อ :</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="surname" type="text" class="validate" name="v_surname" value="{{$victim->v_surname}}">
                             <label for="surname">นามสกุล :</label>
@@ -40,7 +40,7 @@
                             <label for="IDcardnumber">เลขที่บัตรประชาชน</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="no" type="text" class="validate" name="v_whyno" value="{{$victim->v_whyno}}">
                             <label for="no">กรณีไม่มีเนื่องจาก :</label>
@@ -55,22 +55,34 @@
                             <label>วัน/เดือน/ปีเกิด</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="age" type="number" class="validate" name="v_age" value="{{$victim->v_age}}">
                             <label for="age">อายุ :</label>
                         </div>
                     </div>                    
                 </div>
-
+                
                 <div class="row">
                     <div class="col m2 offset-m1 s12">
-                        <div class="input-field">
-                            <input id="sex" type="text" class="validate" name="v_sex" value="{{$victim->v_sex}}">
-                            <label for="sex">เพศ :</label>
-                        </div>
+                        <h5>เพศ</h5>
                     </div>
                     <div class="col m3 s12">
+                        <p>
+                            <input class="with-gap" name="sex" type="radio" id="male" />
+                            <label for="male">ผู้ชาย</label>
+                        </p>
+                    </div>
+                    <div class="col m3 s12">
+                        <p>
+                            <input class="with-gap" name="sex" type="radio" id="female"  />
+                            <label for="female">ผู้หญิง</label>
+                        </p>
+                    </div>                        
+                </div>
+
+                <div class="row">
+                    <div class="col m3 offset-m1 s12">
                         <div class="input-field">
                             <input id="race" type="text" class="validate" name="v_race" value="{{$victim->v_race}}">
                             <label for="race">เชื้อชาติ :</label>
@@ -82,7 +94,7 @@
                             <label for="nationality">สัญชาติ :</label>
                         </div>
                     </div>
-                    <div class="col m3 s12">
+                    <div class="col m4 s12">
                         <div class="input-field">
                             <input id="religion" type="text" class="validate" name="v_religion" value="{{$victim->v_religion}}">
                             <label for="religion">ศาสนา :</label>
@@ -142,7 +154,7 @@
                             <label for="career">อาชีพ :</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="income" type="number" class="validate" name="v_income" value="{{$victim->v_income}}">
                             <label for="income">รายได้เฉลี่ยต่อเดือน :</label>
@@ -175,7 +187,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col m5 offset-m1 s12">
+                    <div class="col m10 offset-m1 s12">
                         <div class="input-field">
                             <input id="career" type="text" class="validate" name="v_situation" value="{{$victim->v_situation}}">
                             <label for="career">สถานะ</label>
@@ -201,7 +213,7 @@
                             <label for="villageno">หมู่ที่ :</label>
                         </div>
                     </div>
-                    <div class="col m3 s12">
+                    <div class="col m2 s12">
                         <div class="input-field">
                             <input id="alley" type="text" class="validate" name="v_alley" value="{{$victim->v_alley}}">
                             <label for="alley">ตรอก :</label>
@@ -222,7 +234,7 @@
                             <label for="road">ถนน :</label>
                         </div>
                     </div>
-                    <div class="col m4 s12">
+                    <div class="col m3 s12">
                         <div class="input-field">
                             <input id="canton" type="text" class="validate" name="v_canton" value="{{$victim->v_canton}}">
                             <label for="canton">ตำบล/แขวง :</label>
@@ -243,7 +255,7 @@
                             <label for="province">จังหวัด :</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="postcode" type="text" class="validate" name="v_postcode" value="{{$victim->v_postcode}}">
                             <label for="postcode">รหัสไปรษณีย์ :</label>
@@ -264,7 +276,7 @@
                             <label for="name1">ชื่อ :</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="surname1" type="text" class="validate" name="h_surname" value="{{$helper->h_surname}}">
                             <label for="surname1">นามสกุล :</label>
@@ -279,7 +291,7 @@
                             <label for="tel">เบอร์โทรศัพท์ :</label>
                         </div>
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col m5 s12">
                         <div class="input-field">
                             <input id="email" type="email" class="validate" name="h_email" value="{{$helper->h_email}}">
                             <label for="email">อีเมล์ :</label>
