@@ -39,7 +39,18 @@ class ElderlyController extends Controller
     {
     	$elderly = Elderly::find($id); 
 
-    	return view('elderly.detailelderly')->with('elderly',$elderly);
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "";
+
+        return view('elderly.detailelderly')->with('elderly', $elderly)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     public function ageChart()
@@ -222,5 +233,6 @@ class ElderlyController extends Controller
             ->with('elderly', $elderly)
             ->with('pro', $pro);
     }
+
 }
 

@@ -23,7 +23,7 @@ Route::get('/ageChart', 'ElderlyController@ageChart');
 
 Route::get('/indexElderlies', 'ElderlyController@indexElderly');
 
-Route::get('/detailElderlies/{id}', 'ElderlyController@detailElderly');
+Route::get('/detailElderly/{id}', 'ElderlyController@detailElderly');
 
 Route::get('/addPublicizes', 'PublicizeController@addForm');
 

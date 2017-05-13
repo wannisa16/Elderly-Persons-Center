@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="container">
-    <div class="detailactivity center z-depth-2"><h4>กิจกรรมในสถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h4></div>
+    <div class="detailactivity center z-depth-2"><h4>กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
 </div>
 <div class="container">
     <div class="row">

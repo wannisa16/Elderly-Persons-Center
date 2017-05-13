@@ -33,8 +33,8 @@
                     @foreach ($elderlies as $elderly)
                     <tr>
                         <td>{{$elderly->id}}</td>
-                        <td><a href="detailElderlies/{{$elderly->id}}">{{$elderly->name}}</a></td>
-                        <td><a href="detailElderlies/{{$elderly->id}}">{{$elderly->surname}}</a></td>
+                        <td><a href="detailElderly/{{$elderly->id}}">{{$elderly->name}}</a></td>
+                        <td><a href="detailElderly/{{$elderly->id}}">{{$elderly->surname}}</a></td>
                         <td>{{$elderly->age}}</td>
                     </tr>
                     @endforeach
