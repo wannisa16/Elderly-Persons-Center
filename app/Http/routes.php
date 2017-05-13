@@ -62,3 +62,5 @@ Route::get('/gradeChart', 'ElderlyController@criterionGraph');
 
 Route::get('/addelderly', 'ElderlyController@addElderly');
 
+Route::get('/editelderly', 'ElderlyController@editElderly');
+
