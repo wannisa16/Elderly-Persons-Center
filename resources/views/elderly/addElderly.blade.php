@@ -1,6 +1,6 @@
 @extends('elderly.template')
 @section('title')
-เพิ่มข้อมูลผู้สูงอายุ
+เพิ่มข้อมูลผู้สูงอายุศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต
 @endsection
 
 @section('link')
@@ -12,7 +12,7 @@
 
 @section('content')
 <div class="container">
-    <div class="addelderly z-depth-2 center-align"><h4>เพิ่มข้อมูลผู้สูงอายุ</h4></div>
+    <div class="addelderly z-depth-2 center-align"><h4>เพิ่มข้อมูลผู้สูงอายุศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
 	<form enctype="multipart/form-data" action="{{ url('/addElderly') }}" method="post" >
 		<div class="card card-define col m12">
 			<div class="row">

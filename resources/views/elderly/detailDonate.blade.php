@@ -19,9 +19,15 @@
 		</div>
 		<div class="row">
 			<div class="col m4 offset-m1">
+				@if($donor->d_picture == "")
 				<div class="card-image waves-effect  waves-light">
-                    <img class="activator" src="{{url('images/1.jpg')}}">
+                    <img class="activator" src="{{url('images/noPhoto.png')}}">
                 </div>
+                @else
+				<div class="card-image waves-effect  waves-light">
+                    <img class="activator" alt="ไม่มีรูป" src="{{url($donor->d_picture)}}">
+                </div>
+                @endif
 			</div>
 			<div class="layout-text col m6">
 				<div class="row">
