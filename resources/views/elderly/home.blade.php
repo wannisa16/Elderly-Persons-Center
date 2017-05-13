@@ -90,11 +90,6 @@
         <div class="right"><a href="{{url('/indexActivity')}}">ดูทั้งหมด</a></div>
     </div>
 
-    <div class="row">
-        <label class="title-community col m12 s12">
-            <p class=" ">ชุมชนที่เกี่ยวข้องภายในจังหวัดภูเก็ต</p>
-        </label>
-    </div>
     <div></div>
     <
 </div>

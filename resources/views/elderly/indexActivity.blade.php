@@ -15,9 +15,11 @@
 </div>
 
 <div class="container">
+    @if (!Auth::guest())
     <div class="row">
         <a href="{{url('/addActivity')}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
     </div>
+    @endif
     @foreach ($activities as $activity)   
     <div class="row">
         <div class="col s14 m12">

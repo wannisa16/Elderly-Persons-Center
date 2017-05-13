@@ -69,13 +69,13 @@
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="sex" type="radio" id="male" />
+                            <input class="with-gap" value="ผู้ชาย" name="v_sex" type="radio" id="male" {{ ($victim->v_sex) == "ผู้ชาย" ? 'checked':'' }}  />
                             <label for="male">ผู้ชาย</label>
                         </p>
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="sex" type="radio" id="female"  />
+                            <input class="with-gap" value="ผู้หญิง" name="v_sex" type="radio" id="female" {{ ($victim->v_sex) == "ผู้หญิง" ? 'checked':'' }} />
                             <label for="female">ผู้หญิง</label>
                         </p>
                     </div>                        
@@ -108,19 +108,19 @@
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="status" type="radio" id="single" checked/>
+                            <input class="with-gap" value="โสด" name="status" type="radio" id="single" {{ ($victim->v_status) == "โสด" ? 'checked':'' }}/>
                             <label for="single">โสด</label>
                         </p>
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="status" type="radio" id="marrytogether" checked />
+                            <input class="with-gap" value="สมรสอยู่ด้วยกัน" name="status" type="radio" id="marrytogether"{{ ($victim->v_status) == "สมรสอยู่ด้วยกัน" ? 'checked':'' }} />
                             <label for="marrytogether">สมรสอยู่ด้วยกัน</label>
                         </p>
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="status" type="radio" id="marryseparately" checked />
+                            <input class="with-gap" value="สมรสแยกกันอยู่" name="status" type="radio" id="marryseparately" {{ ($victim->v_status) == "สมรสแยกกันอยู่" ? 'checked':'' }} />
                             <label for="marryseparately">สมรสแยกกันอยู่</label>
                         </p>
                     </div>                          
@@ -129,19 +129,19 @@
                 <div class="row">
                     <div class="col m3 offset-m3 s12">
                         <p>
-                            <input class="with-gap" name="status" type="radio" id="divorce" checked />
+                            <input class="with-gap" value="หย่าร้าง" name="status" type="radio" id="divorce"{{ ($victim->v_status) == "หย่าร้าง" ? 'checked':'' }} />
                             <label for="divorce">หย่าร้าง</label>
                         </p>
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="status" type="radio" id="unmarriedtogether" checked />
+                            <input class="with-gap" value="ไม่ได้สมรสแต่อยู่ด้วยกัน" name="status" type="radio" id="unmarriedtogether" {{ ($victim->v_status) == "ไม่ได้สมรสแต่อยู่ด้วยกัน" ? 'checked':'' }} />
                             <label for="unmarriedtogether">ไม่ได้สมรสแต่อยู่ด้วยกัน</label>
                         </p>
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="status" type="radio" id="widow" />
+                            <input class="with-gap" value="หม้าย(คู่สมรสเสียชีวิต)" name="status" type="radio" id="widow" {{ ($victim->v_status) == "หม้าย(คู่สมรสเสียชีวิต)" ? 'checked':'' }} />
                             <label for="widow">หม้าย(คู่สมรสเสียชีวิต)</label>
                         </p>
                     </div>                      
@@ -168,13 +168,13 @@
                     </div>
                     <div class="col m3 s12">
                         <p>
-                            <input class="with-gap" name="revenue" type="radio" id="test7" />
-                            <label for="test7">ด้วยตัวเอง</label>
+                            <input class="with-gap" name="source" type="radio" value="ด้วยตัวเอง" id="self"  {{ ($victim->v_source) == "ด้วยตัวเอง" ? 'checked':'' }} />
+                            <label for="self">ด้วยตัวเอง</label>
                         </p>
                     </div>
                     <div class="col m2 s12">
                         <p>
-                            <input class="with-gap" name="revenue" type="radio" id="test8" />
+                            <input class="with-gap" name="source" value="ผู้อื่นให้" type="radio" id="test8" {{ ($victim->v_source) == "ผู้อื่นให้" ? 'checked':'' }}  />
                             <label for="test8">ผู้อื่นให้</label>
                         </p>
                     </div>

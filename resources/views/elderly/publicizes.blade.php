@@ -19,9 +19,11 @@
 	<div class="row">
 		<label class="layout-title col m12 z-depth-3"><p class="font-title " align="center">ประชาสัมพันธ์</p></label>
 	</div>
+	@if (!Auth::guest())
 	<div class="row">
 		<a href="{{url('/addPublicizes')}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
 	</div>
+	@endif
 
 	<div class="row">
 		@foreach ($publicizes as $publicize)
