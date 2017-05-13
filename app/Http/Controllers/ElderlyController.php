@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ImageUploadRequest;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Elderly;
@@ -25,7 +26,7 @@ class ElderlyController extends Controller
         $elderly = "active";
         $pro = "";
 
-    	return view('elderly.indexelderly')->with('elderlies', $elderlies)
+    	return view('elderly.indexElderly')->with('elderlies', $elderlies)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
@@ -131,8 +132,35 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 
-    public function addElderly()
+    public function addElderly(Request $request)
     {
+        $elderly = new Elderly;
+        $elderly->name = $request->input('name');
+        $elderly->surname = $request->input('surname');
+        $pdf = $request->file('pdf');
+        $pdf->move(public_path("/data"), $pdf->getClientOriginalName());
+        $elderly->file = "data/".$pdf->getClientOriginalName();
+        $elderly->brithday = $request->input('brithday');
+        $elderly->age = $elderly->age;
+        $elderly->sex = $request->input('sex');
+        $elderly->education = $request->input('education');
+        $elderly->occupation = $request->input('occupation');
+        $elderly->sex = $request->input('sex');
+        $elderly->child = $request->input('child');
+        $elderly->county = $request->input('county');
+        $elderly->grade = $request->input('grade');
+        $elderly->reason = $request->input('reason');
+        $elderly->housenumber = $request->input('housenumber');
+        $elderly->villageno = $request->input('villageno');
+        $elderly->alley = $request->input('alley');
+        $elderly->alleyway = $request->input('alleyway');
+        $elderly->road = $request->input('road');
+        $elderly->district = $request->input('canton');
+        $elderly->district = $request->input('district');
+        $elderly->province = $request->input('province');
+        $elderly->postcode = $request->input('postcode');
+        $elderly->save();
+
         $home = "";
         $about = "";
         $donate = "";
@@ -140,12 +168,7 @@ class ElderlyController extends Controller
         $elderly = "active";
         $pro = "";
 
-        return view('elderly.addElderly')->with('home', $home)
-            ->with('about', $about)
-            ->with('donate', $donate)
-            ->with('contact', $contact)
-            ->with('elderly', $elderly)
-            ->with('pro', $pro);
+        return redirect('indexElderlies');
     }
 
     public function elderlyGraph()
@@ -164,6 +187,23 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro);
+    }
+    public function elderlyForm()
+    {
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "active";
+        $pro = "";
+
+        return view('elderly.addElderly')->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
+
     }
 }
 

@@ -60,5 +60,11 @@ Route::get('/elderlygraph', 'ElderlyController@elderlyGraph');
 
 Route::get('/gradeChart', 'ElderlyController@criterionGraph');
 
-Route::get('/addelderly', 'ElderlyController@addElderly');
+Route::get('/elderlyForm', 'ElderlyController@elderlyForm');
+
+Route::post('/addElderly', 'ElderlyController@addElderly');
+
+Route::get('/test', function(){
+	return view('elderly/test');
+});
 

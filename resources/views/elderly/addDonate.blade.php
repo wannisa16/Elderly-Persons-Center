@@ -23,8 +23,8 @@
     </div>
 
     <div id="t1" class="col s12">
-        <div class="card card-define col m12">
-            <form action="../donates" method="post" accept-charset="utf-8">
+        <form action="../donates" method="post" accept-charset="utf-8">
+            <div class="card card-define col m12">
                 <div class="row">
                     <div class="col m6"> 
                         <div class="card-image waves-effect  waves-light">
@@ -174,24 +174,23 @@
                     </div>
                 </div>
 
-                <input disabled value="noImage" id="disabled" type="text" class="noimage" name="type">
-
-            </form>
-        </div>
-        <div class="row">
-            <div class="col s6 right-align">
-                <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+                <input value="noImage"  type="text" class="noimage" name="type">
             </div>
-            <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
-            </div>
-        </div>        
+            <div class="row">
+                <div class="col s6 right-align">
+                    <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+                </div>
+                <div class="col s6">
+                    <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                </div>
+            </div> 
+        </form>       
     </div>
 
 
     <div id="t2" class="col s12">
-        <div class="card card-define col m12">
-            <form action="../donates" method="post" enctype="multipart/form-data">
+        <form action="../donates" method="post" enctype="multipart/form-data">
+            <div class="card card-define col m12">
                 <div class="row">
                     <div class="col m6">
                         <div class="card-image waves-effect  waves-light">
@@ -348,17 +347,17 @@
                     </div>
                 </div>
                 
-                <input disabled value="image" id="disabled" type="text" class="image" name="type">
-            </form>
-        </div>
-        <div class="row">
-            <div class="col s6 right-align">
-                <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+                <input  value="image"  type="text" class="image" name="type">
             </div>
-            <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+            <div class="row">
+                <div class="col s6 right-align">
+                    <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+                </div>
+                <div class="col s6">
+                    <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 @endsection
