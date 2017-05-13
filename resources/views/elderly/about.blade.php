@@ -12,7 +12,6 @@
 
 @section('content')
 <div class="container">
-    
 	<div class="row">
 		<div class="col m2 layout-title">ประวัติ</div>
 	</div>
@@ -26,10 +25,7 @@
         <a class="right" href="editAbout/{{ $history->id }}"><h5>แก้ไขประวัติ</h5></a>
     </div>
     @endif
-
-    
 	<div class="row">
-
 		<div class="tab-title col s12">
         <ul class="tabs">
             <li class="tab col s3"><a class="active" href="#goal"><h4>เป้าหมาย</h4></a></li>

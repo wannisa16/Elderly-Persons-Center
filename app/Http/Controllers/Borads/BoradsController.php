@@ -71,6 +71,7 @@ class BoradsController extends Controller
     {
         $questioner = new Questioner;
         $questioner->name = $request->input('name');
+        $questioner->level = $request->input('level');
         $questioner->save();
         $question = new Question;
         $question->subject = $request->input('subject');
