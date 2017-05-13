@@ -54,7 +54,7 @@ class BoradsController extends Controller
         $borads = "active";
         $pro = "";
 
-        return view('elderly.AddBoard')->with('home', $home)
+        return view('elderly.addBoard')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
@@ -90,7 +90,24 @@ class BoradsController extends Controller
      */
     public function show($id)
     {
-        //
+        $booard = Question::find($id);
+        $questioner = Questioner::find($booard->questioner_id);
+
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
+        $borads = "active";
+        $pro = "";
+
+        return view('elderly.detailBoard')->with('home', $home)
+            ->with('booard', $booard)
+            ->with('questioner', $questioner)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
     }
 
     /**
