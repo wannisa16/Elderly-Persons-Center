@@ -32,7 +32,7 @@
                         @foreach ($questions as $question)
                         <tr>
                             <td>{{$question->id}}</td>
-                            <td><a HREF = " ">{{$question->subject}}</a></td>
+                            <td><a HREF = "borads/{{$question->questioner_id}}">{{$question->subject}}</a></td>
                         </tr>
                         @endforeach
                     </tbody>
