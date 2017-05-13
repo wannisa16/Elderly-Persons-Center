@@ -90,6 +90,7 @@ class DonatesController extends Controller
             
         }elseif($type == "image"){
             $image = $request->file('photo');
+            dd($image);
             $image->move(public_path("/images"), $image->getClientOriginalName());
             $donate->d_picture = "images/".$image->getClientOriginalName();
         }

@@ -1,6 +1,7 @@
 @extends('elderly.template')
 
-@section('title') 
+@section('title')
+ตั้งกระทู้ 
 @endsection
 
 @section('link')
