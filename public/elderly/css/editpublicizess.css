@@ -4,7 +4,7 @@ h4{
 	padding-left: 20px;
 	padding-bottom: 10px;
 }
-.editdonate{
+.editpublicizes{
 	background-color: #00bfa5 !important; 
 	border-radius: 10px;
 	margin-top: 25px;
@@ -38,8 +38,13 @@ button.agree{
 	font-size: 20px !important;
 }
 
-.layout-title {
-	font-size: 27px;
-	color: #616161;
-	border-bottom: thick solid #ff8a80;
+input.story{
+	font-size: 20px !important;
+}
+
+textarea.materialize-textarea{
+	font-size: 20px !important;
+}
+.btn span{
+	font-size: 19px !important;
 }

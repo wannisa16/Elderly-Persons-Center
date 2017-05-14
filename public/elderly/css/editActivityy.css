@@ -4,7 +4,7 @@ h4{
 	padding-left: 20px;
 	padding-bottom: 10px;
 }
-.addactivity{
+.editActivity{
 	background-color: #00bfa5 !important; 
 	border-radius: 10px;
 	margin-top: 25px;
@@ -25,15 +25,23 @@ button.agree{
 
 .card {
 	margin-top: 10px !important;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px !important;
     background-color: #fafafa !important;
 }
 
 .btn{
 	background-color: #f57f17 !important;
+	font-size: 19px !important;
 }
 
 .input-field label{
+	font-size: 22px !important;
+}
+
+input.stroy{
+	font-size: 20px !important;
+}
+textarea.materialize-textarea{
 	font-size: 20px !important;
 }

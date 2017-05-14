@@ -20,7 +20,8 @@ span.photo{
 }
 
 .btn{
-	background-color: #00bfa5 !important;
+	font-size: 19px !important;
+	background-color: #f57f17 !important;
 }
 
 a.cancel{
@@ -30,8 +31,15 @@ a.cancel{
 	padding-right: 57px;
 }
 
-a.addto{
+button.addto{
 	font-size: 18px;
-	background-color: #fbc02d !important;
+}
+
+textarea.materialize-textarea{
+	font-size: 20px !important;
+}
+
+input.story{
+	font-size: 20px !important;
 }
 

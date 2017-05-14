@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/editpublicizes.css') }}" rel="stylesheet" type="text/css" media="all" /> 
+<link href="{{ URL::asset('elderly/css/editpublicizess.css') }}" rel="stylesheet" type="text/css" media="all" /> 
 @endsection
 
 @section('band')
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="input_text" type="text" value="" name="title">
+                        <input id="input_text" type="text" value="" name="title" class="story">
                         <label for="input_text">เรื่อง</label>
                     </div>
                 </div>

@@ -30,6 +30,24 @@ nav ul li.active {
     background-color: #26a69a;
 }
 
+li a.dropdown{
+	color: #212121 !important;
+	font-size: 20px !important;
+	width: 300px !important;
+}
+
+li a.dropdown-button{
+	font-size: 20px !important;
+}
+
+ul.dropdown-content{
+	width:300px !important;
+}
+
+li a.bar{
+	font-size: 18px !important;
+}
+
 footer.page-footer {
     background-color: #212121 !important;
 }

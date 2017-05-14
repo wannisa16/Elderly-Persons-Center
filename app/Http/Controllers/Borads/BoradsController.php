@@ -26,8 +26,8 @@ class BoradsController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
-        $borad = "";
-        $pro = "active";
+        $borad = "active";
+        $pro = "";
 
          return view('elderly.indexBorad')->with('questions', $questions)
             ->with('home', $home)

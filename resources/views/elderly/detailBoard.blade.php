@@ -27,16 +27,16 @@
         </div>
     </div>
     <div class="row ">
-        <div class="col s1 m1">
-        <div class="col s1 m1"></div>
+        <div class="col s12 m1">
+        <div class="col s12 m1"></div>
             <div class="progress line">
                 <div class="determinate" ></div>
             </div>
         </div>
-        <div class="col s2 m2">
+        <div class="col s12 m2">
             <p><i class="small material-icons">question_answer</i>   ความคิดเห็น</p>
         </div>
-        <div class="col s9 m9">
+        <div class="col s12 m9">
             <div class="progress line">
                 <div class="determinate" ></div>
             </div>
@@ -57,15 +57,15 @@
         </div>
     </div>
     <div class="row ">
-        <div class="col s1 m1">
+        <div class="col s12 m1">
             <div class="progress line">
                 <div class="determinate" ></div>
             </div>
         </div>
-        <div class="col s2 m2">
+        <div class="col s12 m2">
             <p><i class="small material-icons">comment</i>   แสดงความคิดเห็น</p>
         </div>
-        <div class="col s9 m9">
+        <div class="col s12 m9">
             <div class="progress line">
                 <div class="determinate" ></div>
             </div>

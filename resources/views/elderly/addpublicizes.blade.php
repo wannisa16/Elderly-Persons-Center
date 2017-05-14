@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/addpublicizes.css') }}" rel="stylesheet" type="text/css" media="all" /> 
+<link href="{{ URL::asset('elderly/css/addPublicize.css') }}" rel="stylesheet" type="text/css" media="all" /> 
 @endsection
 
 @section('band')
@@ -18,7 +18,7 @@
     <form enctype="multipart/form-data" action="{{ url('/addPublicize') }}" method="post" >
         <div class="title row">
             <div class="input-field col s6">
-                <input id="input_text" type="text" name="title">
+                <input id="input_text" type="text" name="title" class="story">
                 <label for="input_text"><h5>เรื่อง</h5></label>
             </div>
         </div>
@@ -32,9 +32,9 @@
 
         
         <div class="row">
-            <div class="file-field input-field col m10 offset-m1 s12">
+            <div class="file-field input-field col m12 s12">
                 <div class="btn">
-                    <span>รูปภาพ</span>
+                    <span>เลือกรูปภาพ</span>
                     <input type="file" class="file" name="image"> 
                 </div>
                 <div class="file-path-wrapper">

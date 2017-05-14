@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/editActivity.css') }}" rel="stylesheet" type="text/css" media="all" />  
+<link href="{{ URL::asset('elderly/css/editActivityy.css') }}" rel="stylesheet" type="text/css" media="all" />  
 @endsection
 
 @section('band')
@@ -19,13 +19,13 @@
         <div class="card card-define col m12">
             <div class="row">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input id="input_text" type="text" value="{{ $story->title }}" name="title">
+                    <div class="input-field col m6 s12">
+                        <input id="input_text" type="text" value="{{ $story->title }}" name="title" class="stroy">
                         <label for="input_text">กิจกรรมเรื่อง</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col m10 s12">
                         <textarea id="textarea1" class="materialize-textarea" name="content">{{ $story->content }}</textarea>
                         <label for="textarea1">รายละเอียดของกิจกรรม</label>
                     </div>
