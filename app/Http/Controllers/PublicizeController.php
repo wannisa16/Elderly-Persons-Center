@@ -200,6 +200,28 @@ class PublicizeController extends Controller
 
     }
 
+    public function detailPublicize($id)
+    {
+        $publicize = Publicize::find($id);
+        $images = Image::ofImage($publicize->publicizeID)->get();
+        
+        $home = "active";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $elderly = "";
+        $pro = "";
+
+        return view('elderly.detailPublicizes')->with('publicize',$publicize)
+            ->with('images', $images)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('elderly', $elderly)
+            ->with('pro', $pro);
+
+    }
     public function editForm($id)
     {
         $story = Publicize::find($id);

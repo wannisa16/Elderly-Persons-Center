@@ -36,6 +36,8 @@ Route::get('/indexProblems', 'ProblemController@indexProblems');
 
 Route::get('/detailActivity/{id}', 'PublicizeController@detailActivity');
 
+Route::get('/detailPublicizes/{id}', 'PublicizeController@detailPublicize');
+
 
 Route::get('/index', 'PublicizeController@indexNew');
 

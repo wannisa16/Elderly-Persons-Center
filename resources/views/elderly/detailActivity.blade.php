@@ -40,8 +40,6 @@
                         <div class="modal-content">
                         <h5>รูปภาพทั้งหมด</h5>
                         @foreach($images as $image)
-                            
-                            
                             <img class="materialboxed" src="{{url($image->imagename)}}" alt="NO IMAGE"  width="200" height="200"> 
                         @endforeach
                         </div>
