@@ -20,13 +20,20 @@
     <style>
         body {
             font-family: 'Lato';
+            background-image: url("images/login.png");
         }
 
         .fa-btn {
             margin-right: 6px;
         }
-
-
+        
+        .navbar{
+            background-color: #424242;
+            
+        }
+        a.text{
+            color: #ffffff;
+        }
     </style>
 </head>
 <body id="app-layout">
@@ -54,7 +61,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
 
-                    <li><a href="{{ url('/index') }}">หน้าหลัก</a></li>
+                    <li><a style="color: #ffffff;" href="{{ url('/index') }}">หน้าหลัก</a></li>
 
                 </ul>
 
@@ -63,8 +70,8 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
 
-                        <li><a href="{{ url('/login') }}">ลงชื่อเข้าใช้</a></li>
-                        <li><a href="{{ url('/register') }}">ลงทะเบียน</a></li>
+                        <li><a style="color: #ffffff;" href="{{ url('/login') }}">ลงชื่อเข้าใช้</a></li>
+                        <li><a style="color: #ffffff;" href="{{ url('/register') }}">ลงทะเบียน</a></li>
 
                     @else
                         <li class="dropdown">
