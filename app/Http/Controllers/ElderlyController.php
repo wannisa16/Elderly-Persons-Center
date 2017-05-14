@@ -274,4 +274,21 @@ class ElderlyController extends Controller
             ->with('elderly', $elderly)
             ->with('pro', $pro);
     }
+
+    public function detailFile($id)
+    {
+        $elderly = Elderly::find($id); 
+        $home = "";
+        $about = "";
+        $donate = "";
+        $contact = "";
+        $pro = "";
+
+        return view('elderly.detailFile')->with('elderly',$elderly)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro);
+    }
 }

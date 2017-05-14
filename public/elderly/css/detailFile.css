@@ -1,0 +1,18 @@
+a.back{
+	font-size: 18px;
+	background-color: #fbc02d !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+h4{
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.detailFile{
+	background-color: #00bfa5 !important; 
+	border-radius: 10px;
+	margin-top: 25px;
+}

@@ -73,3 +73,6 @@ Route::get('/editActivity/{id}', 'PublicizeController@editActivity');
 Route::get('/editElderly/{id}', 'ElderlyController@editForm');
 
 Route::post('/editElderly/{id}', 'ElderlyController@editElderly');
+
+Route::get('/detailFile/{id}', 'ElderlyController@detailFile');
+
