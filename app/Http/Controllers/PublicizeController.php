@@ -363,4 +363,18 @@ class PublicizeController extends Controller
         return Redirect::to('publicizes');
 
     }
+
+    public function deletePublicize($id) 
+    {
+        $publicize = Publicize::find($id);
+        $publicize->delete();
+
+        $images = Image::ofImage($id)->get();
+        
+        foreach ($images as $image) {
+            $image->delete();
+        }
+
+        return Redirect::to('publicizes');
+    }
 }

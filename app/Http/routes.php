@@ -87,3 +87,5 @@ Route::get('/elderly/delete/{id}', 'ElderlyController@deleteElderly');
 Route::get('/editFormPublicizes/{id}', 'PublicizeController@editFormPublicizes');
 
 Route::post('/editPublicize/{id}', 'PublicizeController@editPublicizes');
+
+Route::get('/publicize/delete/{id}', 'PublicizeController@deletePublicize');
