@@ -52,7 +52,7 @@
         
         <div class="layout-text row">
             <div class="col m12 offset-m1 s12">เอกสารที่เกี่ยวข้องกับผู้สูงอายุ : {{$elderly->flie}}
-                <a href="" type="submit" class="see waves-effect waves-light btn">ดูเอกสาร</a>
+                <a href="../detailFile/{{ $elderly->id }}" type="submit" class="see waves-effect waves-light btn">ดูเอกสาร</a>
             </div>
         </div>
 

@@ -12,7 +12,7 @@
 
 @section('content')
 <div class="container">
-	<form action="../editElderly/{{$elderly->id}}" method="POST" role="form" >
+	<form enctype="multipart/form-data" action="../editElderly/{{$elderly->id}}" method="POST" role="form" >
 		<div class="addelderly z-depth-2 center-align s12"><h4>แก้ไขข้อมูลผู้สูงอายุ</h4></div>
 			<div class="card card-define col m12 s12">
 				<div class="row">
@@ -39,7 +39,7 @@
                     <div class="file-field input-field col m10 offset-m1 s12">
                         <div class="btn">
                             <span>แนบเอกสาร</span>
-                            <input type="file" name="file" value="{{ $elderly->file }}" class="file"> 
+                            <input type="file" name="pdf" value="{{ $elderly->file }}" class="file"> 
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" placeholder="แนบเอกสาร" value="">

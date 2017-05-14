@@ -66,9 +66,7 @@ Route::get('/elderlyForm', 'ElderlyController@elderlyForm');
 
 Route::post('/addElderly', 'ElderlyController@addElderly');
 
-Route::get('/test', function(){
-	return view('elderly/test');
-});
+Route::get('/detailFile/{$id}', 'ElderlyController@detailFile');
 
 Route::get('/activityForm/{id}', 'PublicizeController@editForm');
 

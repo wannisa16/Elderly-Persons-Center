@@ -13,13 +13,15 @@
 
 @section('content')
 <div class="container">
-    <div class="detailFile z-depth-2 center-align"><h4>เอกสารข้อมูลที่เกี่ยวข้องกับผู้สูงอายุ</h4></div>
+    <div class="detailFile z-depth-2 center-align">
+    	<h4>เอกสารข้อมูลที่เกี่ยวข้องกับผู้สูงอายุ</h4>
+    </div>
 
-    <iframe src="{{url('data/test.pdf')}}" style="width: 100%;height: 500%;border: none;"></iframe>
+    <iframe name="tutor" marginwidth="0" marginheight="0" frameborder="0" width="100%" scrolling="" height="500" src="{{url($elderly->file)}}" style="z-index:100;"> </iframe>
 
     <div class="row">
         <div class="col m12 s12 center-align">
-            <a href="" type="submit" class="back waves-effect waves-light btn-large">ย้อนกลับ</a>
+            <a href="../detailElderly/{{ $elderly->id }}" type="submit" class="back waves-effect waves-light btn-large">ย้อนกลับ</a>
         </div>
 	</div>
 

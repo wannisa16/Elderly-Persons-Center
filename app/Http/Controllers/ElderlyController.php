@@ -87,8 +87,6 @@ class ElderlyController extends Controller
             }
         }
 
-
-        
         $home = "";
         $about = "";
         $donate = "";
@@ -298,4 +296,5 @@ class ElderlyController extends Controller
 
         return redirect('indexElderlies');
     }
+
 }
