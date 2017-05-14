@@ -43,7 +43,6 @@ class ElderlyController extends Controller
         $about = "";
         $donate = "";
         $contact = "";
-        $elderly = "active";
         $pro = "";
 
         return view('elderly.detailelderly')->with('elderly',$elderly)

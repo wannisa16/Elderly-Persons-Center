@@ -17,35 +17,23 @@
 <div class="container">
     <div class="row">
         <div class="col s12 m12">
-            <div class="card ">
-                <label class="layout-title col m12 s12 z-depth-3 " -><p class="font-title "><i class="material-icons">perm_identity</i> ข้อมูลทั่วไปผู้สูงอายุ </p></label>
-        
-            <div class="row">
-                <div class="col m6 s12">
+            <label class="layout-title col m12 s12 z-depth-3 "><p class="font-title "><i class="material-icons">perm_identity</i> ข้อมูลทั่วไปผู้สูงอายุ </p></label>
+            <div class="card card-define col m12 s12">
+                <div class="row">
+                    <div class="col m6 s12">
+                        <p class="font-detail ">รหัส : {{$elderly->id}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m6 s6">
+                        <p class="font-detail ">ชื่อ : {{$elderly->name}}</p>
+                    </div>
                     <div class="col m4 s4">
-                        <p class="font-detail ">รหัส :</p>
-                    </div>
-                    <div class="col m8 s8">
-                        <p class="font-detail ">{{$elderly->id}}</p>
+                        <p class="font-detail ">สกุล : {{$elderly->surname}}</p>
                     </div>
                 </div>
-            <div class="col m6 s6"></div>
-            </div>
-            <div class="row">
-                <div class="col m6 s6">
-                    <div class="col m4 s4"><p class="font-detail ">ชื่อ :</p></div>
-                    <div class="col m5 s5"><p class="font-detail ">{{$elderly->name}}</p></div>
-                </div>
-                <div class="col m6 s6">
-                    <div class="col m4 s4">
-                        <p class="font-detail ">สกุล :</p>
-                    </div>
-                    <div class="col m5 s5">
-                        <p class="font-detail ">{{$elderly->surname}}</p>
-                    </div>
-                </div>
-            </div> 
-            <div class="row">
+ 
+                <div class="row">
                 <div class="col m6 s6">
                     <div class="col m4 s4" class="font-detail ">
                         <p class="font-detail ">เพศ :</p>
@@ -113,6 +101,73 @@
                     <div class="col m5 s5" class="font-detail "><p class="font-detail ">{{$elderly->flie}}</p></div>
                 </div>
             </div>
+            </div>
+            <div class="card card-define col m12 s12">
+                <div class="row">
+                    <div class="layout-title col m10 offset-m1 s12">ที่อยู่ของผู้สูงอายุ</div>
+                </div>
+                <div class="row">
+                    <div class="col m3 offset-m1 s12">
+                        <div class="input-field">
+                            <input id="housenumber" type="text" class="validate" name="v_housenumber" value="">
+                            <label for="housenumber">บ้านเลขที่ :</label>
+                        </div>
+                    </div>
+                    <div class="col m2 s12">
+                        <div class="input-field">
+                            <input id="villageno" type="text" class="validate" name="v_villageno" value="">
+                            <label for="villageno">หมู่ที่ :</label>
+                        </div>
+                    </div>
+                    <div class="col m2 s12">
+                        <div class="input-field">
+                            <input id="alley" type="text" class="validate" name="v_alley" value="">
+                            <label for="alley">ตรอก :</label>
+                        </div>
+                    </div>
+                    <div class="col m3 s12">
+                        <div class="input-field">
+                            <input id="alleyway" type="text" class="validate" name="v_alleyway" value="">
+                            <label for="alleyway">ซอย :</label>
+                        </div>
+                    </div>                          
+                </div>
+
+                <div class="row">
+                    <div class="col m4 offset-m1 s12">
+                        <div class="input-field">
+                            <input id="road" type="text" class="validate" name="v_road" value="">
+                            <label for="road">ถนน :</label>
+                        </div>
+                    </div>
+                    <div class="col m3 s12">
+                        <div class="input-field">
+                            <input id="canton" type="text" class="validate" name="v_canton" value="">
+                            <label for="canton">ตำบล/แขวง :</label>
+                        </div>
+                    </div>
+                    <div class="col m3 s12">
+                        <div class="input-field">
+                            <input id="district" type="text" class="validate" name="v_district" value="">
+                            <label for="district">อำเภอ/เขต :</label>
+                        </div>
+                    </div>           
+                </div>
+
+                <div class="row">
+                    <div class="col m5 offset-m1 s12">
+                        <div class="input-field">
+                            <input id="province" type="text" class="validate" name="v_province" value="">
+                            <label for="province">จังหวัด :</label>
+                        </div>
+                    </div>
+                    <div class="col m5 s12">
+                        <div class="input-field">
+                            <input id="postcode" type="text" class="validate" name="v_postcode" value="">
+                            <label for="postcode">รหัสไปรษณีย์ :</label>
+                        </div>
+                    </div>                    
+                </div>
             </div>
         </div>
     </div>
