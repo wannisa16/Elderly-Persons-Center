@@ -1,0 +1,39 @@
+h4{
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.editpublicizes{
+	background-color: #00bfa5 !important; 
+	border-radius: 10px;
+	margin-top: 25px;
+}
+
+a.cancel{
+	font-size: 18px !important;
+	background-color: #e53935  !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+button.agree{
+	font-size: 18px !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+.card {
+	margin-top: 10px !important;
+    padding: 20px;
+    border-radius: 5px !important;
+    background-color: #fafafa !important;
+}
+
+.btn{
+	background-color: #f57f17 !important;
+}
+
+.input-field label{
+	font-size: 20px !important;
+}

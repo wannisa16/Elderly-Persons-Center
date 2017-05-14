@@ -35,7 +35,7 @@
 
     <div class="row">
         <div class="col s6 right-align">
-            <a href="" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+            <a href="../editPublicizes/{{$publicize->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
         </div>
         <div class="col s6">
             <input type="hidden" name="_method" value="DELETE" />
