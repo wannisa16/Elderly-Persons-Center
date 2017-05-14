@@ -15,6 +15,7 @@
 @section('content')
 
 <div class="container">
+
 	<div class="row">
 		<label class="layout-title col m12 z-depth-3"><p class="font-title " align="center">ประชาสัมพันธ์</p></label>
 	</div>
@@ -41,7 +42,7 @@
 					<p>{{$publicize->content}}</p>
 					<div class="row">
 					<div class="card-action  ">
-              			<a href="detailPublicizes/{{ $publicize->publicizeID }}"><i class="material-icons small right" >input</i></a>
+              			<a href="detailPublicizes/{{ $publicize->publicizeID }}"><i class="material-icons small right" >pageview</i></a>
             		</div>
 					</div>
 				</div>
