@@ -5,7 +5,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/detailelderlyyy.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/detailelderlyy.css') }}" rel="stylesheet" type="text/css" media="all" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 @endsection
 
@@ -67,11 +67,11 @@
     </div>
     <div class="row">
         <div class="col s6 right-align">
-            <a href="" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+            <a href="../editElderly/{{$elderly->id}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
         </div>
         <div class="col s6">
             <input type="hidden" name="_method" value="DELETE" />
-            <button class="cancel waves-effect waves-light btn-large">ลบ</button>
+            <a href="../elderly/delete/{{$elderly->id}}" class="cancel waves-effect waves-light btn-large">ลบ</a>
         </div>
     </div>
 </div>

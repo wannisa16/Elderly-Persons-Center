@@ -80,3 +80,4 @@ Route::get('/detailFile/{id}', 'ElderlyController@detailFile');
 
 Route::get('/activity/delete/{id}', 'PublicizeController@deleteActivity');
 
+Route::get('/elderly/delete/{id}', 'ElderlyController@deleteElderly');
