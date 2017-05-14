@@ -377,4 +377,13 @@ class PublicizeController extends Controller
 
         return Redirect::to('publicizes');
     }
+
+    public function deleteImage($id)
+    {
+        $image = Image::find($id);
+        $story = $image->contentID;
+        $image->delete();
+
+        return Redirect::to('publicizes');
+    }
 }

@@ -89,3 +89,5 @@ Route::get('/editFormPublicizes/{id}', 'PublicizeController@editFormPublicizes')
 Route::post('/editPublicize/{id}', 'PublicizeController@editPublicizes');
 
 Route::get('/publicize/delete/{id}', 'PublicizeController@deletePublicize');
+
+Route::get('/delete/image/{id}', 'PublicizeController@deleteImage');

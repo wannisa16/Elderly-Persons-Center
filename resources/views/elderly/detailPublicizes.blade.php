@@ -18,6 +18,9 @@
     @foreach($images as $image)
     <div class="card">
         <div class="card-image">
+        @if (!Auth::guest())
+            <a class="right" href="../delete/image/{{ $image->imageID }}"><i class="material-icons">delete</i>ลบ</a>
+        @endif
             <img src="{{url($image->imagename) }}" alt="">
         </div>
     </div>
