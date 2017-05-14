@@ -68,8 +68,12 @@ Route::get('/test', function(){
 	return view('elderly/test');
 });
 
-Route::get('/editActivity/{id}', 'PublicizeController@editActivity');
+Route::get('/activityForm/{id}', 'PublicizeController@editForm');
+
+Route::post('/editActivity/{id}', 'PublicizeController@editActivity');
 
 Route::get('/editElderly/{id}', 'ElderlyController@editForm');
 
 Route::post('/editElderly/{id}', 'ElderlyController@editElderly');
+
+Route::get('/activity/delete/{id}', 'PublicizeController@deleteActivity');

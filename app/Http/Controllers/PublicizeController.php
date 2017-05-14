@@ -114,6 +114,7 @@ class PublicizeController extends Controller
         $images->imagename = "images/".$id.".png";
         $images->contentID = $id;
         $images->save();
+        
         return Redirect::to('publicizes');
     }
 
@@ -198,10 +199,19 @@ class PublicizeController extends Controller
             ->with('pro', $pro);
 
     }
-    public function editActivity($id)
+
+    public function editForm($id)
     {
-        $activity = Publicize::find($id);
-        $images = Image::ofImage($activity->publicizeID)->get();
+        $story = Publicize::find($id);
+        $images = Image::ofImage($story->publicizeID)->get();
+
+        $photo = "";
+
+        foreach ($images as $image) {
+
+            $photo = $image->imagename.",".$photo;
+        }
+
 
         $home = "active";
         $about = "";
@@ -210,8 +220,8 @@ class PublicizeController extends Controller
         $elderly = "";
         $pro = "";
 
-        return view('elderly.editActivity')->with('activity',$activity)
-            ->with('images', $images)
+        return view('elderly.editActivity')->with('story',$story)
+            ->with('photo', $photo)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
@@ -219,5 +229,42 @@ class PublicizeController extends Controller
             ->with('elderly', $elderly)
             ->with('pro', $pro);
 
+    }
+
+    public function editActivity(Request $request, $id)
+    {
+        $activity = Publicize::find($id);
+        $activity->title = $request->input('title');
+        $activity->content = $request->input('content');
+        $activity->dataType = "activity";
+        $activity->save();
+
+
+        foreach(Input::file("photo") as $file) { 
+            if($file == " "){
+
+            }elseif($file != "" ){
+                $images = new Image;
+                $file->move(public_path("/images"), $file->getClientOriginalName());
+                $images->imagename = "images/".$file->getClientOriginalName();
+                $images->contentID = $id;
+                $images->save();
+            }     
+        } 
+        return Redirect::to('indexActivity');
+    }
+
+    public function deleteActivity($id) 
+    {
+        $activity = Publicize::find($id);
+        $activity->delete();
+
+        $images = Image::ofImage($activity->publicizeID)->get();
+
+        foreach ($images as $image) {
+            $image->delete();
+        }
+
+        return Redirect::to('indexActivity');
     }
 }
