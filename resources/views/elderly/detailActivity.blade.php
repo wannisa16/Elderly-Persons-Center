@@ -12,8 +12,9 @@
 
 @section('content')
 <div class="container">
-    <form action="../indexActivity" method="post" role="form">
-        <div class="detailactivity center z-depth-2"><h4>กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
+    <div class="detailactivity center z-depth-2">
+        <h4>กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4>
+    </div>
 
     <div class="row">
         <div class="col m12 s12">
@@ -53,17 +54,16 @@
             </div>
         </div>
     
-    <div class="row">
-        <div class="col s6 right-align">
-            <a href="../editactivity/{{$activity->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
-        </div>
-        <div class="col s6">
-            <input type="hidden" name="_method" value="DELETE" />
-            <button class="cancel waves-effect waves-light btn-large">ลบ</button>
+        <div class="row">
+            <div class="col s6 right-align">
+                <a href="../activityForm/{{$activity->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+            </div>
+            <div class="col s6">
+                <input type="hidden" name="_method" value="DELETE" />
+                    <a href="../activity/delete/{{$activity->publicizeID}}" type="sumit" class="cancel waves-effect waves-light btn-large">ลบ</a>
+            </div>
         </div>
     </div>
-    </div>
-    </form>
 </div>
 
 
