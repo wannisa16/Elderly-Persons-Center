@@ -68,6 +68,5 @@ Route::get('/test', function(){
 	return view('elderly/test');
 });
 
-Route::get('/editelderly', 'ElderlyController@editElderly');
-
-
+Route::get('/editElderly/{id}', 'ElderlyController@editForm');
+Route::post('/editElderly/{id}', 'ElderlyController@editElderly');

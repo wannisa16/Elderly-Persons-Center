@@ -55,7 +55,7 @@ class ElderlyController extends Controller
 
     public function ageChart()
     {
-        $elderlies = Elderly::select('id', 'age', 'sex')->get();
+        $elderlies = Elderly::select('id', 'age', 'sex', 'brithday')->get();
 
         $total = [];
         $minAge = 6;
@@ -217,13 +217,54 @@ class ElderlyController extends Controller
 
     }
 
-    public function editElderly()
+    public function editElderly(Request $request, $id)
     {
+        $elderly = Elderly::find($id);
+        $elderly->name = $request->input('name');
+        $elderly->surname = $request->input('surname');
+        $pdf = $request->file('pdf');
+        if($pdf == "")
+        {
+
+        }else{
+            $pdf->move(public_path("/data"), $pdf->getClientOriginalName());
+            $elderly->file = "data/".$pdf->getClientOriginalName();
+        }
+        
+        $elderly->brithday = $request->input('brithday');
+        $elderly->age = $elderly->age;
+        $elderly->sex = $request->input('sex');
+        $elderly->education = $request->input('education');
+        $elderly->occupation = $request->input('occupation');
+        $elderly->status = $request->input('status');
+        $elderly->child = $request->input('child');
+        $elderly->county = $request->input('county');
+        $elderly->grade = $request->input('grade');
+        $elderly->reason = $request->input('reason');
+        $elderly->housenumber = $request->input('housenumber');
+        $elderly->villageno = $request->input('villageno');
+        $elderly->alley = $request->input('alley');
+        $elderly->alleyway = $request->input('alleyway');
+        $elderly->road = $request->input('road');
+        $elderly->district = $request->input('canton');
+        $elderly->district = $request->input('district');
+        $elderly->province = $request->input('province');
+        $elderly->postcode = $request->input('postcode');
+        $elderly->save();
+
+
+        return redirect('indexElderlies');
+    }
+
+    public function editForm($id)
+    {
+        $elderly = Elderly::find($id);
+
+
         $home = "";
         $about = "";
         $donate = "";
         $contact = "";
-        $elderly = "active";
         $pro = "";
 
         return view('elderly.editElderly')->with('home', $home)
@@ -234,6 +275,5 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 
-}
 
 }
