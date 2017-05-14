@@ -313,10 +313,15 @@ class PublicizeController extends Controller
         return Redirect::to('indexActivity');
     }
 
-    public function editPublicizes(Request $request, $id)
+    public function editFormPublicizes(Request $request, $id)
     {
         $publicize = Publicize::find($id);
-        $images = Image::ofImage($publicize->publicizeID)->get();
+        $photos = Image::ofImage($id)->get();
+
+        foreach ($photos as $photo) {
+            $image= $photo;
+        }
+
         
         $home = "active";
         $about = "";
@@ -326,12 +331,36 @@ class PublicizeController extends Controller
         $pro = "";
 
         return view('elderly.editPublicizes')->with('publicize',$publicize)
-            ->with('images', $images)
+            ->with('image', $image)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro);
+    }
+
+    public function editPublicizes(Request $request, $id)
+    {
+        $publicize = Publicize::find($id);
+        $publicize->title = $request->input('title');
+        $publicize->content = $request->input('content');
+        $publicize->dataType = "publicize";
+        $publicize->save();
+        $id=$publicize->publicizeID;
+
+        $image = $request->file('photo');
+
+        if($image == ""){
+
+        }else{
+            $images = new Image;
+            $image->move(public_path("/images"), $image->getClientOriginalName());
+            $images->imagename = "images/".$image->getClientOriginalName();
+            $images->contentID = $id;
+            $images->save();
+        }
+        return Redirect::to('publicizes');
+
     }
 }
