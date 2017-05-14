@@ -5,7 +5,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/detailelderlyy.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/detailelderlyyy.css') }}" rel="stylesheet" type="text/css" media="all" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 @endsection
 
@@ -47,8 +47,13 @@
         </div>
 
         <div class="layout-text row">
-            <div class="col m5 offset-m1 s12">สถานะ : {{$elderly->grade}}</div>
-            <div class="col m5 s12">เอกสารที่เกี่ยวข้องกับผู้สูงอายุ : {{$elderly->flie}}</div>
+            <div class="col m12 offset-m1 s12">สถานะ : {{$elderly->grade}}</div>
+        </div>
+        
+        <div class="layout-text row">
+            <div class="col m12 offset-m1 s12">เอกสารที่เกี่ยวข้องกับผู้สูงอายุ : {{$elderly->flie}}
+                <a href="" type="submit" class="see waves-effect waves-light btn">ดูเอกสาร</a>
+            </div>
         </div>
 
         <div class="layout-text row">
