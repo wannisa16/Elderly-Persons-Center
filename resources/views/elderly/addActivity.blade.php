@@ -12,6 +12,15 @@
 
 @section('content')
 <div class="container">
+  @if ( count($errors) > 0 )
+        <div class="alert alert-danger">
+          <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+          </ul>
+        </div>
+  @endif
 	<div class="addactivity z-depth-2 center-align">
         <h4>เพิ่มกิจกรรม ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4>
     </div>
