@@ -291,4 +291,11 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('pro', $pro);
     }
+    public function deleteElderly($id) 
+    {
+        $elderly = Elderly::find($id);
+        $elderly->delete();
+
+        return redirect('indexElderlies');
+    }
 }
