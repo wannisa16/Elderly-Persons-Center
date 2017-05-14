@@ -1,9 +1,10 @@
 @extends('elderly.template')
 @section('title')
+กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/detailActivity.css') }}" rel="stylesheet" type="text/css" media="all" />  
+<link href="{{ URL::asset('elderly/css/detailActivityy.css') }}" rel="stylesheet" type="text/css" media="all" />  
 @endsection
 
 @section('band')
@@ -11,13 +12,13 @@
 
 @section('content')
 <div class="container">
-    <div class="detailactivity center z-depth-2"><h4>กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
-</div>
-<div class="container">
+    <form action="../indexActivity" method="post" role="form">
+        <div class="detailactivity center z-depth-2"><h4>กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
+
     <div class="row">
-        <div class="col s14 m12">
+        <div class="col m12 s12">
             <div class="card horizontal ">
-                <div class="card-stacked green lighten-5">
+                <div class="card-stacked">
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 font">{{$activity->title}}</span>
                         <div class="progress">
@@ -51,7 +52,18 @@
                 </div>
             </div>
         </div>
+    
+    <div class="row">
+        <div class="col s6 right-align">
+            <a href="../editactivity/{{$activity->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+        </div>
+        <div class="col s6">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button class="cancel waves-effect waves-light btn-large">ลบ</button>
+        </div>
     </div>
+    </div>
+    </form>
 </div>
 
 

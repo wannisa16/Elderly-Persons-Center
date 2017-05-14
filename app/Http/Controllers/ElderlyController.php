@@ -43,9 +43,10 @@ class ElderlyController extends Controller
         $about = "";
         $donate = "";
         $contact = "";
+        $elderly = "active";
         $pro = "";
 
-        return view('elderly.detailelderly')->with('elderly', $elderly)
+        return view('elderly.detailelderly')->with('elderly',$elderly)
             ->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
@@ -233,7 +234,5 @@ class ElderlyController extends Controller
             ->with('elderly', $elderly)
             ->with('pro', $pro);
     }
-
-}
 
 }

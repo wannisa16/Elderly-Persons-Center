@@ -53,10 +53,10 @@
             </div>
 
             <div class="row">
-                    <div class="col m2 offset-m1 s12">
+                    <div class="col m3 offset-m1 s12">
                         <h5>วัน/เดือน/ปีเกิด</h5>
                     </div>
-                <div class="col m8  s12">
+                <div class="col m7  s12">
                     <input type="date" id="myDate" name="v_birthday">
                 </div>                   
             </div>
@@ -314,7 +314,7 @@
                 <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
             </div>
             <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                <a href="../problems/create" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
             </div>
         </div>
     </form>   

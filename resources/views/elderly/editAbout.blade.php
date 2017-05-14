@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/editAbout.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/editA.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')

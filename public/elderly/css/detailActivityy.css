@@ -1,0 +1,38 @@
+h4{
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	font-weight:bold;
+}
+.detailactivity{
+	background-color: #00bfa5 !important; 
+	border-radius: 10px;
+	margin-top: 25px;
+}
+
+.col{
+	margin-top: 20px;
+}
+
+.modal-content h5{
+	color: #81d4fa;
+}
+
+button.cancel{
+	font-size: 18px;
+	background-color: #e53935 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+a.edit{
+	font-size: 18px;
+	background-color: #43a047 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+a.modal-trigger{
+	background-color: #f57f17 !important;
+}

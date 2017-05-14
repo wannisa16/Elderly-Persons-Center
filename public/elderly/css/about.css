@@ -20,3 +20,7 @@ p.layout-text {
 .row {
 	margin-bottom: 0px !important;
 }
+
+.card-panel{
+	background-image: url('images/elderlyabout.png') !important;
+}

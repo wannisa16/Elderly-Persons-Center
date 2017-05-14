@@ -70,4 +70,5 @@ Route::get('/test', function(){
 
 Route::get('/editelderly', 'ElderlyController@editElderly');
 
+Route::get('/editactivity/{id}', 'PublicizeController@editActivity');
 

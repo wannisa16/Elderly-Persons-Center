@@ -13,7 +13,7 @@
 @section('content')
 <div class="container">
 	<div class="addactivity z-depth-2 center-align">
-    <h4>เพิ่มกิจกรรม ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4>
+        <h4>เพิ่มกิจกรรม ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4>
     </div>
     <form action="{{url('/addActivity')}}" method="post" enctype="multipart/form-data" class="col s12">	
 	    <div class="card card-define col m12">
@@ -48,7 +48,7 @@
                 <button type="submit" class="agree waves-effect waves-light btn-large">ตกลง</button>
             </div>
             <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                <a href="indexActivity" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
             </div>
         </div>
     </form>

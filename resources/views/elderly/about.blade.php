@@ -4,27 +4,36 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/aboutmee.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/about.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
 @endsection
 
 @section('content')
-<div class="container">
-	<div class="row">
-		<div class="col m2 layout-title">ประวัติ</div>
-	</div>
-
-	@foreach ($historys as $history)
-	<p class="flow-text">{{$history->content}}</p>
-	@endforeach
-    @if (Auth::guest())
-    @else    
     <div class="row">
-        <a class="right" href="editAbout/{{ $history->id }}"><h5>แก้ไขประวัติ</h5></a>
+        <div class="col s12 m12">
+            <div class="card-panel">
+                <div class="container">
+	            <div class="row">
+		            <div class="col m2 layout-title">ประวัติ</div>
+	            </div>
+    
+	            @foreach ($historys as $history)
+	               <p class="flow-text">{{$history->content}}</p>
+	            @endforeach
+
+                @if (Auth::guest())
+                @else    
+                    <div class="row">
+                        <a class="right" href="editAbout/{{ $history->id }}"><h5>แก้ไขประวัติ</h5></a>
+                    </div>
+                @endif
+                </div>
+            </div>
+        </div>
     </div>
-    @endif
+<div class="container">
 	<div class="row">
 		<div class="tab-title col s12">
         <ul class="tabs">
@@ -60,7 +69,7 @@
         {{--*/$i = 1/*--}}
         @foreach ($obligations as $obligation)
             <div class="row">
-                <div class="col m1 offset-m1 col s2">
+                <div class="col m1 offset-m1 col s02">
                     <p class="layout-number center-align">{{ $i }}</p>
                 </div>
                 <div class="col m9 col s10">

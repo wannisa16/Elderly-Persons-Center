@@ -51,7 +51,7 @@
                 @else
                 <li><a href="{{ url('/logout') }}">ออกจากระบบ</a></li>
                 <li><a href="{{ url('/elderlygraph') }}">รายงานข้อมูลผู้สูงอายุ</a></li>
-                <li class="" ><a href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
+                <li><a href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
                 <li><a href="{{ url('/donates') }}">รายการบริจาค</a></li>
                 <li><a href="{{ url('/problems') }}">รายการผู้ประสบปัญหาทางสังคม</a></li>
                 @endif
