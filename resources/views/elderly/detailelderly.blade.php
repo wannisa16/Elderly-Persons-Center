@@ -67,11 +67,11 @@
     </div>
     <div class="row">
         <div class="col s6 right-align">
-            <a href="../editElderly/{{$elderly->id}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+            <a href="../editElderly/{{$elderly->id}}" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
         </div>
         <div class="col s6">
             <input type="hidden" name="_method" value="DELETE" />
-            <a href="../elderly/delete/{{$elderly->id}}" class="cancel waves-effect waves-light btn-large">ลบ</a>
+            <a href="../elderly/delete/{{$elderly->id}}" class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</a>
         </div>
     </div>
 </div>

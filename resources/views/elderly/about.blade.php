@@ -26,7 +26,7 @@
                 @if (Auth::guest())
                 @else    
                     <div class="row">
-                        <a class="right" href="editAbout/{{ $history->id }}"><h5>แก้ไขประวัติ</h5></a>
+                        <a class="right" href="editAbout/{{ $history->id }}"><h5><i class="Small material-icons">mode_edit</i> แก้ไขประวัติ</h5></a>
                     </div>
                 @endif
                 </div>
@@ -58,7 +58,7 @@
             @if (Auth::guest())
             @else
             <div class="row">
-                <a class="right" href="editAbout/{{$goal->id}}"><p>แก้ไข</p></a>
+                <a class="right" href="editAbout/{{$goal->id}}"><h5><i class="Small material-icons">mode_edit</i> แก้ไข</h5></a>
             </div>
             @endif
         {{--*/$i++/*--}}
@@ -79,7 +79,7 @@
             @if (Auth::guest())
             @else
             <div class="row">
-                <a class="right" href="editAbout/{{$obligation->id}}"><p>แก้ไข</p></a>
+                <a class="right" href="editAbout/{{$obligation->id}}"><h5><i class="Small material-icons">mode_edit</i> แก้ไข</h5></a>
             </div>
             @endif
         {{--*/$i++/*--}}
@@ -100,7 +100,7 @@
             @if (Auth::guest())
             @else
             <div class="row">
-                <a class="right" href="editAbout/{{$role->id}}"><p>แก้ไข</p></a>
+                <a class="right" href="editAbout/{{$role->id}}"><h5><i class="Small material-icons">mode_edit</i> แก้ไข</h5></a>
             </div>
             @endif
         {{--*/$i++/*--}}
@@ -121,7 +121,7 @@
             @if (Auth::guest())
             @else
             <div class="row">
-                <a class="right" href="editAbout/{{$vision->id}}"><p>แก้ไข</p></a>
+                <a class="right" href="editAbout/{{$vision->id}}"><h5><i class="Small material-icons">mode_edit</i> แก้ไข</h5></a>
             </div>
             @endif
         {{--*/$i++/*--}}

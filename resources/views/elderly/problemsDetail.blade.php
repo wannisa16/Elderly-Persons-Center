@@ -130,11 +130,11 @@
 
 		    <div class="row">
                 <div class="col s6 right-align">
-                    <a href="{{$victim->victim_id}}/edit" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+                    <a href="{{$victim->victim_id}}/edit" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
                 </div>
                 <div class="col s6">
             	   <input type="hidden" name="_method" value="DELETE" />
-                   <button class="cancel waves-effect waves-light btn-large">ลบ</button>
+                   <button class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</button>
                 </div>
     	    </div>
     </form>

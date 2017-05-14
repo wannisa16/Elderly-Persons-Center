@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/editA.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/editAbout.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -24,7 +24,7 @@
     	</div>
 
     	<div class="row">
-    		<button class="btn waves-effect waves-light right " type="submit" name="action">Submit
+    		<button class="btn waves-effect waves-light right " type="submit" name="action">ยืนยันการแก้ไข
     		<i class="material-icons right">send</i>
     		</button>
     	</div>  

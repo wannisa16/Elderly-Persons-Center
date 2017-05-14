@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{URL::asset('elderly/css/addActivity.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{URL::asset('elderly/css/addActivityy.css')}}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -29,7 +29,7 @@
 		    <div class="row">
       		    <div class="row">
           			<div class="input-field col s6">
-            			<input id="input_text" type="text" name="title">
+            			<input id="input_text" type="text" name="title" class="story">
             			<label for="input_text">กิจกรรมเรื่อง</label>
           			</div>
         		</div>
@@ -48,7 +48,7 @@
         		  <input name="photo[]" type="file" multiple>
       		    </div>
       		    <div class="file-path-wrapper">
-        		  <input class="file-path validate" type="text" placeholder="Upload one or more files">
+        		  <input class="file-path validate" type="text" placeholder="สามารถโหลดรูปได้มากว่าหนึ่งรูป">
       		    </div>
     	    </div>
 	    </div>

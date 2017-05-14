@@ -11,7 +11,7 @@
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" href="{{url('css/materialize.min.css')}}">
     
-            <link href="{{ URL::asset('elderly/css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ URL::asset('elderly/css/templates.css') }}" rel="stylesheet" type="text/css" media="all" />
 
             <link rel="stylesheet" href="{{ URL::asset('fonts/RSU_Regular.ttf') }}">
     
@@ -26,34 +26,34 @@
                     <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
-                            <li class="{{ $home }}"><a  href="{{url('/index')}}">หน้าหลัก</a></li>
-                            <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
-                            <li class="{{ $donate }}" > <a href="{{url('/donates/create')}}">บริจาค</a></li>
-                            <li><a href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
-                            <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li> 
+                            <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
+                            <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li class="{{ $donate }}" > <a class="bar" href="{{url('/donates/create')}}">บริจาค</a></li>
+                            <li class="{{ $pro }}"><a class="bar" href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
+                            <li><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
+                            <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
                         <ul class="side-nav" id="mobile-demo">
-                            <li class="{{ $home }}"><a href="{{url('/index')}}">หน้าหลัก</a></li>
-                            <li class="{{ $about }}" ><a href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
-                            <li class="{{ $donate }}"><a href="{{url('/donates/create')}}">บริจาค</a></li>
-                            <li class="{{ $pro }}" ><a href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li><a href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
-                            <li class="{{ $contact }}"><a href="{{url('contacts')}}">ติดต่อเรา</a></li>
+                            <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
+                            <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li class="{{ $donate }}"><a class="bar" href="{{url('/donates/create')}}">บริจาค</a></li>
+                            <li class="{{ $pro }}" ><a class="bar" href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
+                            <li><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
+                            <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
                 </div>
             </nav>
             <!-- Dropdown Structure -->
             <ul id="dropdown1" class="dropdown-content">
                 @if (Auth::guest())
-                <li><a href="{{ url('/login') }}" >เข้าสู่ระบบ</a></li>
+                <li><a class="dropdown" href="{{ url('/login') }}" >เข้าสู่ระบบ</a></li>
                 @else
-                <li><a href="{{ url('/logout') }}">ออกจากระบบ</a></li>
-                <li><a href="{{ url('/elderlygraph') }}">รายงานข้อมูลผู้สูงอายุ</a></li>
-                <li><a href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
-                <li><a href="{{ url('/donates') }}">รายการบริจาค</a></li>
-                <li><a href="{{ url('/problems') }}">รายการผู้ประสบปัญหาทางสังคม</a></li>
+                <li><a class="dropdown" href="{{ url('/logout') }}">ออกจากระบบ</a></li>
+                <li><a class="dropdown" href="{{ url('/elderlygraph') }}">รายงานข้อมูลผู้สูงอายุ</a></li>
+                <li><a class="dropdown" href="{{ url('/indexElderlies') }}">ผู้สูงอายุ</a></li>
+                <li><a class="dropdown" href="{{ url('/donates') }}">รายการบริจาค</a></li>
+                <li><a class="dropdown" href="{{ url('/problems') }}">รายการผู้ประสบปัญหาทางสังคม</a></li>
                 @endif
             </ul>
             <nav >
