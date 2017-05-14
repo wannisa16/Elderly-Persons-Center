@@ -11,6 +11,7 @@ use App\Http\Requests;
 use App\Publicize;
 use App\Image;
 use View;
+use Validator;
 
 class PublicizeController extends Controller
 {
@@ -158,7 +159,22 @@ class PublicizeController extends Controller
     }
 
     public function addActivity(Request $request)
-    {   
+    {
+        $rules = [
+            'title' => 'required',
+            'content' => 'required',
+            'photo[]' => 'required|image'
+        ];
+        $messages = [
+            'title.required' => 'กรุณาใส่ชื่อเรื่องกิจกรรม',
+            'content.required' => 'กรุณาใส่รายละเอียดของกิจกรรม',
+            'photo[].required' => 'กรุณาเลือกรูปภาพ',
+            'photo[].image' => 'กรุณาเลือกไฟล์รูปภาพ'
+        ];
+
+        $validator=Validator::make($request->all(),$rules,$messages);
+
+        if($validator->passes() ){
         $publicizes = new Publicize;
         $publicizes->title = $request->input('title');
 
@@ -176,6 +192,11 @@ class PublicizeController extends Controller
         }
 
         return Redirect::to('indexActivity');
+        }else{
+            return Redirect::to('addActivity')
+            ->withErrors($validator->messages());
+        }
+
     }
     
 
