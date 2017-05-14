@@ -12,10 +12,10 @@
 
 @section('content')
 <div class="container">
-    <div class="add z-depth-2"><h4>เพิ่มประชาสัมพันธ์</h4></div>
-
-    {!! Form::open(['url' => 'addPublicize', 'files' => true]) !!}
-
+    <div class="add z-depth-2">
+        <h4>เพิ่มประชาสัมพันธ์</h4>
+    </div>
+    <form enctype="multipart/form-data" action="{{ url('/addPublicize') }}" method="post" >
         <div class="title row">
             <div class="input-field col s6">
                 <input id="input_text" type="text" name="title">
@@ -31,9 +31,16 @@
         </div>
 
         
-        <div class="form-group">
-            {!! Form::label('เลือกรูปภาพ') !!}
-            {!! Form::file('image', null) !!}
+        <div class="row">
+            <div class="file-field input-field col m10 offset-m1 s12">
+                <div class="btn">
+                    <span>รูปภาพ</span>
+                    <input type="file" class="file" name="image"> 
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="รูปภาพ">
+                </div>
+            </div>                   
         </div>
         
 
@@ -45,8 +52,7 @@
                 <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
             </div>
         </div>
-
-    {!! Form::close() !!}
+    </form>
 </div>
 @endsection
 

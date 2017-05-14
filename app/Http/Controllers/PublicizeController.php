@@ -65,6 +65,7 @@ class PublicizeController extends Controller
             ->orderBy('publicizeID','DESC')
             ->paginate(9);
 
+
         $home = "active";
         $about = "";
         $donate = "";
@@ -107,13 +108,14 @@ class PublicizeController extends Controller
         $publicizes->save();
 
         $id=$publicizes->publicizeID;
-        
-        $images = new Image;
+
         $image = $request->file('image');
+        $images = new Image;
         $image->move(public_path("/images"), $id.".png");
         $images->imagename = "images/".$id.".png";
         $images->contentID = $id;
         $images->save();
+        
         
         return Redirect::to('publicizes');
     }
