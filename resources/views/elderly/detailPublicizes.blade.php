@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
- 
+<link href="{{ URL::asset('elderly/css/detailPublicizess.css') }}" rel="stylesheet" type="text/css" media="all" /> 
 @endsection
 
 @section('band')
@@ -12,10 +12,9 @@
 
 @section('content')
 <div class="container">
-
-    <div class="row">
-        <label class="layout-title col m12 z-depth-3"><p class="font-title " align="center">{{$publicize->title}}</p></label>
+    <div class="detailPublicizes z-depth-2 center-align"><h4>{{$publicize->title}}</h4>
     </div>
+    
     @foreach($images as $image)
     <div class="card">
         <div class="card-image">
@@ -23,12 +22,10 @@
         </div>
     </div>
     @endforeach
-    <div class="row">
-        <div class="col s12 m12">
-            <div class="card horizontal">
-                <div class="card-content">
-                    <p>{{$publicize->content}}</p>
-                </div>
+    <div class="card card-define col m12">
+        <div class="row">
+            <div class="layout-text col s12 m12">
+                <p>{{$publicize->content}}</p>
             </div>
         </div>
     </div>

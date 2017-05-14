@@ -5,7 +5,7 @@
 
 @section('link') 
 
-<link href="{{ URL::asset('elderly/css/publicize.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/publicizes.css') }}" rel="stylesheet" type="text/css" media="all" />
 
 @endsection
 
@@ -38,11 +38,11 @@
 					<span class="card-title activator truncate grey-text text-darken-4">{{$publicize->title}}</span>	
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">close</i></span>
+					<span class="card-title activator truncate grey-text text-darken-4">{{$publicize->title}}<i class="material-icons right">close</i></span>
 					<p>{{$publicize->content}}</p>
 					<div class="row">
 					<div class="card-action  ">
-              			<a href="detailPublicizes/{{ $publicize->publicizeID }}"><i class="material-icons small right" >pageview</i></a>
+              			<a href="detailPublicizes/{{ $publicize->publicizeID }}"><i class="material-icons small right" >input</i></a>
             		</div>
 					</div>
 				</div>
