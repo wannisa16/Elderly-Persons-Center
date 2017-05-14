@@ -1,0 +1,37 @@
+.detailelderly {
+	background-color: #00bfa5 !important; 
+	border-radius: 10px;
+	margin-top: 25px;
+}
+
+h4{
+	color: #ffffff;
+	padding-top: 17px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+.layout-text {
+	font-size: 20px;
+}
+
+.card {
+	margin-top: 10px !important;
+    padding: 20px;
+    border-radius: 5px !important;
+    background-color: #fafafa !important;
+}
+
+button.cancel{
+	font-size: 18px;
+	background-color: #e53935 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+a.edit{
+	font-size: 18px;
+	background-color: #43a047 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
