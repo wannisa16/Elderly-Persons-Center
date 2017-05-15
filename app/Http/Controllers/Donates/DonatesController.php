@@ -88,7 +88,9 @@ class DonatesController extends Controller
         $donate->d_postal = $request->input('postal');
         $object1 = $request->input('object1');
         $object2 = $request->input('object2');
-        $donate->d_object = $object1." ".$object2;
+        $object3 = $request->input('object3');
+        $object4 = $request->input('object4');
+        $donate->d_object = $object1.", ".$object2.", ".$object3.", ".$object4;
         $type = $request->input('type');
 
         if($type == "onImage"){

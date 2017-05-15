@@ -41,6 +41,14 @@
                             <input name="object2" type="checkbox" value="เตียงนอน" class="filled-in" id="test6" checked="checked" />
                             <label class="label-check" for="test6">เตียงนอน</label>
                         </p>
+                        <p>
+                            <input name="object3" type="checkbox" value="ผ้าอ้อมผู้ใหญ่" class="filled-in" id="object3" />
+                            <label class="label-check" for="object3">ผ้าอ้อมผู้ใหญ่</label>
+                        </p>
+                        <p>
+                            <input name="object4" type="checkbox" value="ยาสามัญประจำบ้าน" class="filled-in" id="object4" />
+                            <label class="label-check" for="object4">ยาสามัญประจำบ้าน</label>
+                        </p>
                     </div>
                 </div>
                 <div class="row">
@@ -72,7 +80,7 @@
                     <div class="col m11 ">
                         <div class="col m5 offset-m1">
                             <div class="input-field">
-                                <input id="icon_telephone" name="tel" type="tel" class="validate">
+                                <input id="icon_telephone" name="tel" type="number" class="validate">
                                 <label for="icon_telephone">เบอร์โทรติดต่อ :</label>
                             </div>
                         </div>
