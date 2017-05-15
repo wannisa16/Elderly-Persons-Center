@@ -15,6 +15,15 @@
     <div class="add z-depth-2 center">
         <h4>เพิ่มประชาสัมพันธ์</h4>
     </div>
+    @if ( count($errors) > 0 )
+        <div class="card-panel yellow lighten-3">
+          <ul>
+          @foreach ($errors->all() as $error)
+            <li class="error">{{ $error }}</li>
+          @endforeach
+          </ul>
+        </div>
+    @endif
     <form enctype="multipart/form-data" action="{{ url('/addPublicize') }}" method="post" >
         <div class="title row">
             <div class="input-field col s6">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Problems;
 
 use Illuminate\Http\Request;
-
+use Validator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Helper;
@@ -69,7 +69,17 @@ class ProblemsController extends Controller
      */
     public function store(Request $request)
     {
+        $rules = [
+            'v_name' => 'required',
+            'h_name' => 'required',
+        ];
+        $messages = [
+            'v_name.required' => '*** กรุณาใส่ชื่อผู้ประสบปัญหา',
+            'h_name.required' => '*** กรุณาใส่ชื่อของผู้แจ้ง (ชื่อของท่าน)',
+        ];
 
+        $validator=Validator::make($request->all(),$rules,$messages);
+        if($validator->passes() ){
         $helper = new Helper;
         $helper->h_name = $request->input('h_name');
         $helper->h_surname = $request->input('h_surname');
@@ -106,11 +116,16 @@ class ProblemsController extends Controller
         $victim->v_postcode = $request->input('v_postcode');
         $victim->v_situation = "รอการช่วยเหลือ";
         $victim->save();
-        
 
 
         return redirect('problems/'.$victim->victim_id);
-    }
+        }
+
+        }else{
+            return redirect('problems/create')->withErrors($validator->messages());
+        }
+    } 
+
 
     /**
      * Display the specified resource.
@@ -118,6 +133,7 @@ class ProblemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function show($id)
     {
         $victim = Victim::find($id);

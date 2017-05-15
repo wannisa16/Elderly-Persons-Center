@@ -108,6 +108,22 @@ class PublicizeController extends Controller
 
     public function addPublicizes(Request $request )
     {
+        $rules = [
+            'title' => 'required',
+            'content' => 'required',
+            'image' => 'required|image'
+        ];
+        $messages = [
+            'title.required' => '*** กรุณาใส่ชื่อเรื่องกิจกรรม',
+            'content.required' => '*** กรุณาใส่รายละเอียดของกิจกรรม',
+            'image.required' => '*** กรุณาเลือกรูปภาพ',
+            'image.image' => '*** กรุณาเลือกไฟล์รูปภาพ'
+        ];
+
+        $validator=Validator::make($request->all(),$rules,$messages);
+
+        if($validator->passes() ){
+
         $publicizes = new Publicize;
         $publicizes->title = Input::get('title');
         $publicizes->content = Input::get('content');
@@ -125,6 +141,10 @@ class PublicizeController extends Controller
         
         
         return Redirect::to('publicizes');
+        }else{
+            return Redirect::to('addPublicizes')
+            ->withErrors($validator->messages());
+        }
     }
 
     public function indexactivity()
@@ -331,6 +351,7 @@ class PublicizeController extends Controller
 
     public function editFormPublicizes(Request $request, $id)
     {
+
         $publicize = Publicize::find($id);
         $photos = Image::ofImage($id)->get();
 
@@ -360,25 +381,43 @@ class PublicizeController extends Controller
 
     public function editPublicizes(Request $request, $id)
     {
-        $publicize = Publicize::find($id);
-        $publicize->title = $request->input('title');
-        $publicize->content = $request->input('content');
-        $publicize->dataType = "publicize";
-        $publicize->save();
-        $id=$publicize->publicizeID;
+        $rules = [
+            'title' => 'required',
+            'content' => 'required',
+        ];
+        $messages = [
+            'title.required' => '*** กรุณาใส่ชื่อเรื่องกิจกรรม',
+            'content.required' => '*** กรุณาใส่รายละเอียดของกิจกรรม',
+            'photo.required' => '*** กรุณาเลือกรูปภาพ',
+        ];
 
-        $image = $request->file('photo');
+        $validator=Validator::make($request->all(),$rules,$messages);
 
-        if($image == ""){
+        if($validator->passes() ){
+            $publicize = Publicize::find($id);
+            $publicize->title = $request->input('title');
+            $publicize->content = $request->input('content');
+            $publicize->dataType = "publicize";
+            $publicize->save();
+            $id=$publicize->publicizeID;
 
+            $image = $request->file('photo');
+
+            if($image == ""){
+
+            }else{
+                $images = new Image;
+                $image->move(public_path("/images"), $image->getClientOriginalName());
+                $images->imagename = "images/".$image->getClientOriginalName();
+                $images->contentID = $id;
+                $images->save();
+            }
+
+            return Redirect::to('publicizes');
         }else{
-            $images = new Image;
-            $image->move(public_path("/images"), $image->getClientOriginalName());
-            $images->imagename = "images/".$image->getClientOriginalName();
-            $images->contentID = $id;
-            $images->save();
+            return Redirect::to('editFormPublicizes/'.$id)
+            ->withErrors($validator->messages());
         }
-        return Redirect::to('publicizes');
 
     }
 

@@ -70,6 +70,7 @@ class DonatesController extends Controller
      */
     public function store(Request $request)
     {
+
         $donate = new Donor;
         $donate->d_name = $request->input('name');
         $donate->d_surname = $request->input('surname');
@@ -87,16 +88,22 @@ class DonatesController extends Controller
         $donate->d_postal = $request->input('postal');
         $object1 = $request->input('object1');
         $object2 = $request->input('object2');
-        $donate->d_object = $object1." ".$object2;
+        $object3 = $request->input('object3');
+        $object4 = $request->input('object4');
+        $donate->d_object = $object1.", ".$object2.", ".$object3.", ".$object4;
         $type = $request->input('type');
 
         if($type == "onImage"){
             
         }elseif($type == "image"){
             $image = $request->file('photo');
-            dd($image);
+            if($image == ""){
+
+            }else{
             $image->move(public_path("/images"), $image->getClientOriginalName());
             $donate->d_picture = "images/".$image->getClientOriginalName();
+            }
+            
         }
         
         $donate->save();
