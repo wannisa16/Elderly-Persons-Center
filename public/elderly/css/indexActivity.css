@@ -16,11 +16,11 @@ h4 {
 }
 
 .font-content {
-	font-size: larger;
+	font-size: 20px !important;
 }
 
 .font-title {
-	color: tomato !important;
+	color: #212121 !important;
     font-size: larger;
 }
 
@@ -34,4 +34,10 @@ ul.pagination {
 
 span {
 	padding: 10px;
+}
+.card-action a{
+	font-size: 20px !important;
+}
+.progress{
+	background-color:#ff8a80 !important;
 }

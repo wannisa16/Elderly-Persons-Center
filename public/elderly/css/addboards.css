@@ -16,7 +16,7 @@ h4{
 	margin-top: 25px;
 }
 
-button.cancel{
+a.cancel{
 	margin-top: 10px;
 	font-size: 18px;
 	background-color: #e53935 !important;

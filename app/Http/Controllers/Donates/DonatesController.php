@@ -100,7 +100,9 @@ class DonatesController extends Controller
         }
         
         $donate->save();
-        return redirect('donates');
+
+
+        return redirect('donates/'.$donate->id);
     }
 
     /**

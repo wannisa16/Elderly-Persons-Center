@@ -29,14 +29,14 @@ h4{
 a.edit{
 	
 	font-size: 18px;
-	background-color: #e53935 !important;
+	background-color: #43a047 !important;
 	padding-left: 57px;
 	padding-right: 57px;
 }
 
-button.cancel{
+a.cancel{
 	font-size: 18px;
 	padding-left: 57px;
 	padding-right: 57px;
-
+	background-color: #e53935 !important;	
 }

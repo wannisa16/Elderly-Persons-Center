@@ -5,7 +5,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/ageChart.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/ageChartt.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -13,11 +13,12 @@
 
 @section('content')
     <div class="container">
-        <div class="chart"></div>
-        <div  id="columnchart_material" style="width: 800px; height: 500px;"></div>
-        <div class="chart"></div>
-        <a class="waves-effect waves-light btn-large">ย้อนกลับ</a>
-        <div class="chart"></div>
+        <div class="criteriongraph z-depth-2 center-align"><h4>กราฟแบ่งตามอายุ</h4></div>
+        <div class="chart">
+        <div class="center-align" id="columnchart_material" style="width: 900px; height: 500px;"></div>
+        
+        <a href="elderlygraph" class="waves-effect waves-light btn-large">ย้อนกลับ</a>
+        </div>
     </div>
 @endsection
 

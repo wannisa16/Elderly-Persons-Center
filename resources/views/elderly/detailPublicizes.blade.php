@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/detailPublicizess.css') }}" rel="stylesheet" type="text/css" media="all" /> 
+<link href="{{ URL::asset('elderly/css/detailPublicizes.css') }}" rel="stylesheet" type="text/css" media="all" /> 
 @endsection
 
 @section('band')
@@ -32,16 +32,18 @@
             </div>
         </div>
     </div>
-
+    
+    @if (Auth::guest())
+    @else    
     <div class="row">
         <div class="col s6 right-align">
-            <a href="../editFormPublicizes/{{ $publicize->publicizeID }}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+            <a href="../editFormPublicizes/{{ $publicize->publicizeID }}" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
         </div>
         <div class="col s6">
-            
-            <button class="cancel waves-effect waves-light btn-large"><a href="../publicize/delete/{{ $publicize->publicizeID  }}">ลบ</a></button>
+            <a href="../publicize/delete/{{ $publicize->publicizeID  }}" class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</a>
         </div>
     </div>
+    @endif
 </div>
 
 @endsection

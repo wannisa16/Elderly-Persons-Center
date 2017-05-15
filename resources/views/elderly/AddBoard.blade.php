@@ -56,7 +56,7 @@
                     <a href="" type="submit" class="add waves-effect waves-light btn-large">ตกลง</a>
                 </div>
                 <div class="col s6">
-                    <button class="cancel waves-effect waves-light btn-large">ยกเลิก</button>
+                    <a href="../borads" class="cancel waves-effect waves-light btn-large">ยกเลิก</button>
 
                         <div class="row right">
                             <div class="col s6 ">
