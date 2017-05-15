@@ -15,6 +15,17 @@
     <div class="editpublicizes z-depth-2 center-align">
         <h4>แก้ไขประชาสัมพันธ์</h4>
     </div>
+    
+    @if ( count($errors) > 0 )
+    <div class="card-panel yellow lighten-3">
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li class="error">{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
+
     <form action="../editPublicize/{{ $publicize->publicizeID }}" method="post" enctype="multipart/form-data" class="col s12">
         <div class="card card-define col m12">
             <div class="row">

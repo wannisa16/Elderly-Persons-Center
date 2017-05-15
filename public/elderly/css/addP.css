@@ -56,3 +56,8 @@ input.file{
 .input-field label{
 	font-size: 20px !important;
 }
+
+li.error{
+	font-size: 20px !important;
+	color: #d50000;
+}

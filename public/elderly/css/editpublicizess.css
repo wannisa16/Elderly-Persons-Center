@@ -45,6 +45,12 @@ input.story{
 textarea.materialize-textarea{
 	font-size: 20px !important;
 }
-.btn span{
+
+.btn span {
 	font-size: 19px !important;
+}
+
+li.error{
+	font-size: 20px !important;
+	color: #d50000;
 }

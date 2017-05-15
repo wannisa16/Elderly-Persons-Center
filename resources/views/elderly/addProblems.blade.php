@@ -16,6 +16,15 @@
     <div class="addproblems z-depth-2 center-align">
         <h4>แจ้งผู้ประสบปัญหาทางสังคม</h4>
     </div>
+    @if ( count($errors) > 0 )
+    <div class="card-panel yellow lighten-3">
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li class="error">{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="../problems" method="post" accept-charset="utf-8">
         <div class="card card-define col m12">
             <div class="row">
