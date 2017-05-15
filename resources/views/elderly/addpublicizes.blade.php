@@ -12,7 +12,7 @@
 
 @section('content')
 <div class="container">
-    <div class="add z-depth-2">
+    <div class="add z-depth-2 center">
         <h4>เพิ่มประชาสัมพันธ์</h4>
     </div>
     <form enctype="multipart/form-data" action="{{ url('/addPublicize') }}" method="post" >

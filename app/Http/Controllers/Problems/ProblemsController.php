@@ -27,6 +27,7 @@ class ProblemsController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "active";
+        $borad="";
 
          return view('elderly.indexProblems')->with('problems',$problems)
             ->with('home', $home)
@@ -34,7 +35,8 @@ class ProblemsController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     /**
@@ -49,12 +51,14 @@ class ProblemsController extends Controller
         $donate = "";
         $contact = "";
         $pro = "active";
+        $borad="";
 
         return view('elderly.addProblems')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     /**
@@ -108,6 +112,7 @@ class ProblemsController extends Controller
         $donate = "";
         $contact = "";
         $pro = "active";
+        $borad="";
 
         return redirect('problems');
     }
@@ -130,6 +135,7 @@ class ProblemsController extends Controller
         $donate = "";
         $contact = "";
         $pro = "active";
+        $borad="";
 
         return view('elderly.problemsDetail')->with('victim',$victim)
             ->with('helper',$helper)
@@ -137,7 +143,8 @@ class ProblemsController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     /**
@@ -156,6 +163,7 @@ class ProblemsController extends Controller
         $donate = "";
         $contact = "";
         $pro = "active";
+        $borad="";
 
         return view('elderly.editProblems')->with('victim', $victim)
             ->with('helper',$helper)
@@ -164,7 +172,8 @@ class ProblemsController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     /**

@@ -23,7 +23,7 @@ button.agree{
 	padding-right: 57px;
 }
 
-.card {
+.card{
 	margin-top: 10px !important;
     padding: 20px;
     border-radius: 5px !important;
@@ -45,4 +45,13 @@ textarea.materialize-textarea{
 
 input.story{
 	font-size: 20px !important;
+}
+
+li.error{
+	font-size: 20px !important;
+	color: #d50000;
+}
+.card-panel{
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 }

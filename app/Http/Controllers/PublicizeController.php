@@ -42,6 +42,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.home')->with('publicizes', $publicizes)
             ->with('activities', $activities)
@@ -50,6 +51,7 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
     }
 
@@ -73,6 +75,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.publicizes')->with('publicizes', $publicizes)
             ->with('home', $home)
@@ -80,6 +83,7 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
     }
 
@@ -91,12 +95,14 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.addpublicizes')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
     }
 
@@ -133,6 +139,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.indexActivity')->with('activities',$activities)
             ->with('home', $home)
@@ -140,21 +147,24 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
     }
 
     public function formActivity()
     {
-        $home = "";
+        $home = "active";
         $about = "";
         $donate = "";
         $contact = "";
-        $pro = "active";
+        $pro = "";
+        $borad="";
 
         return view('elderly.addActivity')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
+            ->with('borad', $borad)
             ->with('pro', $pro);
     }
 
@@ -166,10 +176,10 @@ class PublicizeController extends Controller
             'photo[]' => 'required|image'
         ];
         $messages = [
-            'title.required' => 'กรุณาใส่ชื่อเรื่องกิจกรรม',
-            'content.required' => 'กรุณาใส่รายละเอียดของกิจกรรม',
-            'photo[].required' => 'กรุณาเลือกรูปภาพ',
-            'photo[].image' => 'กรุณาเลือกไฟล์รูปภาพ'
+            'title.required' => '*** กรุณาใส่ชื่อเรื่องกิจกรรม',
+            'content.required' => '*** กรุณาใส่รายละเอียดของกิจกรรม',
+            'photo[].required' => '*** กรุณาเลือกรูปภาพ',
+            'photo[].image' => '*** กรุณาเลือกไฟล์รูปภาพ'
         ];
 
         $validator=Validator::make($request->all(),$rules,$messages);
@@ -211,6 +221,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.detailActivity')->with('activity',$activity)
             ->with('images', $images)
@@ -219,6 +230,7 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
 
     }
@@ -234,6 +246,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.detailPublicizes')->with('publicize',$publicize)
             ->with('images', $images)
@@ -242,6 +255,7 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
 
     }
@@ -264,6 +278,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.editActivity')->with('story',$story)
             ->with('photo', $photo)
@@ -272,6 +287,7 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
+            ->with('borad', $borad)
             ->with('pro', $pro);
 
     }
@@ -329,6 +345,7 @@ class PublicizeController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
+        $borad="";
 
         return view('elderly.editPublicizes')->with('publicize',$publicize)
             ->with('image', $image)
@@ -337,7 +354,8 @@ class PublicizeController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     public function editPublicizes(Request $request, $id)

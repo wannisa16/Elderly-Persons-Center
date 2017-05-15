@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{URL::asset('elderly/css/addActivityy.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{URL::asset('elderly/css/addActivityyy.css')}}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -12,20 +12,19 @@
 
 @section('content')
 <div class="container">
-  @if ( count($errors) > 0 )
-        <div class="alert alert-danger">
-          <ul>
-          @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-          @endforeach
-          </ul>
-        </div>
-  @endif
 	<div class="addactivity z-depth-2 center-align">
         <h4>เพิ่มกิจกรรม ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4>
     </div>
+    @if ( count($errors) > 0 )
+        <div class="card-panel yellow lighten-3">
+          <ul>
+          @foreach ($errors->all() as $error)
+            <li class="error">{{ $error }}</li>
+          @endforeach
+          </ul>
+        </div>
+    @endif
     <form action="{{url('/addActivity')}}" method="post" enctype="multipart/form-data" class="col s12">	
-	    <div class="card card-define col m12">
 		    <div class="row">
       		    <div class="row">
           			<div class="input-field col s6">
@@ -42,7 +41,7 @@
       		</div>
     	
 
-    	    <div class="file-field input-field">
+    	    <div class="file-field input-field col m12 s12">
       		    <div class="btn waves-effect waves-light">
         		  <span>เลือกรูปภาพ</span>
         		  <input name="photo[]" type="file" multiple>
@@ -51,7 +50,7 @@
         		  <input class="file-path validate" type="text" placeholder="สามารถโหลดรูปได้มากว่าหนึ่งรูป">
       		    </div>
     	    </div>
-	    </div>
+	    
   	    <div class="row">
             <div class="col s6 right-align">
                 <button type="submit" class="agree waves-effect waves-light btn-large">ตกลง</button>
