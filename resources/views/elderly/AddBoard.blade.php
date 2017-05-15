@@ -53,12 +53,14 @@
 
             <div class="row">
                 <div class="col s6 right-align">
+
                 <div class="row"></div>
                     <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
                 </div> 
                 <div class=" col s6 ">
                 <div class="row"></div>
                         <a href="../borads" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+
                 </div>
                 <input type="hidden" name="level" value="{{ $level }}">
             </div>

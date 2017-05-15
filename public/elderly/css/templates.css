@@ -8,8 +8,8 @@ html {
 }
 
 .nav-wrapper a img {
-	height: 75px !important;
-	width: 300px !important;
+	height: 100%;
+	width: auto;
 }
 
 div.nav-wrapper {

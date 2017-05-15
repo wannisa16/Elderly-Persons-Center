@@ -21,12 +21,12 @@
             <div class="card horizontal ">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 font">{{$activity->title}}</span>
+                        <span class="card-title activator grey-text text-darken-4 font">ชื่อกิจกรรม : {{$activity->title}}</span>
                         <div class="progress">
                             <div class="determinate" ></div>
                          </div>
 
-                        <p class="layout-text">{{$activity->content}}</p>
+                        <p class="layout-text">รายละเอียดของกิจกรรม : {{$activity->content}}</p>
                     </div>
 
                     <div class="card-action grey lighten-5">
@@ -51,16 +51,19 @@
                 </div>
             </div>
         </div>
-    
+        
+        @if (Auth::guest())
+        @else    
         <div class="row">
             <div class="col s6 right-align">
-                <a href="../activityForm/{{$activity->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large">แก้ไข</a>
+                <a href="../activityForm/{{$activity->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
             </div>
             <div class="col s6">
                 <input type="hidden" name="_method" value="DELETE" />
-                    <a href="../activity/delete/{{$activity->publicizeID}}" type="sumit" class="cancel waves-effect waves-light btn-large">ลบ</a>
+                    <a href="../activity/delete/{{$activity->publicizeID}}" type="sumit" class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</a>
             </div>
         </div>
+        @endif
     </div>
 </div>
 

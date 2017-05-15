@@ -107,14 +107,9 @@ class ProblemsController extends Controller
         $victim->v_situation = "รอการช่วยเหลือ";
         $victim->save();
         
-        $home = "";
-        $about = "";
-        $donate = "";
-        $contact = "";
-        $pro = "active";
-        $borad="";
 
-        return redirect('problems');
+
+        return redirect('problems/'.$victim->victim_id);
     }
 
     /**

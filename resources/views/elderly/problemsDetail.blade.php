@@ -5,7 +5,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/problemsdetail.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/problemsdetails.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -127,7 +127,8 @@
 				    </div>
 			    </div>
 		    </div>
-
+            
+            @if (!Auth::guest())
 		    <div class="row">
                 <div class="col s6 right-align">
                     <a href="{{$victim->victim_id}}/edit" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
@@ -137,6 +138,13 @@
                    <button class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</button>
                 </div>
     	    </div>
+            @else
+            <div class="row">
+            <div class="col s12 center-align">
+                <a href="create" type="submit" class="cancel waves-effect waves-light btn-large">ย้อนกลับ</a>
+            </div>
+        </div>
+        @endif
     </form>
 </div>
 @endsection

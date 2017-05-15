@@ -3,7 +3,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/indexActivityy.css') }}" rel="stylesheet" type="text/css" media="all" /> 
+<link href="{{ URL::asset('elderly/css/indexActivity.css') }}" rel="stylesheet" type="text/css" media="all" /> 
 @endsection
 
 @section('band')
@@ -22,13 +22,15 @@
     @endif
     @foreach ($activities as $activity)   
     <div class="row">
-        <div class="col s14 m12">
+        <div class="col s12 m12">
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><p class="font-title">{{$activity->title}}</p></span>
+                        <span class="card-title activator grey-text text-darken-4"><p class="font-title">ชื่อกิจกรรม : {{$activity->title}}</p></span>
+                        <div class="progress">
+                         </div>
 
-                        <p class="font-content">{{$activity->content}}</p>
+                        <p class="font-content">รายละเอียดกิจกรรม : {{$activity->content}}</p>
                     </div>
 
                     <div class="card-action">

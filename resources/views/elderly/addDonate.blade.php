@@ -15,9 +15,8 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="donate-buttom tab col s3 "><a class="font" href="#t1">สถานสงเคราะห์ประสงค์</a></li>
-                <li class="donate-buttom tab col s3 offset-s1"><a class="font"  href="#t2">ผู้บริจาคประสงค์</a></li>
-                <li class="donate-buttom tab col s3 offset-s1"><a class="font" href="#test3">บริจาคเงิน</a></li>
+                <li class="donate-buttom tab col m5 s12 center "><a class="font" href="#t1">สถานสงเคราะห์ประสงค์</a></li>
+                <li class="donate-buttom tab col m6 offset-m1 s12"><a class="font"  href="#t2">ผู้บริจาคประสงค์</a></li>
             </ul>
         </div>
     </div>
@@ -177,7 +176,7 @@
                     <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
                 </div>
                 <div class="col s6">
-                    <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                    <a href="create" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
                 </div>
             </div> 
         </form>       
@@ -346,7 +345,7 @@
                     <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
                 </div>
                 <div class="col s6">
-                    <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                    <a href="create" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
                 </div>
             </div>
         </form>

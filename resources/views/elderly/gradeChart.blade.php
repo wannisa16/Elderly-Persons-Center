@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/criteriongraph.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/criteriongraphs.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -13,7 +13,10 @@
 @section('content')
 	<div class="container">
 		<div class="criteriongraph z-depth-2 center-align"><h4>กราฟแบ่งตามเกณฑ์</h4></div>
+    <div class="chart">
 		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <a href="elderlygraph" class="waves-effect waves-light btn-large">ย้อนกลับ</a>
+    </div>
 	</div>
 @endsection
 

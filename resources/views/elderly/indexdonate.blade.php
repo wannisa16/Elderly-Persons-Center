@@ -12,7 +12,9 @@
 
 @section('content')
 <div class="container">
-    <div class="indexdonate z-depth-2 center-align"><h4>รายชื่อผู้บริจาค ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
+    <div class="indexdonate z-depth-2 center-align">
+        <h4>รายชื่อผู้บริจาค ศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4>
+    </div>
         <div class="row">
             <div class="col m12 s12 ">
                 <table class="striped centered">
