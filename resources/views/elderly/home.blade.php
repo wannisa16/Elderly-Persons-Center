@@ -69,10 +69,12 @@
     <div class="row">
         @foreach($activities as $activity)
         @foreach ($activity->Images as $Image)
+        {{--*/$i = $Image->imagename/*--}}
+        @endforeach
         <div class="col s12 m4">
             <div class="card z-depth-2">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator"  src="{{ $Image->imagename }}" alt="office" width="150" height="200">
+                    <img class="activator"  src="{{ $i}}" alt="office" width="150" height="200">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
@@ -85,7 +87,7 @@
                 </div>
             </div>
         </div>
-        @endforeach
+        
         @endforeach
         <div class="right"><a href="{{url('/indexActivity')}}"><h5>ดูทั้งหมด</h5></a></div>
     </div>

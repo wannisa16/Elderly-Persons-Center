@@ -30,7 +30,6 @@ class PublicizeController extends Controller
             ->get();
 
         $activities = Publicize::ofDataType('activity')
-            ->with('Images')
             ->orderBy('publicizeID','DESC')
             ->limit(3)
             ->get();

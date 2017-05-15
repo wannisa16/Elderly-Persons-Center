@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="container">
-    <div class="activity center z-depth-4"><h4>กิจกรรมในสถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h4></div>
+    <div class="activity center z-depth-4"><h4>กิจกรรมในศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div>
 </div>
 
 <div class="container">
@@ -26,11 +26,10 @@
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><p class="font-title">ชื่อกิจกรรม : {{$activity->title}}</p></span>
-                        <div class="progress">
-                         </div>
-
-                        <p class="font-content truncate">รายละเอียดกิจกรรม : {{$activity->content}}</p>
+                        <span class="card-title activator grey-text text-darken-4">
+                            <p class="font-title ">ชื่อกิจกรรม : {{$activity->title}}</p>
+                        </span>
+                        <div class="progress"></div>
                     </div>
 
                     <div class="card-action">
