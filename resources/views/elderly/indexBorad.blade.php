@@ -28,12 +28,14 @@
                     </thead>
 
                 
-                    <tbody>   
+                    <tbody>
+                    {!!Form::hidden($i=1)!!}   
                         @foreach ($questions as $question)
                         <tr>
-                            <td>{{$question->id}}</td>
-                            <td><a HREF = "borads/{{$question->questioner_id}}">{{$question->subject}}</a></td>
+                            <td>{{$i}}</td>
+                            <td><a HREF = "borads/{{$question->id}}">{{$question->subject}}</a></td>
                         </tr>
+                    {!!Form::hidden($i++)!!}
                         @endforeach
                     </tbody>
                 </table>

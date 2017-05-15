@@ -273,6 +273,7 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 
+
     public function detailFile($id)
     {
         $elderly = Elderly::find($id); 
@@ -296,5 +297,6 @@ class ElderlyController extends Controller
 
         return redirect('indexElderlies');
     }
+
 
 }

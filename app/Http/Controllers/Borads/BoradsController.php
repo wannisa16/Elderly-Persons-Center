@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Question;
 use App\Questioner;
+use App\Comment;
 
 class BoradsController extends Controller
 {
@@ -92,7 +93,9 @@ class BoradsController extends Controller
     {
         $booard = Question::find($id);
         $questioner = Questioner::find($booard->questioner_id);
-
+        $comments = Comment::ofComment($booard->id);
+        $comments_count = $comments->count();
+        
         $home = "";
         $about = "";
         $donate = "";
@@ -102,6 +105,8 @@ class BoradsController extends Controller
         $pro = "";
 
         return view('elderly.detailBoard')->with('home', $home)
+            ->with('comments', $comments->get())
+            ->with('comments_count', $comments_count)
             ->with('booard', $booard)
             ->with('questioner', $questioner)
             ->with('about', $about)
@@ -118,7 +123,23 @@ class BoradsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $borad = Question::findOrFail($id);
+        $questioner = Questioner::find($borad->questioner_id);
+        
+        $home = "";
+        $about = "";
+        $donate = "active";
+        $contact = "";
+        $pro = "";
+
+        return view('elderly.editBorad')->with('id',$id)
+            ->with('questioner',$questioner)
+            ->with('borad',$borad)
+            ->with('home', $home)
+            ->with('about', $about)
+            ->with('donate', $donate)
+            ->with('contact', $contact)
+            ->with('pro', $pro); 
     }
 
     /**
@@ -130,7 +151,18 @@ class BoradsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $questioner = Questioner::find($id);
+        $questioner->name = $request->input('name');
+        $questioner->save();
+
+        $question = Question::findOrFail($id);
+        
+        $question->subject = $request->input('subject');
+        $question->detail = $request->input('detail');
+        $question->questioner_id = $questioner->id;
+        $question->save();
+        
+        return redirect('borads');
     }
 
     /**
@@ -141,6 +173,9 @@ class BoradsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Question::destroy($id);
+        Questioner::destroy($id);
+
+        return redirect('borads');
     }
 }

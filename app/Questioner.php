@@ -14,4 +14,9 @@ class Questioner extends Model
        {
        	return $this->hasMany('App\Question', 'questioner_id', 'id');
        }
+
+    public function comment()
+       {
+        return $this->belongsTo('App\Comment');
+       }
 }

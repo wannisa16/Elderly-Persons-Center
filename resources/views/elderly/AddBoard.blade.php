@@ -45,6 +45,7 @@
                             <input id="icon_prefix" type="text" name="name" value="{{ Auth::user()->name }}" class="validate">
                             <label for="icon_prefix"></label>
                         </div>
+
                     @endif
                 </div>
                 <input type="hidden" name="level" value="{{ $level }}">
@@ -56,6 +57,18 @@
                 </div>
                 <div class="col s6">
                     <button class="cancel waves-effect waves-light btn-large">ยกเลิก</button>
+
+                        <div class="row right">
+                            <div class="col s6 ">
+                                <button type="submit" class="addto waves-effect waves-light btn-large">ตกลง</button>
+                            </div>
+                            <div class="col s6">
+                                <a href="../borads" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                            </div>
+                        </div> 
+                        <input type="hidden" name="level" value="{{ $level }}">
+                    </div>
+
                 </div>
             </div>
         </form>
