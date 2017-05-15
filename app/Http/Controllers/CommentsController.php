@@ -100,8 +100,7 @@ class CommentsController extends Controller
         
         $comment->comment = $request->input('comment');
         $comment ->save();
-        
-        return redirect('borads');
+        return redirect('borads/'.($comment->questioner_id));
     }
 
     /**

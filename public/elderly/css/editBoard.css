@@ -1,0 +1,35 @@
+p.ad{
+	font-size: 36px;
+}
+.input-field {
+	font-size: 20px !important;
+}
+
+div.line {
+	margin-top: 35px;
+}
+p.l-text {
+	font-size: 18px;
+	margin-top: 25px;
+}
+p.l-question {
+	font-size: 18px;
+}
+span.l-title{
+	font-size: 30px;
+}
+
+.cancel{
+	margin-top: 10px;
+	font-size: 18px;
+	background-color: #e53935 !important;
+	padding-left: 57px;
+	padding-right: 57px;
+}
+
+.add{
+	margin-top: 10px;
+	font-size: 18px;
+	padding-left: 57px;
+	padding-right: 57px;
+}

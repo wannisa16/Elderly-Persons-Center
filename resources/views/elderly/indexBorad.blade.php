@@ -32,11 +32,12 @@
                     {!!Form::hidden($i=1)!!}   
                         @foreach ($questions as $question)
                         <tr>
-                            <td>{{$i}}</td>
+                            <td><a HREF = "borads/{{$question->id}}">{{$i}}</a></td>
                             <td><a HREF = "borads/{{$question->id}}">{{$question->subject}}</a></td>
-                        </tr>
-                    {!!Form::hidden($i++)!!}
+                        {!!Form::hidden($i++)!!}
                         @endforeach
+                        </tr>
+                    
                     </tbody>
                 </table>
                 <div align="center">{{$questions->render()}}</div>
