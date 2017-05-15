@@ -49,7 +49,7 @@
                 <button type="submit" class="agree waves-effect waves-light btn-large">ตกลง</button>
             </div>
             <div class="col s6">
-                <a href="indexActivity" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                <a href="../indexActivity" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
             </div>
         </div>
     </form>

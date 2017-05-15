@@ -58,7 +58,7 @@
                 <button type="submit" class="addto waves-effect waves-light btn-large">เพิ่มประชาสัมพันธ์</button>
             </div>
             <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                <a href="publicizes" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
             </div>
         </div>
     </form>

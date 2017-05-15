@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
- <link href="{{ URL::asset('elderly/css/detailboards.css') }}" rel="stylesheet" type="text/css" media="all" />
+ <link href="{{ URL::asset('elderly/css/detailboard.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -44,7 +44,7 @@
                     
                         <div class="col s1 m1">
                             <input type="hidden" name="_method" value="DELETE" />
-                            <a class="cancel waves-effect waves-light small"><i class=" small material-icons ">delete</i></a>
+                            <button class="cancel waves-effect waves-light small"><i class=" small material-icons ">delete</i></button>
                         </div>
                     </form>
                     @endif
@@ -93,7 +93,7 @@
                     
                         <div class="col s1 m1">
                             <input type="hidden" name="_method" value="DELETE" />
-                            <a class="cancel waves-effect waves-light small"><i class=" small material-icons ">delete</i></a>
+                            <button class="cancel waves-effect waves-light small"><i class=" small material-icons ">delete</i></button>
                         </div>
                     </form>
                     @endif
@@ -134,7 +134,7 @@
                     
                         <div class="col s1 m1">
                             <input type="hidden" name="_method" value="DELETE" />
-                            <a class="cancel waves-effect waves-light small"><i class="small material-icons ">delete</i></a>
+                            <button class="cancel waves-effect waves-light small"><i class="small material-icons ">delete</i></button>
                         </div>
                     </form>
                     @endif

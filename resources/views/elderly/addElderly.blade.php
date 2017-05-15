@@ -240,7 +240,7 @@
                 <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
             </div>
             <div class="col s6">
-                <a class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
+                <a href="indexElderlies" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
             </div>
         </div>
 	</form>

@@ -131,7 +131,7 @@ class BoradsController extends Controller
         
         $home = "";
         $about = "";
-        $donate = "active";
+        $donate = "";
         $contact = "";
         $pro = "";
         $borads="active";

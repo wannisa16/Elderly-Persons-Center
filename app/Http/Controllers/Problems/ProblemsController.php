@@ -119,7 +119,6 @@ class ProblemsController extends Controller
 
 
         return redirect('problems/'.$victim->victim_id);
-        }
 
         }else{
             return redirect('problems/create')->withErrors($validator->messages());
