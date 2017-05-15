@@ -223,5 +223,3 @@ class ElderlyController extends Controller
             ->with('pro', $pro);
     }
 }
-
-}

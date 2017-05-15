@@ -47,6 +47,8 @@ Route::resource('problems','Problems\\ProblemsController');
 
 Route::resource('borads','Borads\\BoradsController');
 
+Route::resource('comments','CommentsController');
+
 Route::group(['middleware' => ['web']], function () {    
    Route::auth();
    Route::get('/home', 'HomeController@index');
