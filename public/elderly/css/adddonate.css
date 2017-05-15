@@ -64,3 +64,10 @@ input.datepicker{
 input.file{
 	font-size: 20px !important;
 }
+
+.card {
+	margin-top: 10px !important;
+    padding: 20px;
+    border-radius: 5px !important;
+    background-color: #fafafa !important;
+}

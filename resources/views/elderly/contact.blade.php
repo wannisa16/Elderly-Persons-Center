@@ -15,7 +15,7 @@
 @section('content')
 <div class="container">
 
-    <div class="contact z-depth-2 center-align"><h4>ติดต่อสถานสงเคราะห์ผู้สูงอายุ จังหวัดภูเก็ต</h4></div><br>
+    <div class="contact z-depth-2 center-align"><h4>ติดต่อศูนย์พัฒนาการจัดสวัสดิการสังคมผู้สูงอายุภูเก็ต</h4></div><br>
         <div class="row">
     	   <div class="col s12 m4">
                 <div class="card-panel z-depth-3 s12">   

@@ -36,7 +36,8 @@ class BoradsController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('elderly', $elderly)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
         
     }
 
@@ -52,14 +53,15 @@ class BoradsController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
-        $borads = "active";
         $pro = "";
+        $borad="active";
 
         return view('elderly.addBoard')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     /**
@@ -101,8 +103,8 @@ class BoradsController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
-        $borads = "active";
         $pro = "";
+        $borad="active";
 
         return view('elderly.detailBoard')->with('home', $home)
             ->with('comments', $comments->get())
@@ -112,7 +114,8 @@ class BoradsController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borad', $borad);
     }
 
     /**

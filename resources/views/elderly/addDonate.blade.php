@@ -4,7 +4,7 @@
 @endsection
 
 @section('link')
-<link href="{{URL::asset('elderly/css/adddonates.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{URL::asset('elderly/css/adddonate.css')}}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col m6"> 
                         <div class="card-image waves-effect  waves-light">
-                            <img class="activator" src="{{url('images/donate1.jpg')}}">
+                            <img class="activator" src="{{url('images/d1.png')}}">
                         </div>
                     </div>
                     <div class="col m6">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="row">
                     <div class="col m12">
-                        <div class="col m3">
+                        <div class="col m2.5">
                             <div class="layout-title"><h5>ข้อมูลของผู้บริจาค</h5></div>
                         </div>
 
@@ -55,7 +55,6 @@
                 <div class="row">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                          <i class="material-icons prefix">account_circle</i>
                           <input id="icon_prefix" name="name" type="text" class="validate">
                           <label for="icon_prefix">ชื่อ :</label>
                         </div>
@@ -73,14 +72,12 @@
                     <div class="col m11 ">
                         <div class="col m5 offset-m1">
                             <div class="input-field">
-                                <i class="material-icons prefix">phone</i>
                                 <input id="icon_telephone" name="tel" type="tel" class="validate">
                                 <label for="icon_telephone">เบอร์โทรติดต่อ :</label>
                             </div>
                         </div>
                         <div class="col m6 ">
                             <div class="input-field">
-                                <i class="material-icons prefix">email</i>
                                 <input id="icon_telephone" name="email" type="text" class="validate">
                                 <label for="icon_telephone">อีเมล์ :</label>
                             </div>
@@ -91,7 +88,6 @@
                 <div class="row">
                     <div class="col m10 offset-m1">
                         <div class="input-field col s12">
-                            <i class="material-icons prefix">comment</i>
                             <textarea id="textarea1" class="materialize-textarea" name="detail"></textarea>
                             <label for="textarea1">รายละเอียดเพิ่มเติม :</label>
                         </div>
@@ -174,7 +170,7 @@
                     </div>
                 </div>
 
-                <input value="noImage"  type="text" class="noimage" name="type">
+                <input value="noImage"  type="hidden" class="noimage" name="type">
             </div>
             <div class="row">
                 <div class="col s6 right-align">
@@ -194,7 +190,7 @@
                 <div class="row">
                     <div class="col m6">
                         <div class="card-image waves-effect  waves-light">
-                            <img class="activator" src="{{url('images/donate2.jpg')}}">
+                            <img class="activator" src="{{url('images/d2.png')}}">
                         </div>
                     </div>
                     <div class="col m6"> 
@@ -220,7 +216,7 @@
                 </div>
                 <div class="row">
                     <div class="col m12">
-                        <div class="col m3">
+                        <div class="col m2.5">
                             <div class="layout-title"><h5>ข้อมูลของผู้บริจาค</h5></div>
                         </div>
                     </div>
@@ -229,7 +225,6 @@
                 <div class="row">
                     <div class="col m5 offset-m1">
                         <div class="input-field">
-                            <i class="material-icons prefix">account_circle</i>
                             <input id="icon_prefix" name="name" type="text" class="validate">
                             <label for="icon_prefix">ชื่อ :</label>
                         </div>
@@ -247,14 +242,12 @@
                     <div class="col m11 ">
                         <div class="col m5 offset-m1">
                             <div class="input-field">
-                                <i class="material-icons prefix">phone</i>
                                 <input id="icon_telephone" name="tel" type="tel" class="validate">
                                 <label for="icon_telephone">เบอร์โทรติดต่อ :</label>
                             </div>
                         </div>
                         <div class="col m6 ">
                             <div class="input-field">
-                                <i class="material-icons prefix">email</i>
                                 <input id="icon_telephone" name="email" type="text" class="validate">
                                 <label for="icon_telephone">อีเมล์ :</label>
                             </div>
@@ -264,7 +257,6 @@
                 <div class="row">
                     <div class="col m10 offset-m1">
                         <div class="input-field col s12">
-                            <i class="material-icons prefix">comment</i>
                             <textarea id="textarea1" class="materialize-textarea" name="detail"></textarea>
                             <label for="textarea1">รายละเอียดเพิ่มเติม :</label>
                         </div>
@@ -347,7 +339,7 @@
                     </div>
                 </div>
                 
-                <input  value="image"  type="text" class="image" name="type">
+                <input  value="image"  type="hidden" class="image" name="type">
             </div>
             <div class="row">
                 <div class="col s6 right-align">
