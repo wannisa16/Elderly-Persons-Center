@@ -93,9 +93,9 @@
                         </div>
                 </div>
                     
-                    <div class="footer-copyright">
-                        <div class="left">
-                            © 2014 Copyright Text
+                    <div class="row footer-copyright">
+                        <div class="col m12 s12">
+                            ผู้พัฒนา : นักศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตภูเก็ต 
                         </div>
                     </div>
             </footer>

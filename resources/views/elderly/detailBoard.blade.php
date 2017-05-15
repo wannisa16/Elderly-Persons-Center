@@ -1,5 +1,6 @@
 @extends('elderly.template')
 @section('title')
+กะทู้สนทนา
 @endsection
 
 @section('link')
