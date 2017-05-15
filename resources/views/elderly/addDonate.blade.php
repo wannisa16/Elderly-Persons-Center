@@ -173,7 +173,7 @@
             </div>
             <div class="row">
                 <div class="col s6 right-align">
-                    <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+                    <button type="submit" class="addto waves-effect waves-light btn-large">ตกลง</button>
                 </div>
                 <div class="col s6">
                     <a href="create" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
@@ -342,7 +342,7 @@
             </div>
             <div class="row">
                 <div class="col s6 right-align">
-                    <button type="submit" class="addto waves-effect waves-light btn-large">แจ้งความประสงค์บริจาค</button>
+                    <button type="submit" class="addto waves-effect waves-light btn-large">ตกลง</button>
                 </div>
                 <div class="col s6">
                     <a href="create" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>

@@ -48,3 +48,6 @@ textarea.materialize-textarea{
 .btn span{
 	font-size: 19px !important;
 }
+input.file-path{
+	font-size: 19px !important;
+}

@@ -52,17 +52,22 @@
             </div>
         </div>
         
-        @if (Auth::guest())
-        @else    
+        @if (!Auth::guest()) 
         <div class="row">
             <div class="col s6 right-align">
                 <a href="../activityForm/{{$activity->publicizeID}}" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
             </div>
             <div class="col s6">
                 <input type="hidden" name="_method" value="DELETE" />
-                    <a href="../activity/delete/{{$activity->publicizeID}}" type="sumit" class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</a>
+                <a href="../activity/delete/{{$activity->publicizeID}}" type="sumit" class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</a>
             </div>
         </div>
+        @else
+        <div class="row">
+            <div class="col s12 center-align">
+                <a href="../indexActivity" type="submit" class="cancel waves-effect waves-light btn-large">ย้อนกลับ</a>
+            </div>
+        </div>   
         @endif
     </div>
 </div>

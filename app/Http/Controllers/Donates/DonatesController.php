@@ -29,7 +29,7 @@ class DonatesController extends Controller
         $donate = "active";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads="";
 
         return view('elderly.indexDonate')->with('donors',$donors)
             ->with('home', $home)
@@ -37,7 +37,7 @@ class DonatesController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -52,14 +52,14 @@ class DonatesController extends Controller
         $donate = "active";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads="";
 
         return view('elderly.addDonate')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -120,7 +120,7 @@ class DonatesController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
-        $borad="";
+        $borads="";
 
         return view('elderly.detailDonate')->with('donor',$donor)
             ->with('home', $home)
@@ -129,7 +129,7 @@ class DonatesController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -147,7 +147,7 @@ class DonatesController extends Controller
         $donate = "active";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads="";
 
         return view('elderly.editDonate')->with('id',$id)
             ->with('donor',$donor)
@@ -156,7 +156,7 @@ class DonatesController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);   
+            ->with('borads', $borads);   
     }
 
     /**

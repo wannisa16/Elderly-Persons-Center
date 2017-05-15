@@ -62,7 +62,6 @@
                         <a href="../borads" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
 
                 </div>
-                <input type="hidden" name="level" value="{{ $level }}">
             </div>
             </div>
         </form>

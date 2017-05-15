@@ -33,7 +33,7 @@ class ContactsController extends Controller
         $contact = "active";
         $elderly = "";
         $pro = "";
-        $borad="";
+        $borads="";
 
         return view('elderly.contact')->with('addresss',$addresss)
             ->with('tels',$tels)
@@ -45,7 +45,7 @@ class ContactsController extends Controller
             ->with('contact', $contact)
             ->with('elderly' ,$elderly)
             ->with('pro' ,$pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -60,14 +60,14 @@ class ContactsController extends Controller
         $donate = "";
         $contact = "active";
         $pro = "";
-        $borad="";
+        $borads="";
 
         return view('elderly.contact')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -108,7 +108,7 @@ class ContactsController extends Controller
         $donate = "";
         $contact = "active";
         $pro = "";
-        $borad="";
+        $borads="";
 
 
         return view('elderly.editContact')->with('contacts',$contacts)
@@ -118,7 +118,7 @@ class ContactsController extends Controller
             ->with('about', $about)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**

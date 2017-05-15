@@ -76,6 +76,7 @@ class CommentsController extends Controller
         $donate = "active";
         $contact = "";
         $pro = "";
+        $borads ="";
 
         return view('elderly.editComment')->with('id',$id)
             ->with('comment',$comment)
@@ -83,7 +84,8 @@ class CommentsController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro);
+            ->with('pro', $pro)
+            ->with('borads', $borads);
     }
 
     /**

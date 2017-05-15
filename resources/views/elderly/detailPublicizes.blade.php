@@ -33,8 +33,7 @@
         </div>
     </div>
     
-    @if (Auth::guest())
-    @else    
+   @if (!Auth::guest())
     <div class="row">
         <div class="col s6 right-align">
             <a href="../editFormPublicizes/{{ $publicize->publicizeID }}" type="submit" class="edit waves-effect waves-light btn-large"><i class="tiny material-icons left">mode_edit</i>แก้ไข</a>
@@ -42,7 +41,13 @@
         <div class="col s6">
             <a href="../publicize/delete/{{ $publicize->publicizeID  }}" class="cancel waves-effect waves-light btn-large"><i class="tiny material-icons left">delete</i>ลบ</a>
         </div>
-    </div>
+    </div> 
+    @else
+        <div class="row">
+            <div class="col s12 center-align">
+                <a href="../publicizes" type="submit" class="cancel waves-effect waves-light btn-large">ย้อนกลับ</a>
+            </div>
+        </div> 
     @endif
 </div>
 

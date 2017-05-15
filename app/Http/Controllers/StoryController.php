@@ -21,7 +21,7 @@ class StoryController extends Controller
         $donate = "";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads ="";
 
 
         return view('elderly.about')->with('historys',$historys)
@@ -34,7 +34,7 @@ class StoryController extends Controller
             ->with('about', $about)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
 
@@ -46,7 +46,7 @@ class StoryController extends Controller
         $donate = "";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads ="";
 
 
         return view('elderly.editAbout')->with('story',$story)
@@ -55,7 +55,7 @@ class StoryController extends Controller
             ->with('about', $about)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     public function stroeAbout(Request $request, $id)

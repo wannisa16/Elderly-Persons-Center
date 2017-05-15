@@ -27,7 +27,7 @@ class BoradsController extends Controller
         $donate = "";
         $contact = "";
         $elderly = "";
-        $borad = "active";
+        $borads = "active";
         $pro = "";
 
          return view('elderly.indexBorad')->with('questions', $questions)
@@ -37,7 +37,7 @@ class BoradsController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
         
     }
 
@@ -54,14 +54,14 @@ class BoradsController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
-        $borad="active";
+        $borads="active";
 
         return view('elderly.addBoard')->with('home', $home)
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -104,7 +104,7 @@ class BoradsController extends Controller
         $contact = "";
         $elderly = "";
         $pro = "";
-        $borad="active";
+        $borads="active";
 
         return view('elderly.detailBoard')->with('home', $home)
             ->with('comments', $comments->get())
@@ -115,7 +115,7 @@ class BoradsController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     /**
@@ -134,6 +134,7 @@ class BoradsController extends Controller
         $donate = "active";
         $contact = "";
         $pro = "";
+        $borads="active";
 
         return view('elderly.editBorad')->with('id',$id)
             ->with('questioner',$questioner)
@@ -142,7 +143,8 @@ class BoradsController extends Controller
             ->with('about', $about)
             ->with('donate', $donate)
             ->with('contact', $contact)
-            ->with('pro', $pro); 
+            ->with('pro', $pro)
+            ->with('borads', $borads);
     }
 
     /**

@@ -25,7 +25,7 @@ class ElderlyController extends Controller
         $contact = "";
         $elderly = "active";
         $pro = "";
-        $borad="";
+        $borads ="";
 
     	return view('elderly.indexElderly')->with('elderlies', $elderlies)
             ->with('home', $home)
@@ -34,7 +34,7 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     public function detailElderly($id)
@@ -46,7 +46,7 @@ class ElderlyController extends Controller
         $donate = "";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return view('elderly.detailelderly')->with('elderly',$elderly)
             ->with('home', $home)
@@ -54,7 +54,7 @@ class ElderlyController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     public function ageChart()
@@ -97,7 +97,7 @@ class ElderlyController extends Controller
         $contact = "";
         $elderly = "active";
         $pro = "";
-        $borad="";
+        $borads ="";
         
 
         return view('elderly.ageChart')->with('elderlies', $elderlies)
@@ -108,7 +108,7 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     public function criterionGraph()
@@ -137,7 +137,7 @@ class ElderlyController extends Controller
         $contact = "";
         $elderly = "active";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return view('elderly.gradeChart')->with('total', $total)
             ->with('home', $home)
@@ -146,7 +146,7 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
     public function addElderly(Request $request)
@@ -184,7 +184,7 @@ class ElderlyController extends Controller
         $contact = "";
         $elderly = "active";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return redirect('indexElderlies');
     }
@@ -198,7 +198,7 @@ class ElderlyController extends Controller
         $contact = "";
         $elderly = "active";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return view('elderly.elderlyGraph')->with('home', $home)
             ->with('about', $about)
@@ -206,7 +206,7 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
     public function elderlyForm()
     {
@@ -216,7 +216,7 @@ class ElderlyController extends Controller
         $contact = "";
         $elderly = "active";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return view('elderly.addElderly')->with('home', $home)
             ->with('about', $about)
@@ -224,7 +224,7 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
 
     }
 
@@ -277,7 +277,7 @@ class ElderlyController extends Controller
         $donate = "";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return view('elderly.editElderly')->with('home', $home)
             ->with('about', $about)
@@ -285,7 +285,7 @@ class ElderlyController extends Controller
             ->with('contact', $contact)
             ->with('elderly', $elderly)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
 
 
@@ -297,7 +297,7 @@ class ElderlyController extends Controller
         $donate = "";
         $contact = "";
         $pro = "";
-        $borad="";
+        $borads ="";
 
         return view('elderly.detailFile')->with('elderly',$elderly)
             ->with('home', $home)
@@ -305,7 +305,7 @@ class ElderlyController extends Controller
             ->with('donate', $donate)
             ->with('contact', $contact)
             ->with('pro', $pro)
-            ->with('borad', $borad);
+            ->with('borads', $borads);
     }
     public function deleteElderly($id) 
     {

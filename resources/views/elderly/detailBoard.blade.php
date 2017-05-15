@@ -3,7 +3,7 @@
 @endsection
 
 @section('link')
- <link href="{{ URL::asset('elderly/css/detailboard.css') }}" rel="stylesheet" type="text/css" media="all" />
+ <link href="{{ URL::asset('elderly/css/detailboards.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
@@ -11,20 +11,19 @@
 
 @section('content')
 <div class="container">
-    <div class="row"></div>
     <div class="row">
         <div class="col s12 m12">
-          <div class="card col s12 m12">
-            <div class="card-content ">
-                <div class="col s9 m9">
-                 <span class="card-title ">{{$booard->subject}} </span>   
-                </div>
+            <div class="card col s12 m12">
+                <div class="card-content ">
+                    <div class="col s9 m9">
+                        <span class="card-title">{{$booard->subject}} </span>   
+                    </div>
                 <div class="col s3 m3">
                 @if (!Auth::guest())
                 <form action="../borads/{{$booard->id}}" method="POST" role="form">
                 <div class="col s9 m9"></div>
                     <div class="col s3 m3">
-                    <a href="{{$booard->id}}/edit" type="submit" ><i class="tiny material-icons right">mode_edit</i></a>
+                    <a href="{{$booard->id}}/edit" type="submit" ><i class="small material-icons right">mode_edit</i></a>
                     </div>
                 </form>
                 @endif
@@ -44,25 +43,24 @@
                     
                         <div class="col s1 m1">
                             <input type="hidden" name="_method" value="DELETE" />
-                            <button class="cancel waves-effect waves-light small"><i class=" tiny material-icons ">delete</i></button>
+                            <a class="cancel waves-effect waves-light small"><i class=" small material-icons ">delete</i></a>
                         </div>
                     </form>
                     @endif
                     </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
     <div class="row col s12 m12 ">
         <div class="col s12 m1">
-        <div class="col s12 m1"></div>
             <div class="progress line">
                 <div class="determinate" ></div>
             </div>
         </div>
 
         <div class="col s12 m2">
-            <p><i class="small material-icons">question_answer</i>  {{$comments_count}}   ความคิดเห็น</p>
+            <p><i class="com small material-icons">question_answer</i>  {{$comments_count}}   ความคิดเห็น</p>
         </div>
         <div class="col s12 m9">
             <div class="progress line">
@@ -94,7 +92,7 @@
                     
                         <div class="col s1 m1">
                             <input type="hidden" name="_method" value="DELETE" />
-                            <button class="cancel waves-effect waves-light small"><i class=" tiny material-icons ">delete</i></button>
+                            <a class="cancel waves-effect waves-light small"><i class=" small material-icons ">delete</i></a>
                         </div>
                     </form>
                     @endif
@@ -115,7 +113,7 @@
                     <form action="../comments/{{$comment->id}}" method="POST" role="form">
                     <div class="col s9 m9"></div>
                         <div class="col s3 m3">
-                            <a href="../comments/{{$comment->id}}/edit" type="submit" class="edit waves-effect waves-light btn-small" ><i class="tiny material-icons right">mode_edit</i></a>
+                            <a href="../comments/{{$comment->id}}/edit" type="submit" class="edit waves-effect waves-light btn-small" ><i class="small material-icons right">mode_edit</i></a>
                         </div>
                     </form>
                     @endif
@@ -135,7 +133,7 @@
                     
                         <div class="col s1 m1">
                             <input type="hidden" name="_method" value="DELETE" />
-                            <button class="cancel waves-effect waves-light small"><i class=" tiny material-icons ">delete</i></button>
+                            <a class="cancel waves-effect waves-light small"><i class="small material-icons ">delete</i></a>
                         </div>
                     </form>
                     @endif
@@ -155,10 +153,10 @@
                 <div class="determinate" ></div>
             </div>
         </div>
-        <div class="col s12 m2">
-            <p><i class="small material-icons">comment</i>   แสดงความคิดเห็น</p>
+        <div class="col s12 m3">
+            <p><i class="small material-icons">comment</i>     แสดงความคิดเห็น</p>
         </div>
-        <div class="col s12 m9">
+        <div class="col s12 m8">
             <div class="progress line">
                 <div class="determinate" ></div>
             </div>

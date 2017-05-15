@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="input_text" type="text" value="{{ $publicize->title }}" name="title">
+                        <input id="input_text" type="text" value="{{ $publicize->title }}" name="title" class="story">
                         <label for="input_text">เรื่อง</label>
                     </div>
                 </div>

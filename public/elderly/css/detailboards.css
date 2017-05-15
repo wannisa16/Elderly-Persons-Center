@@ -1,0 +1,31 @@
+div.line {
+	margin-top: 35px;
+}
+p.l-text {
+	font-size: 18px;
+	margin-top: 25px;
+}
+p.l-question {
+	font-size: 20px;
+}
+span.l-title{
+	font-size: 30px;
+}
+p{
+	font-size: 20px !important; 
+}
+span.display-post-number{
+	font-size: 20px !important; 
+}
+textarea.materialize-textarea{
+	font-size: 20px !important;
+}
+label{
+	font-size: 20px !important;
+}
+button.addto{
+	font-size: 18px !important;
+}
+a.cancel{
+	color: #f44336 !important;
+}

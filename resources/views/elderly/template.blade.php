@@ -30,7 +30,7 @@
                             <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
                             <li class="{{ $donate }}" > <a class="bar" href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li class="{{ $pro }}"><a class="bar" href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li class="{{ $borad }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
+                            <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
@@ -39,7 +39,7 @@
                             <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
                             <li class="{{ $donate }}"><a class="bar" href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li class="{{ $pro }}" ><a class="bar" href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li class="{{ $borad }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
+                            <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
                 </div>
