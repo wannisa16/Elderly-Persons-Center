@@ -16,7 +16,7 @@ h4{
 	margin-top: 25px;
 }
 
-button.cancel{
+.cancel{
 	margin-top: 10px;
 	font-size: 18px;
 	background-color: #e53935 !important;
@@ -24,7 +24,7 @@ button.cancel{
 	padding-right: 57px;
 }
 
-a.add{
+.add{
 	margin-top: 10px;
 	font-size: 18px;
 	padding-left: 57px;

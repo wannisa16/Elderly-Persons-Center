@@ -53,23 +53,15 @@
 
             <div class="row">
                 <div class="col s6 right-align">
-                    <a href="" type="submit" class="add waves-effect waves-light btn-large">ตกลง</a>
+                <div class="row"></div>
+                    <button type="submit" class="add waves-effect waves-light btn-large">ตกลง</button>
+                </div> 
+                <div class=" col s6 ">
+                <div class="row"></div>
+                        <a href="../borads" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
                 </div>
-                <div class="col s6">
-                    <button class="cancel waves-effect waves-light btn-large">ยกเลิก</button>
-
-                        <div class="row right">
-                            <div class="col s6 ">
-                                <button type="submit" class="addto waves-effect waves-light btn-large">ตกลง</button>
-                            </div>
-                            <div class="col s6">
-                                <a href="../borads" class="cancel waves-effect waves-light btn-large">ยกเลิก</a>
-                            </div>
-                        </div> 
-                        <input type="hidden" name="level" value="{{ $level }}">
-                    </div>
-
-                </div>
+                <input type="hidden" name="level" value="{{ $level }}">
+            </div>
             </div>
         </form>
 </div>
