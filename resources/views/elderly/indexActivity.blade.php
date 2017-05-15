@@ -30,7 +30,7 @@
                         <div class="progress">
                          </div>
 
-                        <p class="font-content">รายละเอียดกิจกรรม : {{$activity->content}}</p>
+                        <p class="font-content truncate">รายละเอียดกิจกรรม : {{$activity->content}}</p>
                     </div>
 
                     <div class="card-action">
