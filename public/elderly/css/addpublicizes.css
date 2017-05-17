@@ -42,4 +42,8 @@ textarea.materialize-textarea{
 input.story{
 	font-size: 20px !important;
 }
+li.error{
+	font-size: 20px !important;
+	color: #d50000;
+}
 

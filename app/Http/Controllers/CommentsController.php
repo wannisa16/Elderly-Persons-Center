@@ -113,7 +113,9 @@ class CommentsController extends Controller
      */
     public function destroy($id)
     {
+        $comment = Comment::findOrFail($id);
+        $idb = $comment->questioner_id;
         Comment::destroy($id);
-        return redirect('borads/'.($id));
+        return redirect('borads/'.($idb));
     }
 }

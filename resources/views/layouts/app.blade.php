@@ -34,6 +34,10 @@
         a.text{
             color: #ffffff;
         }
+        a.navbar-brand img {
+            height:48px;
+            width: 600px;
+        }
     </style>
 </head>
 <body id="app-layout">
@@ -52,7 +56,7 @@
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
 
-                    <img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" />
+                    <img src="{{url('images/logo1.png')}}" alt="LOGO" class="img-responsive" />
 
                 </a>
             </div>

@@ -192,13 +192,10 @@ class PublicizeController extends Controller
         $rules = [
             'title' => 'required',
             'content' => 'required',
-            'photo[]' => 'required|image'
         ];
         $messages = [
             'title.required' => '*** กรุณาใส่ชื่อเรื่องกิจกรรม',
-            'content.required' => '*** กรุณาใส่รายละเอียดของกิจกรรม',
-            'photo[].required' => '*** กรุณาเลือกรูปภาพ',
-            'photo[].image' => '*** กรุณาเลือกไฟล์รูปภาพ'
+            'content.required' => '*** กรุณาใส่รายละเอียดของกิจกรรม'
         ];
 
         $validator=Validator::make($request->all(),$rules,$messages);
