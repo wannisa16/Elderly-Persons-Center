@@ -33,20 +33,16 @@
                     <div class="col m6">
                         <h5>สิ่งของที่ต้องการรับบริจาค</h5>
                         <p>
-                            <input name="object1" type="checkbox" value="กระดาษชำระ" class="filled-in" id="test5" />
-                            <label class="label-check" for="test5">กระดาษชำระ</label>
+                            <input name="object1" type="checkbox" value="เครื่องอุปโภคบริโภค" class="filled-in" id="test5" />
+                            <label class="label-check" for="test5">เครื่องอุปโภคบริโภค</label>
                         </p>
                         <p>
-                            <input name="object2" type="checkbox" value="เตียงนอน" class="filled-in" id="test6" checked="checked" />
-                            <label class="label-check" for="test6">เตียงนอน</label>
+                            <input name="object2" type="checkbox" value="กายอุปกรณ์" class="filled-in" id="test6" checked="checked" />
+                            <label class="label-check" for="test6">กายอุปกรณ์</label>
                         </p>
                         <p>
-                            <input name="object3" type="checkbox" value="ผ้าอ้อมผู้ใหญ่" class="filled-in" id="object3" />
-                            <label class="label-check" for="object3">ผ้าอ้อมผู้ใหญ่</label>
-                        </p>
-                        <p>
-                            <input name="object4" type="checkbox" value="ยาสามัญประจำบ้าน" class="filled-in" id="object4" />
-                            <label class="label-check" for="object4">ยาสามัญประจำบ้าน</label>
+                            <input name="object3" type="checkbox" value="บริจาคเงิน" class="filled-in" id="object3" />
+                            <label class="label-check" for="object3">บริจาคเงิน</label>
                         </p>
                     </div>
                 </div>

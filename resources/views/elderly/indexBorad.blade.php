@@ -15,8 +15,9 @@
     <div class="indexborad z-depth-2 center-align"><h4>บอร์ดสนทนา ศูนย์พัฒนาการจัดสวัสดิการสังคม ผู้สูงอายุภูเก็ต</h4>
     </div>
     <div class="row">
+        <p class="right">ตั้งกระทู้</p>
         <a href="{{url('/borads/create')}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
-    </div>
+    </div>   
         <div class="row">
             <div class="col m12 s12 ">
                 <table class="striped centered">
