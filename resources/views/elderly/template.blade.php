@@ -11,7 +11,7 @@
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" href="{{url('css/materialize.min.css')}}">
     
-            <link href="{{ URL::asset('elderly/css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ URL::asset('elderly/css/templates.css') }}" rel="stylesheet" type="text/css" media="all" />
 
             <link rel="stylesheet" href="{{ URL::asset('fonts/RSU_Regular.ttf') }}">
     
@@ -23,7 +23,7 @@
         @yield('band')
             <nav>
                 <div class="nav-wrapper">
-                    <a href="elderly"><img src="{{url('images/logo1.png')}}" alt="LOGO" class="img-responsive" /></a>
+                    <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
                             <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
