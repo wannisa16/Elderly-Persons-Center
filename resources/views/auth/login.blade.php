@@ -53,8 +53,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i> เข้าสู่ระบบ
                                 </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">ลืมรหัสผ่าน?</a>
                             </div>
                         </div>
                     </form>

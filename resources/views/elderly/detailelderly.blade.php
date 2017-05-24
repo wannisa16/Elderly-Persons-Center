@@ -50,11 +50,14 @@
             <div class="col m12 offset-m1 s12">สถานะ : {{$elderly->grade}}</div>
         </div>
         
+        @if($elderly->file == "")
+        @else
         <div class="layout-text row">
-            <div class="col m12 offset-m1 s12">เอกสารที่เกี่ยวข้องกับผู้สูงอายุ : {{$elderly->flie}}
+            <div class="col m12 offset-m1 s12">เอกสารที่เกี่ยวข้องกับผู้สูงอายุ : {{$elderly->file}}
                 <a href="../detailFile/{{ $elderly->id }}" type="submit" class="see waves-effect waves-light btn">ดูเอกสาร</a>
             </div>
         </div>
+        @endif
 
         <div class="layout-text row">
             <div class="col m12 offset-m1 s12">รายละเอียดเพิ่มเติม : {{$elderly->reason}}</div>

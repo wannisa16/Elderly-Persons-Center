@@ -12,23 +12,11 @@
 @endsection
 
 @section('content') 
-
-
-<div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center"></div>
-    <div class="carousel-item">
-      <img src="images/26.png" alt="">
-    </div>
-        <div class="carousel-item">
-      <img src="images/28.png" alt="">
-    </div>
-        <div class="carousel-item">
-      <img src="images/29.png" alt="">
+<div class="row">
+    <div class="col m12 s12">
+        <img src="images/cover.png" alt="" class="img-responsive">
     </div>
 </div>
-
-
-        
 
 <div class="container">
     <div class="row">

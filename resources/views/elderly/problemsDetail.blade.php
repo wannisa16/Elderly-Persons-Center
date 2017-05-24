@@ -59,7 +59,7 @@
                     </div>
                     <div class="row">
                         <div class="col m11 ">
-                            <div class="col m5 offset-m1 ">รายได้ : {{$victim->v_income}}</div>
+                            <div class="col m5 offset-m1 ">รายได้ : {{$victim->v_income}} บาท</div>
                             <div class="col m6 ">ที่มาของรายได้ : {{$victim->v_source}}</div>
                         </div>
                     </div>
