@@ -1,6 +1,6 @@
 @extends('elderly.template')
 @section('title')
-บอร์ดสนทนา
+กระทู้สนทนา
 @endsection
 
 @section('link')
@@ -12,11 +12,10 @@
 
 @section('content')
 <div class="container">
-    <div class="indexborad z-depth-2 center-align"><h4>บอร์ดสนทนา ศูนย์พัฒนาการจัดสวัสดิการสังคม ผู้สูงอายุภูเก็ต</h4>
+    <div class="indexborad z-depth-2 center-align"><h4>กระทู้สนทนา ศูนย์พัฒนาการจัดสวัสดิการสังคม ผู้สูงอายุภูเก็ต</h4>
     </div>
     <div class="row">
-        <p class="right">ตั้งกระทู้</p>
-        <a href="{{url('/borads/create')}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
+        <a href="{{url('/borads/create')}}" class="btn btn-large waves-effect waves-light red right"><i class="material-icons left">add</i>ตั้งกระทู้</a>
     </div>   
         <div class="row">
             <div class="col m12 s12 ">

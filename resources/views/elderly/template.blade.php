@@ -29,19 +29,19 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
                             <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
-                            <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับศูนย์ฯ</a></li>
                             <li class="{{ $donate }}" > <a class="bar" href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li class="{{ $pro }}"><a class="bar" href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
+                            <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">กระทู้สนทนา</a></li>
                             <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li> 
                         </ul>
 
                         <ul class="side-nav" id="mobile-demo">
                             <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
-                            <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับเรา</a></li>
+                            <li class="{{ $about }}" ><a class="bar" href="{{url('/about')}}">เกี่ยวกับศูนย์ฯ</a></li>
                             <li class="{{ $donate }}"><a class="bar" href="{{url('/donates/create')}}">บริจาค</a></li>
                             <li class="{{ $pro }}" ><a class="bar" href="{{url('/problems/create')}}">ผู้ประสบปัญหาทางสังคม</a></li>
-                            <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
+                            <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">กระทู้สนทนา</a></li>
                             <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
                     </div>
