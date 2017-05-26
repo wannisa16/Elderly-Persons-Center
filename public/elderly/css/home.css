@@ -22,6 +22,7 @@ p.font-title{
     color: salmon;
 }
 
-.carousel-slider {
-	height: 450px !important;
+img{
+	 width: 100%;
+    height: auto;
 }

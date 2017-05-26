@@ -11,7 +11,7 @@
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" href="{{url('css/materialize.min.css')}}">
     
-            <link href="{{ URL::asset('elderly/css/templates.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ URL::asset('elderly/css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
 
             <link rel="stylesheet" href="{{ URL::asset('fonts/RSU_Regular.ttf') }}">
     
@@ -23,9 +23,9 @@
         @yield('band')
             <nav>
                 <div class="nav-wrapper">
-                    <div class="row col m12 s3">
-                        <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
-                    
+                    <div class="row col m12 s12">
+                            <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
+
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
                             <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
@@ -88,7 +88,7 @@
                         <p>อีเมล์ : banphuket_132@hotmail.com</p>
                     </div>
 
-                        <div class="col l4 offset-l0 s12">
+                        <div class="c col l4 offset-l0 s12">
                             <h5>ติดตามหรือติดต่อได้ที่</h5>
                             <a href="contacts"><img src="{{url('images/email1.png')}}" alt="E-mail" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
                             <a href="contacts"><img src="{{url('images/call1.png')}}" alt="Call" height="40" width="40" class="img-responsive" />&nbsp;&nbsp;</a>
