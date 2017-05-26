@@ -23,7 +23,9 @@
         @yield('band')
             <nav>
                 <div class="nav-wrapper">
-                    <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
+                    <div class="row col m12 s3">
+                        <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
+                    
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
                             <li class="{{ $home }}"><a class="bar" href="{{url('/index')}}">หน้าหลัก</a></li>
@@ -42,6 +44,7 @@
                             <li class="{{ $borads }}"><a class="bar" href="{{url('/borads')}}">บอร์ดสนทนา</a></li>
                             <li class="{{ $contact }}"><a class="bar" href="{{url('contacts')}}">ติดต่อเรา</a></li>
                         </ul>
+                    </div>
                 </div>
             </nav>
             <!-- Dropdown Structure -->
@@ -93,9 +96,9 @@
                         </div>
                 </div>
                     
-                    <div class="row footer-copyright">
-                        <div class="col m12 s12">
-                            ผู้พัฒนา : นักศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตภูเก็ต 
+                    <div class="footer-copyright">
+                        <div class="container">
+                            ผู้พัฒนา : นางสาว วรรณิษา เขียวแก้ว, นางสาว นาถฤทัย นัคเร, นาย จิตริน คิดรอบ | นักศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ | มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตภูเก็ต
                         </div>
                     </div>
             </footer>
