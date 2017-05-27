@@ -5,18 +5,17 @@
 @endsection
 
 @section('link')
-<link href="{{ URL::asset('elderly/css/home.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ URL::asset('elderly/css/homee.css') }}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('band')
 @endsection
 
 @section('content') 
-<!-- <div class="row">
-    <div class="col m12 s12"> -->
-        <img src="images/cover.png" alt="" class="img-responsive">
-   <!--  </div>
-</div> -->
+<div class="photo">
+     <img src="images/cover.png" alt="" class="img-responsive">
+</div>
+   
 
 <div class="container">
     <div class="row">

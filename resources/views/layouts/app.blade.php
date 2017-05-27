@@ -54,7 +54,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand">
 
                     <img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" />
 

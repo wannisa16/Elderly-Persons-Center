@@ -11,7 +11,7 @@
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" href="{{url('css/materialize.min.css')}}">
     
-            <link href="{{ URL::asset('elderly/css/template.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ URL::asset('elderly/css/templateee.css') }}" rel="stylesheet" type="text/css" media="all" />
 
             <link rel="stylesheet" href="{{ URL::asset('fonts/RSU_Regular.ttf') }}">
     
@@ -24,7 +24,7 @@
             <nav>
                 <div class="nav-wrapper">
                     <div class="row col m12 s12">
-                            <a href="elderly"><img src="{{url('images/logo.png')}}" alt="LOGO" class="img-responsive" /></a>
+                            <a><img src="{{url('images/logo1.png')}}" alt="LOGO" class="img-responsive" /></a>
 
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="m-bar right hide-on-med-and-down ">
